@@ -1,0 +1,29 @@
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Extension.BasicPack\bin\Release\veles_blue.ico
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Extension.BasicPack\bin\Release\Snippets\imbACE BasicPack\aceMethodOperation.snippet
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Extension.BasicPack\bin\Release\Snippets\imbACE BasicPack\acePluginInstance.snippet
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Extension.BasicPack\bin\Release\Snippets\imbACE BasicPack\imbACE BasicPack.pkgdef
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Extension.BasicPack\bin\Release\Snippets\imbACE BasicPack\imbLock.snippet
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Extension.BasicPack\bin\Release\Snippets\imbACE BasicPack\imbPropDesc.snippet
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Extension.BasicPack\bin\Release\Snippets\imbACE BasicPack\imbRegComplete.snippet
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Extension.BasicPack\bin\Release\Snippets\imbACE BasicPack\imbRegStaticIs.snippet
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Extension.BasicPack\bin\Release\Snippets\imbACE BasicPack\imbSciBool.snippet
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Extension.BasicPack\bin\Release\Snippets\imbACE BasicPack\imbSciCount.snippet
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Extension.BasicPack\bin\Release\Snippets\imbACE BasicPack\imbSciDoBool.snippet
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Extension.BasicPack\bin\Release\Snippets\imbACE BasicPack\imbSciFileDataProp.snippet
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Extension.BasicPack\bin\Release\Snippets\imbACE BasicPack\imbSciRatio.snippet
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Extension.BasicPack\bin\Release\Snippets\imbACE BasicPack\imbSciString.snippet
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Extension.BasicPack\bin\Release\Snippets\imbACE BasicPack\imbStaticAutoObject.snippet
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Extension.BasicPack\bin\Release\imbACE_Extension_BasicPack.jpg
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Extension.BasicPack\bin\Release\imbSCI.ico
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Extension.BasicPack\bin\Release\index.html
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Extension.BasicPack\bin\Release\LICENCE.txt
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Extension.BasicPack\bin\Release\imbACE.Extension.BasicPack.vsix
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Extension.BasicPack\bin\Release\extension.vsixmanifest
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Extension.BasicPack\obj\Release\imbACE.Extension.BasicPack.csproj.CoreCompileInputs.cache
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Extension.BasicPack\obj\Release\imbACE.Extension.BasicPack.dll
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Extension.BasicPack\obj\Release\imbACE.Extension.BasicPack.pdb
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Extension.BasicPack\obj\Release\extension.vsixmanifest
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Extension.BasicPack\bin\Release\Packages\imbSCI.Core.Standard.0.3.36.nupkg
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Extension.BasicPack\bin\Release\Packages\imbACE.Services.Standard.0.2.4.nupkg
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Extension.BasicPack\bin\Release\imbACE.ico
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Extension.BasicPack\bin\Release\veles_template_blue.ico

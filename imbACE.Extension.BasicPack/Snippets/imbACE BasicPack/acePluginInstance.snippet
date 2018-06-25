@@ -1,0 +1,59 @@
+﻿    <CodeSnippet Format="1.1.0">
+        <Header>
+            <Title>imbACE Plugin property</Title>
+            <Shortcut>_imbAcePluginProp</Shortcut>
+            <Description>Plugin property at IAceCommandConsole, with thread-safe lazy initialization</Description>
+            <Author>imbVeles</Author>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>type</ID>
+                    <ToolTip>Property type</ToolTip>
+                    <Default>itmPlugin</Default>
+                </Literal>
+                <Literal>
+                    <ID>name</ID>
+                    <ToolTip>Name of the method</ToolTip>
+                    <Default>plugin</Default>
+                </Literal>
+                <Literal>
+                    <ID>help</ID>
+                    <ToolTip>Plugin</ToolTip>
+                    <Default>Embedded plugin</Default>
+                </Literal>
+                <Literal>
+                    <ID>group</ID>
+                    <ToolTip>Functional group, used just for user manual method categorization</ToolTip>
+                    <Default>Plugin</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="csharp">
+                <![CDATA[
+	  
+    private Object $name$_lock = new Object();
+    protected $type$ _$name$ = null;
+    /// <summary>
+    /// Instance of a plugin - $help$
+    /// </summary>
+    [Display(GroupName = "$group$", Name ="$name$", Description ="$help$")]
+    public $type$ $name$
+    {
+        get {
+          if (_$name$ == null) {
+            lock ($name$_lock( {
+              if (_$name$ == null) {
+                _$name$ = new $type$(this);
+              }
+            }
+          }
+          return _$name$;
+        }
+    }
+	  $end$]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>

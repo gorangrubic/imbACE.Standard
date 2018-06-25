@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>imbACE.Generator.Xamarin</id>
+    <version>0.2.4</version>
+    <title>imbACE.Generator.Xamarin .NET Standard</title>
+    <authors>Goran Grubić</authors>
+    <owners>Goran Grubić</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>http://doc.veles.rs/LICENCE.txt</licenseUrl>
+    <projectUrl>http://blog.veles.rs/</projectUrl>
+    <iconUrl>http://doc.veles.rs/imbACE.ico</iconUrl>
+    <description>User Interface generator (XAML)</description>
+    <releaseNotes>Targets: .NET 4.0, .NET 4.5 and .NET Core 2.0</releaseNotes>
+    <copyright>Copyright (C) 2017-2018 imbVeles - GNU GENERAL PUBLIC LICENSE V3.0</copyright>
+    <repository type="GitHub" url="https://github.com/gorangrubic/" />
+    <dependencies>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="imbACE.Generator" version="0.2.8" exclude="Build,Analyzers" />
+        <dependency id="Xamarin.Forms" version="3.1.0.550168-pre3" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="G:\imbVelesOpenSource\imbACE.Standard\imbACE.Generator.Xamarin\bin\Release\netstandard2.0\imbACE.Generator.Xamarin.dll" target="lib\netstandard2.0\imbACE.Generator.Xamarin.dll" />
+    <file src="G:\imbVelesOpenSource\imbACE.Standard\imbACE.Generator.Xamarin\bin\Release\netstandard2.0\imbACE.Generator.Xamarin.xml" target="lib\netstandard2.0\imbACE.Generator.Xamarin.xml" />
+  </files>
+</package>

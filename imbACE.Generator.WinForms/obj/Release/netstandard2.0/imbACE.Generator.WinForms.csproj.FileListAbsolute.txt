@@ -1,0 +1,14 @@
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Generator.WinForms\obj\Release\netstandard2.0\imbACE.Generator.WinForms.csprojAssemblyReference.cache
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Generator.WinForms\obj\Release\netstandard2.0\imbACE.Generator.WinForms.csproj.CoreCompileInputs.cache
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Generator.WinForms\obj\Release\netstandard2.0\imbACE.Generator.WinForms.AssemblyInfoInputs.cache
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Generator.WinForms\obj\Release\netstandard2.0\imbACE.Generator.WinForms.AssemblyInfo.cs
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Generator.WinForms\bin\Release\netstandard2.0\imbACE.Generator.WinForms.deps.json
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Generator.WinForms\bin\Release\netstandard2.0\imbACE.Generator.WinForms.dll
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Generator.WinForms\bin\Release\netstandard2.0\imbACE.Generator.WinForms.pdb
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Generator.WinForms\obj\Release\netstandard2.0\imbACE.Generator.WinForms.dll
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Generator.WinForms\obj\Release\netstandard2.0\imbACE.Generator.WinForms.pdb
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Generator.WinForms\bin\Release\netstandard2.0\imbACE.Generator.dll
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Generator.WinForms\bin\Release\netstandard2.0\imbACE.Generator.pdb
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Generator.WinForms\bin\Release\netstandard2.0\imbACE.Generator.xml
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Generator.WinForms\obj\Release\netstandard2.0\imbACE.Generator.WinForms.csproj.CopyComplete
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Generator.WinForms\bin\Release\netstandard2.0\imbACE.Generator.WinForms.xml

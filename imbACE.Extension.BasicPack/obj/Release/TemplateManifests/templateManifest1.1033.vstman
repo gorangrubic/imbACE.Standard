@@ -1,0 +1,40 @@
+﻿<VSTemplateManifest Version="1.0" Locale="1033" xmlns="http://schemas.microsoft.com/developer/vstemplatemanifest/2015">
+  <VSTemplateContainer TemplateType="Project">
+    <RelativePathOnDisk>imbACE\CSharp\1033\imbACE.ProjectTemplate.ConsoleApplication</RelativePathOnDisk>
+    <TemplateFileName>imbACE.ProjectTemplate.ConsoleApplication.vstemplate</TemplateFileName>
+    <VSTemplateHeader>
+      <TemplateData xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+        <Name>imbACE Console Application multi-target</Name>
+        <Description>Project for imbACE console application, with custom: Advanced Command Console, State and Workspace classes. Targets: .NET 4.0, .NET 4.5 and .NET Standard</Description>
+        <Icon>veles_template_blue.ico</Icon>
+        <ProjectType>CSharp</ProjectType>
+        <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
+        <SortOrder>1000</SortOrder>
+        <TemplateID>178fe38c-7979-46ed-a217-f7bc370f1db5</TemplateID>
+        <CreateNewFolder>true</CreateNewFolder>
+        <DefaultName>ConsoleApplication</DefaultName>
+        <ProvideDefaultName>true</ProvideDefaultName>
+        <CreateInPlace>true</CreateInPlace>
+      </TemplateData>
+    </VSTemplateHeader>
+  </VSTemplateContainer>
+  <VSTemplateContainer TemplateType="Project">
+    <RelativePathOnDisk>imbSCI\CSharp\1033\imbSCI.ProjectTemplate.MultiTarget</RelativePathOnDisk>
+    <TemplateFileName>imbSCI.ProjectTemplate.MultiTarget.vstemplate</TemplateFileName>
+    <VSTemplateHeader>
+      <TemplateData xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+        <Name>Blank multi-target library project</Name>
+        <Description>C# Library project, targeting .NET 4.0, .NET 4.5 and .NET Standard 2.0. The .csproj file contains: option build instruction to copy .nupkg file into local NuGet repository, declaration of compiler tags for each target and other helpful things.</Description>
+        <Icon>imbVeles_red_blank.png</Icon>
+        <ProjectType>CSharp</ProjectType>
+        <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
+        <SortOrder>1000</SortOrder>
+        <TemplateID>b8e54219-0fb2-4b8d-b19e-4a0e1f7bed49</TemplateID>
+        <CreateNewFolder>true</CreateNewFolder>
+        <DefaultName>imbSCI.ProjectTemplate.MultiTarget</DefaultName>
+        <ProvideDefaultName>true</ProvideDefaultName>
+        <CreateInPlace>true</CreateInPlace>
+      </TemplateData>
+    </VSTemplateHeader>
+  </VSTemplateContainer>
+</VSTemplateManifest>

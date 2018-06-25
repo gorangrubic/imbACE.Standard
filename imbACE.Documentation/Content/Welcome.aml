@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="7c269a7a-f52e-4b0c-b298-daf4c38b03c4" revisionNumber="1">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction>
+			<para>imbACE is all about rapid console application development - any kind of console application. The main use case is: development of your research-specific console application/tool for automated experimentation, data processing and reporting. It contains several user input/output systems, parallel and persistent task management (single PC or network), its own ACE and S# script languages, graph-tree project resources management, work with RDF and MySQL entities, plugin API, download/upload tasks (http/ftp), TCP/IP server/client remote messaging and other things.</para>
+		</introduction>
+
+		<section>
+			<title>Getting Started</title>
+			<content>
+				
+			</content>
+		</section>
+
+		<relatedTopics>
+			<link xlink:href="11c94271-635c-458a-8bc1-dc22bfdae963" />
+      <externalLink>
+        <linkText>Introduction page on imbACE libraries</linkText>
+        <linkUri>http://blog.veles.rs/imbveles-open-source-libraries/imbace-introduction/</linkUri>
+      </externalLink>
+      <externalLink>
+        <linkText>Introduction page on imbSCI libraries</linkText>
+        <linkUri>http://blog.veles.rs/imbsci-introduction/</linkUri>
+      </externalLink>
+      <externalLink>
+        <linkText>About imbVeles Open Source libraries</linkText>
+        <linkUri>http://blog.veles.rs/imbveles-open-source-libraries/</linkUri>
+      </externalLink>
+      <externalLink>
+        <linkText>imbVeles Home site</linkText>
+        <linkUri>http://blog.veles.rs</linkUri>
+      </externalLink>
+		</relatedTopics>
+	</developerConceptualDocument>
+</topic>

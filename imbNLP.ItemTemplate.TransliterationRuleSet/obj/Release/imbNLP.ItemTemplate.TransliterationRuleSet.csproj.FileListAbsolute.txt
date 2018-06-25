@@ -1,0 +1,8 @@
+G:\imbVelesOpenSource\imbACE.Standard\imbNLP.ItemTemplate.TransliterationRuleSet\bin\Release\ItemTemplates\CSharp\1033\imbNLP.ItemTemplate.TransliterationRuleSet.zip
+G:\imbVelesOpenSource\imbACE.Standard\imbNLP.ItemTemplate.TransliterationRuleSet\bin\Release\imbNLP.ItemTemplate.TransliterationRuleSet.dll
+G:\imbVelesOpenSource\imbACE.Standard\imbNLP.ItemTemplate.TransliterationRuleSet\obj\Release\imbNLP.ItemTemplate.TransliterationRuleSet.csproj.CoreCompileInputs.cache
+G:\imbVelesOpenSource\imbACE.Standard\imbNLP.ItemTemplate.TransliterationRuleSet\obj\Release\CSharp\1033\imbNLP.ItemTemplate.TransliterationRuleSet.zip
+G:\imbVelesOpenSource\imbACE.Standard\imbNLP.ItemTemplate.TransliterationRuleSet\obj\Release\imbNLP.ItemTemplate.TransliterationRuleSet.dll
+G:\imbVelesOpenSource\imbACE.Standard\imbNLP.ItemTemplate.TransliterationRuleSet\obj\Release\imbNLP.ItemTemplate.TransliterationRuleSet.pdb
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Extension.BasicPack\ItemTemplates\imbNLP\ItemTemplates\CSharp\1033\imbNLP.ItemTemplate.TransliterationRuleSet.zip
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Extension.BasicPack\ItemTemplates\imbNLP\imbNLP.ItemTemplate.TransliterationRuleSet.dll

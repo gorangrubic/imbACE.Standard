@@ -1,0 +1,3287 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>imbACE.Network</name>
+    </assembly>
+    <members>
+        <member name="T:imbACE.Network.aceCommonNetworkSystem">
+            <summary>
+            Osnovna sistemska klasa za imbACE.Network
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.aceCommonNetworkSystem.main">
+            <summary>
+            Glavna instanca sistemske klase za imbACE.Network
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.aceCommonNetworkSystem.doEnableEmailSending">
+            <summary>
+            Is emailing allowed
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:imbACE.Network.aceCommonNetworkSystem.OnPropertyChanged(System.String)" -->
+        <member name="T:imbACE.Network.authorization.openAuthEngine">
+            <summary>
+            PREISPITATI UPOTREBU
+            </summary>
+        </member>
+        <member name="T:imbACE.Network.authorization.openAuthTools">
+            <summary>
+            Biblioteka za rad sa openAuth-om (jos nije implementirana do kraja)
+            </summary>
+        </member>
+        <member name="T:imbACE.Network.authorization.openAuthTools.SignatureTypes">
+            <summary>
+            Provides a predefined set of algorithms that are supported officially by the protocol
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.authorization.openAuthTools.ComputeHash(System.Security.Cryptography.HashAlgorithm,System.String)">
+            <summary>
+            Helper function to compute a hash value
+            </summary>
+            <param name="hashAlgorithm">The hashing algoirhtm used. If that algorithm needs some initialization, like HMAC and its derivatives, they should be initialized prior to passing it to this function</param>
+            <param name="data">The data to hash</param>
+            <returns>a Base64 string of the hash value</returns>
+        </member>
+        <member name="M:imbACE.Network.authorization.openAuthTools.GetQueryParameters(System.String)">
+            <summary>
+            Internal function to cut out all non oauth query string parameters (all parameters not begining with "oauth_")
+            </summary>
+            <param name="parameters">The query string part of the Url</param>
+            <returns>A list of QueryParameter each containing the parameter name and value</returns>
+        </member>
+        <member name="M:imbACE.Network.authorization.openAuthTools.UrlEncode(System.String)">
+            <summary>
+            This is a different Url Encode implementation since the default .NET one outputs the percent encoding in lower case.
+            While this is not a problem with the percent encoding spec, it is used in upper case throughout OAuth
+            </summary>
+            <param name="value">The value to Url encode</param>
+            <returns>Returns a Url encoded string</returns>
+        </member>
+        <member name="M:imbACE.Network.authorization.openAuthTools.NormalizeRequestParameters(System.Collections.Generic.IList{imbACE.Network.authorization.openAuthTools.QueryParameter})">
+            <summary>
+            Normalizes the request parameters according to the spec
+            </summary>
+            <param name="parameters">The list of parameters already sorted</param>
+            <returns>a string representing the normalized parameters</returns>
+        </member>
+        <member name="M:imbACE.Network.authorization.openAuthTools.GenerateSignatureBase(System.Uri,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String@,System.String@)">
+            <summary>
+            Generate the signature base that is used to produce the signature
+            </summary>
+            <param name="url">The full url that needs to be signed including its non OAuth url parameters</param>
+            <param name="consumerKey">The consumer key</param>
+            <param name="token">The token, if available. If not available pass null or an empty string</param>
+            <param name="tokenSecret">The token secret, if available. If not available pass null or an empty string</param>
+            <param name="httpMethod">The http method used. Must be a valid HTTP method verb (POST,GET,PUT, etc)</param>
+            <param name="signatureType">The signature type. To use the default values use <see cref="!:OAuthBase.SignatureTypes">OAuthBase.SignatureTypes</see>.</param>
+            <returns>The signature base</returns>
+        </member>
+        <member name="M:imbACE.Network.authorization.openAuthTools.GenerateSignatureUsingHash(System.String,System.Security.Cryptography.HashAlgorithm)">
+            <summary>
+            Generate the signature value based on the given signature base and hash algorithm
+            </summary>
+            <param name="signatureBase">The signature based as produced by the GenerateSignatureBase method or by any other means</param>
+            <param name="hash">The hash algorithm used to perform the hashing. If the hashing algorithm requires initialization or a key it should be set prior to calling this method</param>
+            <returns>A base64 string of the hash value</returns>
+        </member>
+        <member name="M:imbACE.Network.authorization.openAuthTools.GenerateSignature(System.Uri,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String@,System.String@)">
+            <summary>
+            Generates a signature using the HMAC-SHA1 algorithm
+            </summary>
+            <param name="url">The full url that needs to be signed including its non OAuth url parameters</param>
+            <param name="consumerKey">The consumer key</param>
+            <param name="consumerSecret">The consumer seceret</param>
+            <param name="token">The token, if available. If not available pass null or an empty string</param>
+            <param name="tokenSecret">The token secret, if available. If not available pass null or an empty string</param>
+            <param name="httpMethod">The http method used. Must be a valid HTTP method verb (POST,GET,PUT, etc)</param>
+            <returns>A base64 string of the hash value</returns>
+        </member>
+        <member name="M:imbACE.Network.authorization.openAuthTools.GenerateSignature(System.Uri,System.String,System.String,System.String,System.String,System.String,System.String,System.String,imbACE.Network.authorization.openAuthTools.SignatureTypes,System.String@,System.String@)">
+            <summary>
+            Generates a signature using the specified signatureType
+            </summary>
+            <param name="url">The full url that needs to be signed including its non OAuth url parameters</param>
+            <param name="consumerKey">The consumer key</param>
+            <param name="consumerSecret">The consumer seceret</param>
+            <param name="token">The token, if available. If not available pass null or an empty string</param>
+            <param name="tokenSecret">The token secret, if available. If not available pass null or an empty string</param>
+            <param name="httpMethod">The http method used. Must be a valid HTTP method verb (POST,GET,PUT, etc)</param>
+            <param name="signatureType">The type of signature to use</param>
+            <returns>A base64 string of the hash value</returns>
+        </member>
+        <member name="M:imbACE.Network.authorization.openAuthTools.GenerateNonce">
+            <summary>
+            Generate a nonce
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:imbACE.Network.authorization.openAuthTools.QueryParameter">
+            <summary>
+            Provides an internal structure to sort the query parameter
+            </summary>
+        </member>
+        <member name="T:imbACE.Network.authorization.openAuthTools.QueryParameterComparer">
+            <summary>
+            Comparer class used to perform the sorting of the query parameters
+            </summary>
+        </member>
+        <member name="T:imbACE.Network.authorization.signature">
+            <summary>
+            Authorization signature generators
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.authorization.signature.makeSignature(imbACE.Network.authorization.signatureType,System.String,System.String,System.String)">
+            <summary>
+            Generate signature according to specified parameters
+            </summary>
+            <param name="itemToExecute"></param>
+            <param name="data"></param>
+            <param name="urlToSign"></param>
+            <returns></returns>
+        </member>
+        <member name="T:imbACE.Network.authorization.signatureType">
+            <summary>
+            Tip potpisa
+            </summary>
+        </member>
+        <member name="F:imbACE.Network.authorization.signatureType.noSignature">
+            <summary>
+            The no signature
+            </summary>
+        </member>
+        <member name="F:imbACE.Network.authorization.signatureType.HMACSHA1">
+            <summary>
+            The hmacsh a1
+            </summary>
+        </member>
+        <member name="F:imbACE.Network.authorization.signatureType.PLAINTEXT">
+            <summary>
+            The plaintext
+            </summary>
+        </member>
+        <member name="F:imbACE.Network.authorization.signatureType.RSASHA1">
+            <summary>
+            The rsash a1
+            </summary>
+        </member>
+        <member name="F:imbACE.Network.authorization.signatureType.HMACSHA256">
+            <summary>
+            The hmacsh a256
+            </summary>
+        </member>
+        <member name="T:imbACE.Network.core.aceServerException">
+             <summary>
+            
+             </summary>
+             <seealso cref="T:imbACE.Core.core.exceptions.aceGeneralException" />
+        </member>
+        <member name="T:imbACE.Network.core.aceServerSessionControlException">
+            <summary>
+            Error with or within <see cref="T:imbACE.Network.internet.sessions.serverSession"/> or <see cref="T:imbACE.Network.internet.sessions.serverSessionControl"/>
+            </summary>
+            <seealso cref="T:imbACE.Core.core.exceptions.aceGeneralException" />
+        </member>
+        <member name="T:imbACE.Network.email.emailMessage">
+            <summary>
+            E-Mail message pre-compiled instance
+            </summary>
+            <seealso cref="T:imbSCI.Data.data.imbBindable" />
+            <seealso cref="T:imbSCI.Data.interfaces.IObjectWithName" />
+        </member>
+        <member name="M:imbACE.Network.email.emailMessage.makeUID">
+            <summary>
+            vraca jedinstveni emailSendTask id
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:imbACE.Network.email.emailMessage.createMailObject">
+            <summary>
+            Creates MailMessage instance
+            </summary>
+            <returns>MainMessage object, ready for sending</returns>
+        </member>
+        <member name="P:imbACE.Network.email.emailMessage.name">
+            <summary>
+            UID of this email message
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.email.emailMessage.subject">
+            <summary>
+            Email subject
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.email.emailMessage.content">
+            <summary>
+            Content of the message
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.email.emailMessage.address">
+            <summary>
+            Address To
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.email.emailMessage.from">
+            <summary>
+            Address From
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.email.emailMessage.attachments">
+            <summary>
+            Collection of included attachment files - files to send
+            </summary>
+        </member>
+        <member name="T:imbACE.Network.email.emailMessageCollection">
+            <summary>
+            imbCollectionMeta namenska kolekcija za  emailMessage
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.email.emailMessageCollection.Save(System.String)">
+            <summary>
+            Saves the message collection to the specified path
+            </summary>
+            <param name="path">The path.</param>
+        </member>
+        <member name="T:imbACE.Network.email.emailMessageFactory">
+            <summary>
+            Class that builds the email collections using templates and DataTable source
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.email.emailMessageFactory.deploy(imbSCI.Core.reporting.ILogBuilder,imbSCI.Core.files.folders.folderNode)">
+            <summary>
+            Deploys the specified loger.
+            </summary>
+            <param name="loger">The loger.</param>
+            <param name="workspace">The workspace.</param>
+        </member>
+        <member name="M:imbACE.Network.email.emailMessageFactory.createCollections(imbSCI.Core.reporting.ILogBuilder,imbSCI.Core.files.folders.folderNode,System.Boolean)">
+            <summary>
+            Creates message collections
+            </summary>
+            <param name="loger">The loger.</param>
+            <param name="workspace">The workspace.</param>
+            <param name="showMessage">if set to <c>true</c> [show message].</param>
+            <returns></returns>
+        </member>
+        <member name="P:imbACE.Network.email.emailMessageFactory.dataSource">
+            <summary>
+            Gets or sets the data source.
+            </summary>
+            <value>
+            The data source.
+            </value>
+        </member>
+        <member name="P:imbACE.Network.email.emailMessageFactory.dataSourcePath">
+            <summary>
+            Gets or sets the data source path.
+            </summary>
+            <value>
+            The data source path.
+            </value>
+        </member>
+        <member name="P:imbACE.Network.email.emailMessageFactory.contentTemplate">
+            <summary>
+            Gets or sets the content template.
+            </summary>
+            <value>
+            The content template.
+            </value>
+        </member>
+        <member name="P:imbACE.Network.email.emailMessageFactory.subjectTemplate">
+            <summary>
+            Gets or sets the subject template.
+            </summary>
+            <value>
+            The subject template.
+            </value>
+        </member>
+        <member name="P:imbACE.Network.email.emailMessageFactory.addressTemplate">
+            <summary>
+            Gets or sets the address template.
+            </summary>
+            <value>
+            The address template.
+            </value>
+        </member>
+        <member name="P:imbACE.Network.email.emailMessageFactory.collectionSize">
+            <summary>
+            Size of one collection (batch)
+            </summary>
+            <value>
+            The size of the collection.
+            </value>
+        </member>
+        <member name="T:imbACE.Network.email.emailSendTask">
+            <summary>
+            2014c> zadatak slanja e-maila, koji se prati preko baze podataka
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.email.emailSendTask.createMailObject(imbSCI.Reporting.includes.reportIncludeFileCollection)">
+            <summary>
+            Pravi poruku, adresira, kaci attachmente
+            </summary>
+            <param name="attachments">attachmenti koji treba da se okace</param>
+            <returns>formiran MailMessage objekat - spreman za slanje</returns>
+        </member>
+        <member name="P:imbACE.Network.email.emailSendTask.subject">
+            <summary>
+            naslov emaila
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.email.emailSendTask.result">
+            <summary>
+            Rezultat slanja emaila
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.email.emailSendTask.triggerDate">
+            <summary>
+            Datum od kada moze da se salje
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.email.emailSendTask.message">
+            <summary>
+            poruka koja treba da se posalje
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.email.emailSendTask.signature">
+            <summary>
+            Naziv preseta
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.email.emailSendTask.status">
+            <summary>
+            status zadatka
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.email.emailSendTask.lastRunStamp">
+            <summary>
+            Potpis poslednjeg izvrsavanja: datum_vreme + oznaka testa
+            </summary>
+        </member>
+        <member name="T:imbACE.Network.email.emailSendTaskCollection">
+            <summary>
+            imbSqlEntity kolekcija za:  emailSendTask --- prati proces slanja emailova
+            </summary>
+        </member>
+        <member name="F:imbACE.Network.email.emailSendTaskResult.unknown">
+            <summary>
+            Nema feedbacka za email
+            </summary>
+        </member>
+        <member name="F:imbACE.Network.email.emailSendTaskResult.noreply">
+            <summary>
+            Nije bilo odgovora
+            </summary>
+        </member>
+        <member name="F:imbACE.Network.email.emailSendTaskResult.response">
+            <summary>
+            Dobijen je odgovor od coveka
+            </summary>
+        </member>
+        <member name="F:imbACE.Network.email.emailSendTaskResult.returnedUnknownUser">
+            <summary>
+            Vracen je email
+            </summary>
+        </member>
+        <member name="F:imbACE.Network.email.emailSendTaskStatus.waiting">
+            <summary>
+            task ceka na slanje
+            </summary>
+        </member>
+        <member name="F:imbACE.Network.email.emailSendTaskStatus.sent">
+            <summary>
+            poslato je
+            </summary>
+        </member>
+        <member name="F:imbACE.Network.email.emailSendTaskStatus.failed">
+            <summary>
+            nije uspeo proces slanja
+            </summary>
+        </member>
+        <member name="F:imbACE.Network.email.emailSendTaskStatus.cancelled">
+            <summary>
+            zadatak je obustavljen
+            </summary>
+        </member>
+        <member name="T:imbACE.Network.email.emailServer">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:imbACE.Network.email.emailServer.login">
+            <summary>
+            podaci o logovanju na server
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.email.emailServer.isConnectedToSMTP">
+            <summary>
+            Da li je konektovan na SMTP
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.email.emailServer.isLogedInAndReady">
+            <summary>
+            da li je spreman za upotrebu?
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.email.emailServer.smtpServerPort">
+            <summary>
+            Port kojim pristupa serveru
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.email.emailServer.smtpHostUrl">
+            <summary>
+            adresa na kojoj se nalazi server
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.email.emailServer.useSSL">
+            <summary>
+            da li da koristi SSL konekciju
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.email.emailServer.loginPassword">
+            <summary>
+            Password za login - ako je prazan onda ce otvoriti input box -- privremena varijabla, ne snima se
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.email.emailServer.smtpServer">
+            <summary>
+            instanca SMTP servera koji se koristi za slanje poste
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.email.emailServer.loginUsername">
+            <summary>
+            snimljen username za logovanje na server
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.email.emailServer.connectSmtp(System.String,System.String,System.String,System.Boolean,System.Int32)">
+            <summary>
+            Uspostavlja vezu za Smtp serverom
+            </summary>
+            <param name="username"></param>
+            <param name="password"></param>
+            <param name="__smtpHostUrl"></param>
+            <param name="__useSSL"></param>
+            <param name="__smtpServerPort"></param>
+            <returns></returns>
+        </member>
+        <member name="M:imbACE.Network.email.emailServer.disconnectSmtp">
+            <summary>
+            Disconnecting from the SMTP server
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.email.emailServer.Send(imbACE.Network.email.emailMessage,imbSCI.Core.reporting.ILogBuilder)">
+            <summary>
+            Sends the specified message.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="loger">The loger.</param>
+            <returns></returns>
+        </member>
+        <member name="M:imbACE.Network.email.emailServer.Send(System.Net.Mail.MailMessage)">
+            <summary>
+            Salje i vraca TRUE ako je uspeo
+            </summary>
+            <param name="msg"></param>
+            <returns></returns>
+        </member>
+        <member name="T:imbACE.Network.email.targetSourceType">
+            <summary>
+            Odakle uzima informacije
+            </summary>
+        </member>
+        <member name="F:imbACE.Network.email.targetSourceType.imbCollection">
+            <summary>
+            Bilo koja imb kolekcija, preuzima podatke iz objekata
+            </summary>
+        </member>
+        <member name="F:imbACE.Network.email.targetSourceType.imbEntitySelectRows">
+            <summary>
+            vrsi upit nad imbSqlEntityCollection-om
+            </summary>
+        </member>
+        <member name="F:imbACE.Network.email.targetSourceType.crmTargetListModule">
+            <summary>
+            preuzima podatke iz crmTargetListModula, potreban mu je samo targetlist id
+            </summary>
+        </member>
+        <member name="F:imbACE.Network.email.targetSourceType.emailTaskDataTable">
+            <summary>
+            U bazi podataka postoji tabela koja predstavlja listu za slanje, u
+            </summary>
+        </member>
+        <member name="F:imbACE.Network.email.targetSourceType.testData">
+            <summary>
+            data set za testiranje
+            </summary>
+        </member>
+        <member name="T:imbACE.Network.extensions.imbUrlOps">
+            <summary>
+            Skup alatki za rad sa URL adresama
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:imbACE.Network.extensions.imbUrlOps.getStringTokensFromUrls(System.Collections.Generic.IEnumerable{System.String},System.Boolean,System.Boolean,System.Boolean)" -->
+        <!-- Badly formed XML comment ignored for member "M:imbACE.Network.extensions.imbUrlOps.getStringTokensFromUrl(System.String,System.Boolean,System.Boolean,System.Boolean)" -->
+        <member name="M:imbACE.Network.extensions.imbUrlOps.toUri(System.String,System.UriKind)">
+            <summary>
+            2014 maj> creates URI object from string path
+            </summary>
+            <param name="uriPath"></param>
+            <param name="kind"></param>
+            <returns></returns>
+        </member>
+        <member name="M:imbACE.Network.extensions.imbUrlOps.guessTopLevelDomain(System.Uri)">
+            <summary>
+            Pokusava da pogodi TopLevelDomen
+            </summary>
+            <param name="uri"></param>
+            <returns></returns>
+        </member>
+        <member name="M:imbACE.Network.extensions.imbUrlOps.validateUrlShema(System.String,imbSCI.Data.enums.urlShema)">
+            <summary>
+            v5 > osigurava da URL pocne pravilnom shemom - ako je shema unknown onda nista
+            </summary>
+            <param name="url"></param>
+            <param name="shema"></param>
+            <returns></returns>
+        </member>
+        <member name="M:imbACE.Network.extensions.imbUrlOps.removeUrlShema(System.String)">
+            <summary>
+            sklanja shemu - kao sto je su: http://  ftp:// itd
+            </summary>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="M:imbACE.Network.extensions.imbUrlOps.httpsToHttpShema(System.String)">
+            <summary>
+            HTTPSs to HTTP shema check and replacement
+            </summary>
+            <param name="url">The URL.</param>
+            <returns></returns>
+        </member>
+        <member name="M:imbACE.Network.extensions.imbUrlOps.validateUrlWithUri(System.String)">
+            <summary>
+            Pokusava da instancira objekat Uri
+            </summary>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="M:imbACE.Network.extensions.imbUrlOps.getDomainNameFromUrl(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Iz URL-a izdvaja ime domena - sklanja UrlShema deo i www. deo. Opciono konvertuje . u -
+            </summary>
+            <param name="input"></param>
+            <param name="convertDots"></param>
+            <returns></returns>
+        </member>
+        <member name="M:imbACE.Network.extensions.imbUrlOps.getUrlSegment(System.String,imbSCI.Data.enums.urlSegment,System.Object)">
+            <summary>
+            Vraca segment URL-a
+            </summary>
+            <param name="input"></param>
+            <param name="targetSegment"></param>
+            <param name="indInput"></param>
+            <returns></returns>
+        </member>
+        <member name="M:imbACE.Network.extensions.imbUrlOps.getQueryFromUrl(System.String,System.Boolean)">
+            <summary>
+            izdvaja Query ili ostatak iz URL-a. Ako nema ? , onda gleda da li ima = i vraca sve. Ako nema ni = onda vraca prazan string
+            </summary>
+            <param name="urlInput"></param>
+            <param name="getLeftSide"></param>
+            <returns></returns>
+        </member>
+        <member name="M:imbACE.Network.extensions.imbUrlOps.getQueryPairs(System.String)">
+            <summary>
+            Vraca dictionary sa ParamName vs Value - input je URL query
+            </summary>
+            <param name="query">URL string ili samo query</param>
+            <returns></returns>
+        </member>
+        <member name="M:imbACE.Network.extensions.imbUrlOps.getQuerySegment(System.String,imbSCI.Data.enums.urlSegment,System.Int32,System.String)">
+            <summary>
+            Izdvaja querz segment
+            </summary>
+            <param name="query"></param>
+            <param name="targetSegment"></param>
+            <param name="index"></param>
+            <param name="paramName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:imbACE.Network.extensions.imbUrlOps.getStandardizedUrl(System.String,imbSCI.Data.enums.urlShema)">
+            <summary>
+            Vrši standardizaciju URL-a
+            (staro rešenje)
+            </summary>
+            <param name="url"></param>
+            <param name="addWww"></param>
+            <param name="addLastBackSlash"></param>
+            <returns></returns>
+        </member>
+        <member name="M:imbACE.Network.extensions.imbUrlOps.getCleanFileName(System.String,System.Boolean)">
+             <summary>
+             Iz prosleđenog urla izdvaja nedozvoljene karaktere.
+            
+             </summary>
+             <param name="url">URL</param>
+             <returns>String koji predstavlja URL i može biti deo imena fajla</returns>
+        </member>
+        <member name="T:imbACE.Network.extensions.networkTools">
+            <summary>
+            Static tools for network ops
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.extensions.networkTools.GetIPByPinging(System.String)">
+            <summary>
+            Gets the ip by pinging
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:imbACE.Network.extensions.networkTools.GetAllLocalIPv4(System.Net.NetworkInformation.NetworkInterfaceType)">
+            <summary>
+            Gets all local i PV4.
+            </summary>
+            <param name="_type">The type.</param>
+            <returns></returns>
+        </member>
+        <member name="M:imbACE.Network.extensions.networkTools.GetLocalIPv4(System.Net.NetworkInformation.NetworkInterfaceType)">
+            <summary>
+            Gets the first local IPv4 attached to the internal network that match NetowrkInterfaceType
+            </summary>
+            <param name="_type">The type.</param>
+            <returns></returns>
+        </member>
+        <member name="M:imbACE.Network.extensions.networkTools.GetEmptyPort">
+            <summary>
+            Gets the furst empty port available
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:imbACE.Network.ftp.imbFtpConnection.host">
+            <summary>
+            Adresa na koju se konektuje
+            </summary>
+        </member>
+        <member name="T:imbACE.Network.internet.config.aceServerInitFlags">
+            <summary>
+            Server init options
+            </summary>
+        </member>
+        <member name="F:imbACE.Network.internet.config.aceServerInitFlags.enforceALC">
+            <summary>
+            To enforce Access Level Control (authorization)
+            </summary>
+        </member>
+        <member name="F:imbACE.Network.internet.config.aceServerInitFlags.enforceIPDoubleCheck">
+            <summary>
+            Should it check IP allow list in user definition
+            </summary>
+            <remarks>
+            When <c>enforceACL</c> is on it checks user allowed IP list
+            </remarks>
+        </member>
+        <member name="F:imbACE.Network.internet.config.aceServerInitFlags.enforceIPGlobalCheck">
+            <summary>
+            It uses IP allowed list from <see cref="T:imbACE.Network.internet.config.configParameters"/>
+            </summary>
+        </member>
+        <member name="F:imbACE.Network.internet.config.aceServerInitFlags.enforceLocalhostOnly">
+            <summary>
+            It will ignore both <see cref="F:imbACE.Network.internet.config.aceServerInitFlags.enforceIPGlobalCheck"/> and <see cref="F:imbACE.Network.internet.config.aceServerInitFlags.enforceIPDoubleCheck"/> and allow only local host to send requests.
+            </summary>
+        </member>
+        <member name="F:imbACE.Network.internet.config.aceServerInitFlags.enforceLocalNetworkNodeOnly">
+            <summary>
+            Allow access all ip addressed with the same network prefix
+            </summary>
+        </member>
+        <member name="T:imbACE.Network.internet.config.aceServerUser">
+            <summary>
+            Definition of a php user
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.internet.config.aceServerUser.serverSidePhp">
+            <summary>
+            Default user instance - for server side PHP call
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.internet.config.aceServerUser.userAccessLevel">
+            <summary>0 means it is not authorised</summary>
+        </member>
+        <member name="P:imbACE.Network.internet.config.aceServerUser.uid">
+            <summary> </summary>
+        </member>
+        <member name="P:imbACE.Network.internet.config.aceServerUser.username">
+            <summary> </summary>
+        </member>
+        <member name="P:imbACE.Network.internet.config.aceServerUser.ipAddress">
+            <summary> </summary>
+        </member>
+        <member name="P:imbACE.Network.internet.config.aceServerUser.md5pass">
+            <summary>Password  MD5 hash</summary>
+        </member>
+        <member name="T:imbACE.Network.internet.config.aceServerUserALC">
+            <summary>
+            aceServer :: collection of users and Access Level Controler
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.internet.config.aceServerUserALC.#ctor(imbACE.Network.internet.core.IAceHttpServer)">
+            <summary>
+            Initializes a new instance of the <see cref="T:imbACE.Network.internet.config.aceServerUserALC"/> class.
+            </summary>
+            <param name="__serverInstance">The server instance.</param>
+            <param name="__componentName">Name of the component.</param>
+            <param name="__instanceName">Name of the instance.</param>
+        </member>
+        <member name="M:imbACE.Network.internet.config.aceServerUserALC.GetAccessLevel(System.String,System.String)">
+            <summary>
+            Returns null if username and password are not matched
+            </summary>
+            <param name="username">The username</param>
+            <param name="password">The password</param>
+            <returns>null or aceServerUser instance</returns>
+        </member>
+        <member name="P:imbACE.Network.internet.config.aceServerUserALC.Item(System.String)">
+            <summary>
+            Gets the <see cref="T:imbACE.Network.internet.config.aceServerUser"/> with the specified username.
+            </summary>
+            <value>
+            The <see cref="T:imbACE.Network.internet.config.aceServerUser"/>.
+            </value>
+            <param name="username">The username.</param>
+            <returns></returns>
+        </member>
+        <member name="M:imbACE.Network.internet.config.aceServerUserALC.SetUser(System.String,System.String,System.UInt32,System.Int32,System.String[])">
+            <summary>
+            Sets the user supplied. Use this during init sequence or during user list loading
+            </summary>
+            <param name="username">The username.</param>
+            <param name="md5pass">The md5 encripted password</param>
+            <param name="uid">The uid.</param>
+            <param name="uLevel">User access level</param>
+            <param name="allowIP">The list of IP addresses allowed to login using this username/password.</param>
+            <returns></returns>
+            <exception cref="T:imbACE.Network.core.aceServerException">Username [" + username + "] is already taken. - null - SetUser failed</exception>
+        </member>
+        <member name="P:imbACE.Network.internet.config.aceServerUserALC.items">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:imbACE.Network.internet.config.configParameters">
+            <summary>
+            Design-time configuration
+            </summary>
+        </member>
+        <member name="F:imbACE.Network.internet.config.configParameters._settings">
+            <summary>
+            The default server settings
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.internet.config.configParameters.settings">
+            <summary> </summary>
+        </member>
+        <member name="P:imbACE.Network.internet.config.configParameters.initFlags">
+            <summary>
+            DEFAULT init flags
+            </summary>
+            <value>
+            The initialize flags.
+            </value>
+        </member>
+        <member name="P:imbACE.Network.internet.config.configParameters.pathToUserlist">
+            <summary> relative path to user list - relative from server execution</summary>
+        </member>
+        <member name="P:imbACE.Network.internet.config.configParameters.pathToConfig">
+            <summary> relative path to <see cref="T:imbACE.Network.internet.config.serverParameters"/> xml file - relative from server execution</summary>
+        </member>
+        <member name="P:imbACE.Network.internet.config.configParameters.headerTerminator">
+            <summary>HTTP header terminator</summary>
+        </member>
+        <member name="P:imbACE.Network.internet.config.configParameters.main">
+            <summary>
+            Current and active server instance configuration
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.internet.config.configParameters.defSuspendInSeconds">
+            <summary> </summary>
+        </member>
+        <member name="P:imbACE.Network.internet.config.configParameters.defRestartInSeconds">
+            <summary> </summary>
+        </member>
+        <member name="P:imbACE.Network.internet.config.configParameters.minPortNumber">
+            <summary>Minimal port number for safe operation</summary>
+        </member>
+        <member name="P:imbACE.Network.internet.config.configParameters.maxPortNumber">
+            <summary>Maximal port number for safe operation</summary>
+        </member>
+        <member name="T:imbACE.Network.internet.config.serverParameters">
+            <summary>
+            Run-time configuration, loaded from external file
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.internet.config.serverParameters.instanceName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:imbACE.Network.internet.config.serverParameters.port">
+            <summary>
+            The default port to use if -1 is supplied during instance creation
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.internet.config.serverParameters.sessionTimeoutMinutes">
+            <summary>
+            Session timeout
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.internet.config.serverParameters.filepathToServe">
+            <summary> Local filepath to serve </summary>
+        </member>
+        <member name="T:imbACE.Network.internet.core.aceHttpServerBase">
+            <summary>
+            Override <see cref="M:imbACE.Network.internet.core.aceHttpServerBase.Process(System.Net.HttpListenerContext)"/> to applicate this class
+            </summary>
+            <seealso cref="!:imbACE.Services.core.aceComponentBase&lt;imbACE.Network.internet.config.serverParameters&gt;" />
+            <seealso cref="!:imbACE.Network.internet.IAceHttpServer" />
+        </member>
+        <member name="T:imbACE.Network.internet.core.aceHttpServerBase.aceServerDefaultSubDirs">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:imbACE.Network.internet.core.aceHttpServerBase.init(System.Int32,imbACE.Network.internet.config.aceServerInitFlags,imbACE.Network.internet.config.serverParameters)">
+            <summary>
+            Initializes the server
+            </summary>
+            <param name="path">The path.</param>
+            <param name="port">The port.</param>
+            <param name="initFlags">The initialize flags.</param>
+            <param name="__settings">The settings.</param>
+        </member>
+        <member name="M:imbACE.Network.internet.core.aceHttpServerBase.beforeStarted">
+            <summary>
+            Before the instance going to be started
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.internet.core.aceHttpServerBase.directory">
+            <summary>Directory path to monitor</summary>
+        </member>
+        <member name="P:imbACE.Network.internet.core.aceHttpServerBase.sessionControl">
+            <summary>Session component of the server [by default is not used] -- use it within <see cref="M:imbACE.Network.internet.core.aceHttpServerBase.Process(System.Net.HttpListenerContext)"/> override to check and retrive session data</summary>
+        </member>
+        <member name="P:imbACE.Network.internet.core.aceHttpServerBase.accessControl">
+            <summary>ALC component of the server [by default is not used] -- use it within <see cref="M:imbACE.Network.internet.core.aceHttpServerBase.Process(System.Net.HttpListenerContext)"/> override to check access rights</summary>
+        </member>
+        <member name="M:imbACE.Network.internet.core.aceHttpServerBase.Start">
+            <summary>
+            Starts this server,
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.internet.core.aceHttpServerBase.Stop">
+            <summary>
+            Stop server and dispose all functions.
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.internet.core.aceHttpServerBase.Continue">
+            <summary>
+            Continues this instance -- if it was suspended
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.internet.core.aceHttpServerBase.doUseTimedSuspension">
+            <summary> </summary>
+        </member>
+        <member name="M:imbACE.Network.internet.core.aceHttpServerBase.Process(System.Net.HttpListenerContext)">
+            <summary>
+            Processes the context http listener detected
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="P:imbACE.Network.internet.core.aceHttpServerBase.underSuspension">
+            <summary> </summary>
+        </member>
+        <member name="P:imbACE.Network.internet.core.aceHttpServerBase.timeForSuspend">
+            <summary>Scheduled time for server suspend</summary>
+        </member>
+        <member name="P:imbACE.Network.internet.core.aceHttpServerBase.timeForRestart">
+            <summary>Scheduled time for server restart</summary>
+        </member>
+        <member name="M:imbACE.Network.internet.core.aceHttpServerBase.Suspend(System.Int32,System.Int32)">
+            <summary>
+            Suspends the specified in seconds.
+            </summary>
+            <param name="inSeconds">The in seconds - from this moment</param>
+            <param name="restartInSeconds">The restart in seconds - from moment of suspension: in <c>inSeconds</c> + this parametere</param>
+        </member>
+        <member name="M:imbACE.Network.internet.core.aceHttpServerBase.Listen">
+            <summary>
+            Listens this instance.
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.internet.core.aceHttpServerBase.instanceName">
+            <summary>Signature of the server</summary>
+        </member>
+        <member name="P:imbACE.Network.internet.core.aceHttpServerBase.serverThread">
+            <summary> </summary>
+        </member>
+        <member name="P:imbACE.Network.internet.core.aceHttpServerBase.port">
+            <summary>
+            Port to listen to
+            </summary>
+            <value>
+            The port.
+            </value>
+        </member>
+        <member name="P:imbACE.Network.internet.core.aceHttpServerBase.flags">
+            <summary>Initialization flags</summary>
+        </member>
+        <member name="P:imbACE.Network.internet.core.aceHttpServerBase.settings">
+            <summary>Configuration of the server</summary>
+        </member>
+        <member name="P:imbACE.Network.internet.core.aceHttpServerBase.listener">
+            <summary>Listener of TCP/IP</summary>
+        </member>
+        <member name="M:imbACE.Network.internet.core.IAceHttpServer.Suspend(System.Int32,System.Int32)">
+            <summary>
+            Suspends the specified in seconds.
+            </summary>
+            <param name="inSeconds">The in seconds - from this moment</param>
+            <param name="restartInSeconds">The restart in seconds - from moment of suspension: in <c>inSeconds</c> + this parametere</param>
+        </member>
+        <member name="M:imbACE.Network.internet.core.IAceHttpServer.Start">
+            <summary>
+            Starts this server,
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.internet.core.IAceHttpServer.Stop">
+            <summary>
+            Stop server and dispose all functions.
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.internet.core.IAceHttpServer.Continue">
+            <summary>
+            Continues this instance -- if it was suspended
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.internet.core.IAceHttpServer.beforeStarted">
+            <summary>
+            Before the instance going to be started
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.internet.core.IAceHttpServer.instanceName">
+            <summary>
+            Gets the name of the instance.
+            </summary>
+            <value>
+            The name of the instance.
+            </value>
+        </member>
+        <member name="P:imbACE.Network.internet.core.IAceHttpServer.sessionControl">
+            <summary>
+            Gets the session control.
+            </summary>
+            <value>
+            The session control.
+            </value>
+        </member>
+        <member name="P:imbACE.Network.internet.core.IAceHttpServer.accessControl">
+            <summary>ALC component of the server -- use it within <see cref="!:Process(HttpListenerContext)"/> override to check access rights</summary>
+        </member>
+        <member name="P:imbACE.Network.internet.core.IAceServerComponent.componentName">
+            <summary>
+            Gets the name of the component.
+            </summary>
+            <value>
+            The name of the component.
+            </value>
+        </member>
+        <member name="P:imbACE.Network.internet.core.IAceServerComponent.instanceName">
+            <summary>
+            Gets the name of the server instance.
+            </summary>
+            <value>
+            The name of the instance.
+            </value>
+        </member>
+        <member name="P:imbACE.Network.internet.core.IAceServerComponent.serverInstance">
+            <summary>
+            Gets the server instance.
+            </summary>
+            <value>
+            The server instance.
+            </value>
+        </member>
+        <member name="T:imbACE.Network.internet.core.serverComponentBase">
+             <summary>
+            
+             </summary>
+             <seealso cref="T:imbACE.Network.internet.core.IAceServerComponent" />
+        </member>
+        <member name="M:imbACE.Network.internet.core.serverComponentBase.#ctor(imbACE.Network.internet.core.IAceHttpServer,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:imbACE.Network.internet.core.serverComponentBase"/> class.
+            </summary>
+            <param name="__serverInstance">The server instance.</param>
+            <param name="__componentName">Name of the component.</param>
+            <param name="__instanceName">Name of the instance.</param>
+            <exception cref="T:imbACE.Network.core.aceServerException">Server instance is null and instance name is empty/null - null - null - Component constructor exception</exception>
+        </member>
+        <member name="P:imbACE.Network.internet.core.serverComponentBase.componentName">
+            <summary> </summary>
+        </member>
+        <member name="P:imbACE.Network.internet.core.serverComponentBase.instanceName">
+            <summary>
+            Server instance name
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.internet.core.serverComponentBase.serverInstance">
+            <summary>
+            Reference to <see cref="T:imbACE.Network.internet.core.IAceHttpServer"/>
+            </summary>
+        </member>
+        <member name="T:imbACE.Network.internet.events.aceServerArgsBase">
+            <summary>
+            Base class for Server request arguments
+            </summary>
+            <seealso cref="T:System.EventArgs" />
+        </member>
+        <member name="P:imbACE.Network.internet.events.aceServerArgsBase.values">
+            <summary> </summary>
+        </member>
+        <member name="P:imbACE.Network.internet.events.aceServerArgsBase.type">
+            <summary> </summary>
+        </member>
+        <member name="P:imbACE.Network.internet.events.aceServerArgsBase.paramFlags">
+            <summary> </summary>
+        </member>
+        <member name="F:imbACE.Network.internet.events.aceServerRequestStdParams.action">
+            <summary>
+            The CRM action parameter
+            </summary>
+        </member>
+        <member name="F:imbACE.Network.internet.events.aceServerRequestStdParams.module">
+            <summary>
+            The CRM module name
+            </summary>
+        </member>
+        <member name="F:imbACE.Network.internet.events.aceServerRequestStdParams.parentTab">
+            <summary>
+            The parent tab (containing CRM module link)
+            </summary>
+        </member>
+        <member name="F:imbACE.Network.internet.events.aceServerRequestStdParams.record">
+            <summary>
+            The record UID
+            </summary>
+        </member>
+        <member name="F:imbACE.Network.internet.events.aceServerRequestStdParams.log">
+            <summary>
+            The log
+            </summary>
+        </member>
+        <member name="T:imbACE.Network.internet.events.serverRequestReceivedEvent">
+            <summary>
+            Delegat eventa
+            </summary>
+            <param name="sender">Objekat koji je izazvao dogadjaj</param>
+            <param name="args">Objekat sa argumentima</param>
+        </member>
+        <member name="T:imbACE.Network.internet.events.serverRequestReceivedEventArgs">
+            <summary>
+            Objekat koji opisuje dogadjaj koji se desio objektu: serverRequestReceived
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.internet.events.serverRequestReceivedEventArgs.httpContext">
+            <summary> </summary>
+        </member>
+        <member name="T:imbACE.Network.internet.events.serverRequestReceivedEventType">
+            <summary>
+            Tip dogadjaja - za objekat: serverRequestReceived
+            </summary>
+        </member>
+        <member name="F:imbACE.Network.internet.events.serverRequestReceivedEventType.getFile">
+            <summary>
+            Trys to find file in the serving path
+            </summary>
+        </member>
+        <member name="F:imbACE.Network.internet.events.serverRequestReceivedEventType.crmAction">
+            <summary>
+            The CRM action: it expects action, module, record and other parameters in get
+            </summary>
+        </member>
+        <member name="F:imbACE.Network.internet.events.serverRequestReceivedEventType.startSession">
+            <summary>
+            The ALC approved the username
+            </summary>
+        </member>
+        <member name="F:imbACE.Network.internet.events.serverRequestReceivedEventType.accessDenied">
+            <summary>
+            The access denied for the username, password and/or IP address
+            </summary>
+        </member>
+        <member name="F:imbACE.Network.internet.events.serverRequestReceivedEventType.authorisedRequest">
+            <summary>
+            The access is granted
+            </summary>
+        </member>
+        <member name="F:imbACE.Network.internet.events.serverRequestReceivedEventType.terminateSession">
+            <summary>
+            The access was granted - client calls for session termination
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.internet.formats.filenames.indexAllFilenames">
+            <summary>
+            List of all known index filenames, not only HTML
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.internet.formats.filenames.indexHtmlFilenames">
+            <summary>
+            static and autoinitiated object
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:imbACE.Network.internet.NamespaceDoc" -->
+        <member name="T:imbACE.Network.internet.sessions.serverSession">
+            <summary>
+            Instance of a session
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.internet.sessions.serverSession.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:imbACE.Network.internet.sessions.serverSession"/> class.
+            </summary>
+            <param name="uid">The uid.</param>
+        </member>
+        <member name="P:imbACE.Network.internet.sessions.serverSession.started">
+            <summary> </summary>
+        </member>
+        <member name="F:imbACE.Network.internet.sessions.serverSession.usernameOnNull">
+            <summary>
+            The username on null
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.internet.sessions.serverSession.username">
+            <summary>
+            Gets the username.
+            </summary>
+            <value>
+            The username.
+            </value>
+        </member>
+        <member name="P:imbACE.Network.internet.sessions.serverSession.authorizedUser">
+            <summary>Instance of <c>user</c></summary>
+        </member>
+        <member name="P:imbACE.Network.internet.sessions.serverSession.data">
+            <summary> </summary>
+        </member>
+        <member name="P:imbACE.Network.internet.sessions.serverSession.dataSet">
+            <summary> </summary>
+        </member>
+        <member name="P:imbACE.Network.internet.sessions.serverSession.sessionID">
+            <summary> </summary>
+        </member>
+        <member name="P:imbACE.Network.internet.sessions.serverSession.phpSessionID">
+            <summary> </summary>
+        </member>
+        <member name="P:imbACE.Network.internet.sessions.serverSession.isActive">
+            <summary> </summary>
+        </member>
+        <member name="T:imbACE.Network.internet.sessions.serverSessionControl">
+            <summary>
+            Session control mechanism
+            </summary>
+            <remarks>
+            <para>Primarly desinged for network servers, but might be usefull for other applications due <see cref="P:imbACE.Network.internet.sessions.serverSession.data"/> and <see cref="P:imbACE.Network.internet.sessions.serverSession.dataSet"/> properties</para>
+            </remarks>
+        </member>
+        <member name="M:imbACE.Network.internet.sessions.serverSessionControl.#ctor(imbACE.Network.internet.core.IAceHttpServer)">
+            <summary>
+            Initializes a new instance of the <see cref="T:imbACE.Network.internet.sessions.serverSessionControl"/> class.
+            </summary>
+            <param name="serverInstanceName">Name of the server instance.</param>
+        </member>
+        <member name="M:imbACE.Network.internet.sessions.serverSessionControl.Update">
+            <summary>
+            Updates this instance.
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.internet.sessions.serverSessionControl.serverName">
+            <summary> </summary>
+        </member>
+        <member name="P:imbACE.Network.internet.sessions.serverSessionControl.started">
+            <summary>Time of instance creation</summary>
+        </member>
+        <member name="M:imbACE.Network.internet.sessions.serverSessionControl.GetSession(System.String)">
+            <summary>
+            Gets the session.
+            </summary>
+            <param name="sessionID">The session identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:imbACE.Network.internet.sessions.serverSessionControl.GetNewSession(imbACE.Network.internet.config.aceServerUser,System.String)">
+            <summary>
+            Gets the new session.
+            </summary>
+            <param name="user">The user.</param>
+            <param name="PHPSESSID">The phpsessid.</param>
+            <returns></returns>
+        </member>
+        <member name="F:imbACE.Network.internet.sessions.serverSessionControl.LIMIT_NEWUID_RETRY">
+            <summary>
+            The limit new uid creation retries inside <see cref="M:imbACE.Network.internet.sessions.serverSessionControl.GetNewUID(System.String)"/>
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.internet.sessions.serverSessionControl.GetNewUID(System.String)">
+            <summary>
+            Gets the new uid based on <c>customString</c> and internal algorithm
+            </summary>
+            <param name="customString">The custom string.</param>
+            <returns>Unique ID</returns>
+            <exception cref="T:imbACE.Network.core.aceServerSessionControlException">Failed to get new UID after r:[" + r.ToString() + "] retries. - null</exception>
+        </member>
+        <member name="P:imbACE.Network.internet.sessions.serverSessionControl.items">
+            <summary>
+            Active and terminated sessions
+            </summary>
+        </member>
+        <member name="T:imbACE.Network.remote.aceRemoteManager">
+            <summary>
+            aceRemote MANAGER
+            </summary>
+        </member>
+        <member name="T:imbACE.Network.remote.clients.aceRemoteTestClient">
+            <summary>
+            Testing client class
+            </summary>
+            <seealso cref="T:imbACE.Network.remote.instance.aceRemoteClient" />
+        </member>
+        <member name="M:imbACE.Network.remote.clients.aceRemoteTestClient.#ctor(imbACE.Network.remote.core.aceRemoteSettings)">
+            <summary>
+            Initializes a new instance of the <see cref="T:imbACE.Network.remote.clients.aceRemoteTestClient"/> class.
+            </summary>
+            <param name="__settings"></param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:imbACE.Network.remote.core.aceRemoteBindable.OnPropertyChanged(System.String)" -->
+        <member name="T:imbACE.Network.remote.core.aceRemoteReceiveMessage">
+            <summary>
+            Primljena aceRemote poruka
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.remote.core.aceRemoteReceiveMessage.message">
+            <summary>
+            poruka koja se salje
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.remote.core.aceRemoteReceiveMessage.socket">
+            <summary>
+            dodeljen socket
+            </summary>
+        </member>
+        <member name="T:imbACE.Network.remote.core.aceRemoteSendTask">
+            <summary>
+            aceRemote poruka koja ceka slanje
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.remote.core.aceRemoteSendTask.#ctor(System.String,System.Int32,System.Net.Sockets.Socket)">
+            <summary>
+            Pravi aceRemoteSend poruku
+            </summary>
+            <param name="__message">String sadržaj poruke</param>
+            <param name="__delayAfter">Koliko milisekundi da čeka nakon što pošalje poruku</param>
+            <param name="__socket">Socket preko koga šalje poruku</param>
+        </member>
+        <member name="P:imbACE.Network.remote.core.aceRemoteSendTask.delayAfter">
+            <summary>
+            pauza u ms nakon slanja poruke
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.remote.core.aceRemoteSendTask.message">
+            <summary>
+            poruka koja se salje
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.remote.core.aceRemoteSendTask.socket">
+            <summary>
+            dodeljen socket
+            </summary>
+        </member>
+        <member name="T:imbACE.Network.remote.core.aceRemoteSettings">
+            <summary>
+            aceRemote settings
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.remote.core.aceRemoteSettings.bufferSize">
+            <summary>
+            Number of bytes reserved for buffer size
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.remote.core.aceRemoteSettings.serverIP">
+            <summary>
+            IP Adresa servera sa kojim komunicira
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.remote.core.aceRemoteSettings.serverPort">
+            <summary>
+            PORT koji slusa server
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.remote.core.aceRemoteSettings.endMessageSufix">
+            <summary>
+            sufix koji se dodaje na kraj poruke kako bi oznacio jednu transakciju
+            </summary>
+        </member>
+        <member name="T:imbACE.Network.remote.core.aceRemoteStateObject">
+            <summary>
+            StateObject -- for inter-thread communication
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.remote.core.aceRemoteStateObject.workSocket">
+            <summary>
+            trenutni socket objekat
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.remote.core.aceRemoteStateObject.buffer">
+            <summary>
+            bafer za komunikaciju
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.remote.core.aceRemoteStateObject.sb">
+            <summary>
+            string builder
+            </summary>
+        </member>
+        <member name="T:imbACE.Network.remote.events.aceRemoteInstanceBaseEvent">
+            <summary>
+            Delegat eventa
+            </summary>
+            <param name="sender">Objekat koji je izazvao dogadjaj</param>
+            <param name="args">Objekat sa argumentima</param>
+        </member>
+        <member name="T:imbACE.Network.remote.events.aceRemoteInstanceBaseEventArgs">
+            <summary>
+            Objekat koji opisuje dogadjaj koji se desio objektu: aceRemoteInstanceBase
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.remote.events.aceRemoteInstanceBaseEventArgs.socket">
+            <summary>
+            relevantan socket
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.remote.events.aceRemoteInstanceBaseEventArgs.message">
+            <summary>
+            event msg
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.remote.events.aceRemoteInstanceBaseEventArgs.type">
+            <summary>
+            tip dogadjaja
+            </summary>
+        </member>
+        <member name="T:imbACE.Network.remote.events.aceRemoteInstanceBaseEventType">
+            <summary>
+            Tip dogadjaja - za objekat: aceRemoteInstanceBase
+            </summary>
+        </member>
+        <member name="T:imbACE.Network.remote.instance.aceRemoteClient">
+            <summary>
+            Client for remote communication
+            </summary>
+            <seealso cref="T:imbACE.Network.remote.instance.aceRemoteInstanceBase" />
+        </member>
+        <member name="F:imbACE.Network.remote.instance.aceRemoteClient.onClientReceived">
+            <summary>
+            Kada server primi konekciju
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.remote.instance.aceRemoteClient.sendStack">
+            <summary>
+            stack zadataka za slanje
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.remote.instance.aceRemoteClient.sendToStack(System.String,System.Int32,System.Net.Sockets.Socket)">
+            <summary>
+            Sends to stack.
+            </summary>
+            <param name="__message">The message.</param>
+            <param name="__delay">The delay.</param>
+            <param name="__socket">The socket.</param>
+            <returns></returns>
+        </member>
+        <member name="M:imbACE.Network.remote.instance.aceRemoteClient.sendToStack(imbACE.Network.remote.core.aceRemoteSendTask)">
+            <summary>
+            Sends to stack.
+            </summary>
+            <param name="task">The task.</param>
+            <returns></returns>
+        </member>
+        <member name="M:imbACE.Network.remote.instance.aceRemoteClient.startSending">
+            <summary>
+            Pokrece novi thread koji brine o slanju
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.remote.instance.aceRemoteClient.readStack">
+            <summary>
+            stack zadataka za slanje
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.remote.instance.aceRemoteClient.startProcessing">
+            <summary>
+            Pokrece novi thread koji brine o slanju
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.remote.instance.aceRemoteClient.client">
+            <summary>
+            TCP klijent
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.remote.instance.aceRemoteClient.ipHostInfo">
+            <summary>
+            informacije o serveru
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.remote.instance.aceRemoteClient.ipAddress">
+            <summary>
+            Bindable property
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.remote.instance.aceRemoteClient.remoteEP">
+            <summary>
+            end point
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.remote.instance.aceRemoteClient.#ctor(imbACE.Network.remote.core.aceRemoteSettings)">
+            <summary>
+            Instancira klijenta - i kopira podesavanja.
+            </summary>
+            <param name="__settings"></param>
+        </member>
+        <member name="M:imbACE.Network.remote.instance.aceRemoteClient.connect">
+            <summary>
+            Povezuje se sa serverom
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:imbACE.Network.remote.instance.aceRemoteClient.receive">
+            <summary>
+            Prijem poruke
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:imbACE.Network.remote.instance.aceRemoteClient.receiveString">
+            <summary>
+            Prijem string poruke
+            </summary>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:imbACE.Network.remote.instance.aceRemoteClient.sendString(System.String)" -->
+        <member name="M:imbACE.Network.remote.instance.aceRemoteClient.close">
+            <summary>
+            Zatvara konekciju sa serverom
+            </summary>
+        </member>
+        <member name="T:imbACE.Network.remote.instance.aceRemoteInstanceBase">
+            <summary>
+            Osnovna klasa za client/server/netservice komponente
+            </summary>
+        </member>
+        <member name="T:imbACE.Network.remote.instance.aceRemoteServer">
+             <summary>
+            
+             </summary>
+             <seealso cref="T:imbACE.Network.remote.instance.aceRemoteClient" />
+        </member>
+        <member name="M:imbACE.Network.remote.instance.aceRemoteServer.#ctor(imbACE.Network.remote.core.aceRemoteSettings)">
+            <summary>
+            Initializes a new instance of the <see cref="T:imbACE.Network.remote.instance.aceRemoteServer"/> class.
+            </summary>
+            <param name="__settings"></param>
+        </member>
+        <member name="F:imbACE.Network.remote.instance.aceRemoteServer.allDone">
+            <summary>
+            All done
+            </summary>
+        </member>
+        <member name="F:imbACE.Network.remote.instance.aceRemoteServer.onServerReceived">
+            <summary>
+            Kada server primi konekciju
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.remote.instance.aceRemoteServer.sendBackString(System.Net.Sockets.Socket,System.String)">
+            <summary>
+            Sends the back string.
+            </summary>
+            <param name="handler">The handler.</param>
+            <param name="_data">The data.</param>
+        </member>
+        <member name="M:imbACE.Network.remote.instance.aceRemoteServer.sendBackCallback(System.IAsyncResult)">
+            <summary>
+            Sends the back callback.
+            </summary>
+            <param name="ar">The ar.</param>
+        </member>
+        <member name="P:imbACE.Network.remote.instance.aceRemoteServer.doLoopListening">
+            <summary>
+            Is listening turned on
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.remote.instance.aceRemoteServer.startListening">
+            <summary>
+            Starts the listening.
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.remote.instance.aceRemoteServer.acceptCallback(System.IAsyncResult)">
+            <summary>
+            Accepts the callback.
+            </summary>
+            <param name="ar">The ar.</param>
+        </member>
+        <member name="T:imbACE.Network.remote.servers.aceRemoteTestServer">
+            <summary>
+            Test application and demonstration class
+            </summary>
+            <seealso cref="T:imbACE.Network.remote.instance.aceRemoteServer" />
+        </member>
+        <member name="M:imbACE.Network.remote.servers.aceRemoteTestServer.#ctor(imbACE.Network.remote.core.aceRemoteSettings)">
+            <summary>
+            Initializes a new instance of the <see cref="T:imbACE.Network.remote.servers.aceRemoteTestServer"/> class.
+            </summary>
+            <param name="__settings"></param>
+        </member>
+        <member name="M:imbACE.Network.remote.servers.aceRemoteTestServer.received(imbACE.Network.remote.instance.aceRemoteInstanceBase,imbACE.Network.remote.events.aceRemoteInstanceBaseEventArgs)">
+            <summary>
+            Reaction on something received
+            </summary>
+            <param name="instance">The instance.</param>
+            <param name="args">The <see cref="T:imbACE.Network.remote.events.aceRemoteInstanceBaseEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="T:imbACE.Network.tools.domainAnalysis">
+            <summary>
+            Analisys of domain landing URL
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.tools.domainAnalysis.#ctor">
+            <summary>
+            Constructor only for XML Serialization purposes
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.tools.domainAnalysis.#ctor(System.String)">
+            <summary>
+            Creates analysis of domain name from provided <c>url</c> string.
+            </summary>
+            <param name="url">The URL.</param>
+        </member>
+        <member name="P:imbACE.Network.tools.domainAnalysis.domainName">
+            <summary> Complete domain name like: tim-sistem.rs  when url was http://www.tim-sistem.rs </summary>
+        </member>
+        <member name="P:imbACE.Network.tools.domainAnalysis.domainUrlTokens">
+            <summary> </summary>
+        </member>
+        <member name="M:imbACE.Network.tools.domainAnalysis.analyse(System.String)">
+            <summary>
+            Analyses the specified URL.
+            </summary>
+            <param name="__url">The URL.</param>
+        </member>
+        <member name="M:imbACE.Network.tools.domainAnalysis.GetURLWithoutDomainName(System.String)">
+            <summary>
+            Makes the URL version without domain name. Like: from http://www.koplas.co.rs/proizvodi/mtx.php to /proizvodi/mtx.php
+            </summary>
+            <param name="fullUrl">The full URL.</param>
+            <returns></returns>
+        </member>
+        <member name="P:imbACE.Network.tools.domainAnalysis.urlProper">
+            <summary>
+            The proper form of <c>url</c> with shema definition: like: http://www.timsistem.co.rs  or http://emdip.co.rs
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.tools.domainAnalysis.url">
+            <summary>The original url form</summary>
+        </member>
+        <member name="P:imbACE.Network.tools.domainAnalysis.isFound">
+            <summary>
+            Da li je pronadjen TLD
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.tools.domainAnalysis.domainRootName">
+            <summary>
+            Domain name without the top level domain
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.tools.domainAnalysis.domainWords">
+            <summary>
+            Reci koje su otkrivene u domainRoot imenu domena
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.tools.domainAnalysis.tldDefinition">
+            <summary>
+            Referenca prema imbTopLevelDomain objektu
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.tools.domainAnalysis.tld">
+            <summary>
+            TOP LEVEL DOMAIN deo domena
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.tools.domainAnalysisEngine.getDomain(System.String)">
+            <summary>
+            Vraca TLD definiciju za upit: co.rs
+            </summary>
+            <param name="tldInput"></param>
+            <returns></returns>
+        </member>
+        <member name="M:imbACE.Network.tools.domainAnalysisEngine.getExactDomain(System.String)">
+            <summary>
+            Gets the exact domain.
+            </summary>
+            <param name="tldInput">The TLD input.</param>
+            <returns></returns>
+        </member>
+        <member name="T:imbACE.Network.tools.imbCountryInfoEngine">
+            <summary>
+            imbEngine koji izvrsava odredjenu logiku koristeci adekvatan imbProjectResource derivat
+            </summary>
+        </member>
+        <member name="F:imbACE.Network.tools.imbCountryInfoEngine.countryBase">
+            <summary>
+            Country Name Versus ImbCountryInfoEntry
+            </summary>
+        </member>
+        <member name="F:imbACE.Network.tools.imbCountryInfoEngine.countryBasePerCode">
+            <summary>
+            Country code versus imbCountryInfoEntry
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.tools.imbCountryInfoEngine.findCountry(System.String)">
+            <summary>
+            Izvrsava predmet Enginea
+            </summary>
+            <param name="itemToExecute"></param>
+        </member>
+        <member name="F:imbACE.Network.tools.imbCountryInfoEngine.isReady">
+            <summary>
+            Da li je vec iniciran engine
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.tools.imbCountryInfoEngine.checkEngine">
+            <summary>
+            pozivati pri svakom pozivanju enginea
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.tools.imbCountryInfoEngine.initiate">
+            <summary>
+            Inicira engine ako do sada nije iniciran
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.tools.imbCountryInfoEngine.initFromDomainManager">
+            <summary>
+            Ucitava podatke o drzavi na osnovu domain managera
+            </summary>
+            <param name="myDomainManager"></param>
+        </member>
+        <member name="P:imbACE.Network.tools.imbCountryInfoEntry.tldList">
+            <summary>
+            Lista svih top level domena
+            </summary>
+        </member>
+        <member name="F:imbACE.Network.tools.imbCountryInfoEntry._countryTLDindex">
+            <summary>
+            Top Level domains by TLD sufix
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:imbACE.Network.tools.imbCountryInfoEntry.countryTLDindex" -->
+        <member name="P:imbACE.Network.tools.imbCountryInfoEntry.countryCode">
+            <summary>
+            imbControl property countryCode tipa String
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.tools.imbCountryInfoEntry.countryName">
+            <summary>
+            imbControl property countryName tipa String
+            </summary>
+        </member>
+        <member name="T:imbACE.Network.tools.imbDomainManager">
+            <summary>
+            OLD TECH: manager koji učitava podatke o domenu
+            </summary>
+        </member>
+        <member name="T:imbACE.Network.tools.imbLanguageInfo">
+            <summary>
+            Basic Project Module [imbLanguageInfo] - imbVeles v4.0 lightClassTemplate
+            </summary>
+            <remarks>
+            Resurs koji koristi nove tehnike npr. nestedModules
+            </remarks>
+        </member>
+        <member name="P:imbACE.Network.tools.imbLanguageInfo.name">
+            <summary>
+            Ime jezika na engleskom
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.tools.imbLanguageInfo.isoCode2L">
+            <summary>
+            Oznaka jezika po dvoslovnom ISO standardu
+            </summary>
+        </member>
+        <member name="T:imbACE.Network.tools.imbNetworkTools">
+            <summary>
+            2013c> Skup zajednickih alata za Network operacije.
+            </summary>
+        </member>
+        <member name="F:imbACE.Network.tools.imbNetworkTools.URL_QUERYSTART">
+            <summary>
+            karakter kojim pocinje query u URL-u - ?
+            </summary>
+        </member>
+        <member name="F:imbACE.Network.tools.imbNetworkTools.URL_PARAMSEPARATOR">
+            <summary>
+            Karakter koji se razdvajaju parametri u upitu
+            </summary>
+        </member>
+        <member name="F:imbACE.Network.tools.imbNetworkTools.URL_SHEMAEND">
+            <summary>
+            Blok kojim se razdvaja SHEMA od ostatka URL-a @"://"
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.tools.imbNetworkTools.makeUri(System.String)">
+            <summary>
+            Pokusace da napravi URI - ako ne uspe, rezultat je Null
+            </summary>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="M:imbACE.Network.tools.imbNetworkTools.DisplayDnsAddresses">
+            <summary>
+            Prikazuje trenutne DNS adrese
+            </summary>
+        </member>
+        <member name="T:imbACE.Network.tools.imbServiceType">
+            <summary>
+            Klasa koja opisuje razlicite tipove veb servisa
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.tools.imbServiceType.title">
+            <summary>
+            Naziv vrste servisa
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.tools.imbServiceType.description">
+            <summary>
+            Opis servisa
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.tools.imbTopLevelDomain.countryCode">
+            <summary>
+            dvoslovna oznaka zemlje
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.tools.imbTopLevelDomain.domainName">
+            <summary>
+            Ime domena
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.tools.imbTopLevelDomain.count">
+            <summary>
+            Broj domena na serveru
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.tools.imbTopLevelDomain.nic">
+            <summary>
+            Adresa NIC-a
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.tools.imbTopLevelDomain.countryName">
+            <summary>
+            Naziv drzave na engleskom
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.tools.imbTopLevelDomain.doPreload">
+            <summary>
+            Da li da unapred ucita ovaj TLD
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.tools.imbTopLevelDomain.subDomainList">
+            <summary>
+            List obuhvacenih pod domena
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.tools.imbTopLevelDomain.subTLDs">
+            <summary>
+            TLD and all sub TLDS domain
+            </summary>
+            <value>
+            The sub tl ds.
+            </value>
+        </member>
+        <member name="M:imbACE.Network.tools.imbTopLevelDomain.RemoveTLD(System.String)">
+            <summary>
+            Removes the Top Level domain from domain name
+            </summary>
+            <param name="domainName">Name of the domain.</param>
+            <returns></returns>
+        </member>
+        <member name="M:imbACE.Network.tools.imbTopLevelDomain.loadXml(System.Xml.XmlNode)">
+            <summary>
+            Obradjuje XML node
+            </summary>
+            <param name="node"></param>
+            <returns></returns>
+        </member>
+        <member name="P:imbACE.Network.tools.imbWhoIsServer.url">
+            <summary>
+            Adresa WHO is Servera
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.tools.imbWhoIsServer.info">
+            <summary>
+            Opis servera
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.tools.imbWhoIsServer.mainDomainList">
+            <summary>
+            Lista glavnih domena koje pokriva
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.tools.imbWhoIsServer.subDomainList">
+            <summary>
+            lista pod domena
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.tools.imbWhoIsServer.GetWhoisInformation(System.String,System.String)">
+            <summary>
+            Vraca u formi text fajla WhoIs informaciju
+            </summary>
+            <param name="whoisServer">The whois server.</param>
+            <param name="url">The URL.</param>
+            <returns></returns>
+        </member>
+        <member name="T:imbACE.Network.tools.systemKnowledge">
+            <summary>
+            Klasa za upravljanje znanjem sistema
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.tools.systemKnowledge.prepare(imbACE.Core.data.mysql.dataBaseTarget,imbSCI.Core.reporting.ILogBuilder)">
+            <summary>
+            2013a: Poziv za priremu
+            Nije bitan sadržaj već samo postojanje poziva ka ovom metodu jer to osigurava da se instanciraju sve date statičke kolekcije
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.tools.systemKnowledge.rebuildKnowledge">
+            <summary>
+            2013a: prvenstveno je napravljeno za jednokratnu upotrebu, možda se upotrebi za eksportovanje različitog znanja sa veba
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.tools.systemKnowledge.topLevelDomains">
+            <summary>
+            kolekcija TLDa
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.tools.systemKnowledge.whoIsServers">
+            <summary>
+            kolekcija who is servera
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.tools.systemKnowledge.countries">
+            <summary>
+            Podaci o drzavama
+            </summary>
+        </member>
+        <member name="T:imbACE.Network.web.cache.cacheResponse">
+            <summary>
+            Cache response for http response and web content
+            </summary>
+            <seealso cref="!:imbCore.core.imbBindable" />
+        </member>
+        <member name="P:imbACE.Network.web.cache.cacheResponse.content">
+            <summary>
+            sadrzaj
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.cache.cacheResponse.httpContent">
+            <summary>
+            httpVezani sadrzaj
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.cache.cacheResponse.cacheFound">
+            <summary>
+            Da li postoji kesiran sadrzaj
+            </summary>
+        </member>
+        <member name="T:imbACE.Network.web.cache.webCacheSystem">
+            <summary>
+            Web Cache System
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.cache.webCacheSystem.ageCount">
+            <summary>
+            Cached file age limit in hours
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.web.cache.webCacheSystem.saveCache(System.String,System.String,imbACE.Network.web.result.webResponse)">
+            <summary>
+            Saves the cache.
+            </summary>
+            <param name="url">The URL.</param>
+            <param name="content">The content.</param>
+            <param name="httpResponse">The HTTP response.</param>
+        </member>
+        <member name="M:imbACE.Network.web.cache.webCacheSystem.hasCache(System.String)">
+            <summary>
+            Determines whether the specified URL has cache.
+            </summary>
+            <param name="url">The URL.</param>
+            <returns>
+              <c>true</c> if the specified URL has cache; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:imbACE.Network.web.cache.webCacheSystem.loadCache(System.String)">
+            <summary>
+            Ućitava sadržaj iz Cache-a u zavisnosti od podešavanja i dostupnosti zadatog URL-a
+            </summary>
+            <param name="url">URL koji treba da učita</param>
+            <returns>Vraća Cache Odgovor</returns>
+        </member>
+        <member name="M:imbACE.Network.web.cache.webCacheSystem.getCacheFilenameFromUrl(System.String,System.Boolean)">
+            <summary>
+            Vraca standarni htmlFileCache
+            </summary>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="T:imbACE.Network.web.context.webRequestContext">
+            <summary>
+            2013c: LowLevel resurs
+            </summary>
+        </member>
+        <member name="T:imbACE.Network.web.core.commonRequestSettings">
+            <summary>
+            Zajednicka podesavanja
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.commonRequestSettings.doLogCacheLoaded">
+            <summary>
+            Show log message when cache found
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.commonRequestSettings.doLogNewLoad">
+            <summary>
+            Show log message when new page is loaded
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.commonRequestSettings.doLogRequestError">
+            <summary>
+            Do log request error
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.commonRequestSettings.doTimeoutLimiter">
+            <summary>
+            Da li da
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.commonRequestSettings.doRetryExecution">
+            <summary>
+            Da li da
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.commonRequestSettings.doContentCheck">
+            <summary>
+            Da li da
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.commonRequestSettings.doSubdomainVariations">
+            <summary>
+            Da li da
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.commonRequestSettings.subdomainVariations">
+            <summary>
+            Lista poddomena koji se mogu pojaviti
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.commonRequestSettings.requestMethod">
+            <summary>
+            Metod koji se ocekuje od requesta
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.commonRequestSettings.url">
+            <summary>
+            Path koji treba da otvori
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.commonRequestSettings.action">
+            <summary>
+            Koju akciju izvrsava request
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.commonRequestSettings.timeCounter">
+            <summary>
+            Counter - ukupno vreme izvrsavanja
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.commonRequestSettings.retryWaitCounter">
+            <summary>
+            Counter - ceka izmedju potrebe za retry i pozivanja retry
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.commonRequestSettings.retryCounter">
+            <summary>
+            Counter - za retry
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.commonRequestSettings.loadCooloffCounter">
+            <summary>
+            Counter - za loadCooloff
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.commonRequestSettings.contentCriteriaTryCounter">
+            <summary>
+            Counter - za contentCriteriaTimeout
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.commonRequestSettings.contentCriteriaCheckDelayCounter">
+            <summary>
+            Counter - za koliko tickova treba da proveri ContentCriteria
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.commonRequestSettings.criteriaValue">
+            <summary>
+            REGEX ili XPATH upit za proveru sadrzaja
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.commonRequestSettings.contentCriteriaTimeoutAction">
+            <summary>
+            Akcija koju odradjuje kada contentCriteria try ipsadne
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.commonRequestSettings.criteriaType">
+            <summary>
+            tip contentCriteria testa
+            </summary>
+        </member>
+        <member name="T:imbACE.Network.web.core.domainElement">
+            <summary>
+            Element naziva domena
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.domainElement.url">
+            <summary>
+            URL pojavni oblik elementa domena
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.domainElement.position">
+            <summary>
+            domainElementPosition
+            </summary>
+        </member>
+        <member name="T:imbACE.Network.web.core.domainElementCollection">
+            <summary>
+            2013c: Kolekcija domenskih elemenata - koristi se za poddomene itd
+            </summary>
+        </member>
+        <member name="T:imbACE.Network.web.core.htmlDomSettings">
+            <summary>
+            2013c: LowLevel resurs
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.htmlDomSettings.doTransliterateToLat">
+            <summary>
+            Da izvrsi transliteraciju na latinicu
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.htmlDomSettings.doRemoveHtmlEntities">
+            <summary>
+            Da skloni HTML entitie
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.web.core.htmlDomSettings.sourcePreFilter(System.String)">
+            <summary>
+            Izvrsava filtriranje HTML source code-a prema podesavanjima
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:imbACE.Network.web.core.htmlDomSettings.getBlankDocument">
+            <summary>
+            Priprema HtmlDocument radi ucitavanja DOM-a
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:imbACE.Network.web.core.htmlDomSettings.doUpperCase">
+            <summary>
+            Da li da svi tagovi budu u upper case-u
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.htmlDomSettings.doAutocloseOnEnd">
+            <summary>
+            Da li da automatski zatvori tagove koji su ostali otvoreni
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.htmlDomSettings.doWorkInSafeMode">
+            <summary>
+            Da li da radi u sigurnom modu
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.htmlDomSettings.doAddDebugAttributes">
+            <summary>
+            Da li da
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.htmlDomSettings.doWriteEmptyNodes">
+            <summary>
+            Da li ispisuje i prazne nodove
+            </summary>
+        </member>
+        <member name="T:imbACE.Network.web.core.requestParameter">
+            <summary>
+            Request parametar koji ucestvuje u formiranju URL-a, ali i u izvrsavanju requesta
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.requestParameter.Value">
+            <summary>
+            imbControl property Value tipa String
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.requestParameter.Name">
+            <summary>
+            imbControl property Name tipa String
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.requestParameter.useIt">
+            <summary>
+            imbControl property useIt tipa Boolean
+            </summary>
+        </member>
+        <member name="T:imbACE.Network.web.core.requestParameterCollection">
+            <summary>
+            Skup parametara
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.web.core.requestParameterCollection.learnFromUrl(System.String)">
+            <summary>
+            Popunjava kolekciju parametara na osnovu URL-a. Moze biti ceo URL ili samo query deo URL-a. Moze biti i template
+            </summary>
+            <param name="input">Ulazni URL string - moze ceo, moze i samo query deo, moze da ima anchor itd.</param>
+            <returns>Broj parametara koji su ucitani u kolekciju</returns>
+        </member>
+        <member name="M:imbACE.Network.web.core.requestParameterCollection.makeGetQueryLine(imbACE.Network.web.core.requestParameterCollection.requestQueryStringType,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Vraca QUERY deo sa parametrima requesta - ako nema vrednosti onda ne prikazuje taj item
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:imbACE.Network.web.core.webLoaderBase">
+            <summary>
+            Osnovna klasa za objekat koji ucitava resurse preko veba
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.webLoaderBase.settings">
+            <summary>
+            Podesavanja za webLoader
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.webLoaderBase.onRequestBlockFinished_hasHandler">
+            <summary>
+            Proverava da li ima handler vec
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.web.core.webLoaderBase.callRequestBlockFinished(imbACE.Network.web.request.webRequestBlock,imbACE.Network.web.events.webRequestBlockEventArgs)">
+            <summary>
+            Event invoker za RequestBlockFinished - ako je ovaj objekat uzrok dogadjaja onda moze i bez argumenata da se pozove
+            </summary>
+            <param name="sender">Objekat koji je pozvao izvrsavanje - ako je null smatrace da je ovaj objekat uzrok dogadjaja</param>
+            <param name="args">Argumenti dogadjaja - ako je null postavlja da je unknown</param>
+        </member>
+        <member name="E:imbACE.Network.web.core.webLoaderBase.onRequestBlockFinished">
+            <summary>
+            Event handler za RequestBlockFinished
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.web.core.webLoaderBase.onRequestBlockFinished_addHandler(imbACE.Network.web.events.webLoaderEvent)">
+            <summary>
+            Postavlja event handler za RequestBlockFinished (onRequestBlockFinished)
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.webLoaderBase.onRequestBlockAborted_hasHandler">
+            <summary>
+            Proverava da li ima handler vec
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.web.core.webLoaderBase.callRequestBlockAborted(imbACE.Network.web.request.webRequestBlock,imbACE.Network.web.events.webRequestBlockEventArgs)">
+            <summary>
+            Event invoker za RequestBlockAborted - ako je ovaj objekat uzrok dogadjaja onda moze i bez argumenata da se pozove
+            </summary>
+            <param name="sender">Objekat koji je pozvao izvrsavanje - ako je null smatrace da je ovaj objekat uzrok dogadjaja</param>
+            <param name="args">Argumenti dogadjaja - ako je null postavlja da je unknown</param>
+        </member>
+        <member name="E:imbACE.Network.web.core.webLoaderBase.onRequestBlockAborted">
+            <summary>
+            Event handler za RequestBlockAborted
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.web.core.webLoaderBase.onRequestBlockAborted_addHandler(imbACE.Network.web.events.webLoaderEvent)">
+            <summary>
+            Postavlja event handler za RequestBlockAborted (onRequestBlockAborted)
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.webLoaderBase.onProxyChangeCall_hasHandler">
+            <summary>
+            Proverava da li ima handler vec
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.web.core.webLoaderBase.callProxyChangeCall(imbACE.Network.web.core.webLoaderBase,imbACE.Network.web.events.webLoaderEventArgs)">
+            <summary>
+            Event invoker za ProxyChangeCall - ako je ovaj objekat uzrok dogadjaja onda moze i bez argumenata da se pozove
+            </summary>
+            <param name="sender">Objekat koji je pozvao izvrsavanje - ako je null smatrace da je ovaj objekat uzrok dogadjaja</param>
+            <param name="args">Argumenti dogadjaja - ako je null postavlja da je unknown</param>
+        </member>
+        <member name="E:imbACE.Network.web.core.webLoaderBase.onProxyChangeCall">
+            <summary>
+            Event handler za ProxyChangeCall
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.web.core.webLoaderBase.onProxyChangeCall_addHandler(imbACE.Network.web.events.webLoaderEvent)">
+            <summary>
+            Postavlja event handler za ProxyChangeCall (onProxyChangeCall)
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.webLoaderBase.onProxyChanged_hasHandler">
+            <summary>
+            Proverava da li ima handler vec
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.web.core.webLoaderBase.callProxyChanged(imbACE.Network.web.core.webLoaderBase,imbACE.Network.web.events.webLoaderEventArgs)">
+            <summary>
+            Event invoker za ProxyChanged - ako je ovaj objekat uzrok dogadjaja onda moze i bez argumenata da se pozove
+            </summary>
+            <param name="sender">Objekat koji je pozvao izvrsavanje - ako je null smatrace da je ovaj objekat uzrok dogadjaja</param>
+            <param name="args">Argumenti dogadjaja - ako je null postavlja da je unknown</param>
+        </member>
+        <member name="E:imbACE.Network.web.core.webLoaderBase.onProxyChanged">
+            <summary>
+            Event handler za ProxyChanged
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.web.core.webLoaderBase.onProxyChanged_addHandler(imbACE.Network.web.events.webLoaderEvent)">
+            <summary>
+            Postavlja event handler za ProxyChanged (onProxyChanged)
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.webLoaderBase.onExecutionProgress_hasHandler">
+            <summary>
+            Proverava da li ima handler vec
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.web.core.webLoaderBase.callExecutionProgress(System.String)">
+            <summary>
+            Event invoker za ExecutionProgress - Progress
+            </summary>
+        </member>
+        <member name="E:imbACE.Network.web.core.webLoaderBase.onExecutionProgress">
+            <summary>
+            Event handler za ExecutionProgress
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.web.core.webLoaderBase.onExecutionProgress_addHandler(imbACE.Network.web.events.webLoaderEvent)">
+            <summary>
+            Postavlja event handler za ExecutionProgress (onExecutionProgress)
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.web.core.webLoaderBase.createNewRequestBlock(System.String)">
+            <summary>
+            Pravi novi request block i postavlja ga za current
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:imbACE.Network.web.core.webLoaderBase.addNewRequest(System.String,imbACE.Network.web.enums.webRequestActionType,imbACE.Network.web.request.webRequestType)">
+            <summary>
+            Pravi novi request i dodaje ga u trenutni request block
+            </summary>
+            <param name="__url">URL koji treba da se izvrsi</param>
+            <param name="__action">Akcija koja treba da se izvrsi</param>
+            <param name="__type">Tip webRequesta</param>
+            <returns>Novo kreirani request</returns>
+        </member>
+        <member name="M:imbACE.Network.web.core.webLoaderBase.purgeExecutedBlocksAndRequests(System.Boolean)">
+            <summary>
+            Brise RequestBlock-ove koji su izvrseni
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.web.core.webLoaderBase.getCurrentBlock">
+            <summary>
+            Vraca Request block koji sadrzi tmp request listu
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:imbACE.Network.web.core.webLoaderBase.executeRequest(imbACE.Network.web.request.webRequest,imbACE.Network.web.enums.executionSyncMode,System.Boolean)">
+            <summary>
+            Izvrsava jedan request
+            </summary>
+            <param name="request">Zahtev koji treba da se izvrsi</param>
+            <param name="__syncMode">Rezim izvrsavanja</param>
+            <param name="purge">Da li da obrise sve ranije izvrsene Blokove i Zahteve ?</param>
+            <returns>Vraca objekat sa rezultatom</returns>
+        </member>
+        <member name="M:imbACE.Network.web.core.webLoaderBase.executeRequest(System.String,imbACE.Network.web.enums.executionSyncMode,imbACE.Network.web.enums.webRequestActionType,imbACE.Network.web.request.webRequestType,System.Boolean)">
+            <summary>
+            Omogućava ad-hoc izvršavanje webRequest-a
+            </summary>
+            <param name="__url"></param>
+            <param name="__syncMode"></param>
+            <param name="__action"></param>
+            <param name="__type"></param>
+            <param name="purge">Da li da obrise sve ranije izvrsene Blokove i Zahteve ?</param>
+            <returns>Vraća dobijeni rezultat</returns>
+        </member>
+        <member name="P:imbACE.Network.web.core.webLoaderBase.requestBlock">
+            <summary>
+            First requestBlock - trenutno odabrani request block
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.webLoaderBase.has_requestBlock">
+            <summary>
+            Da li ima requestBlock?
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.webLoaderBase.requestBlocks">
+            <summary>
+            Svi elementi: requestBlocks
+            </summary>
+        </member>
+        <member name="T:imbACE.Network.web.core.webLoaderSettings">
+            <summary>
+            Podesavanja za webLoader
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.webLoaderSettings.timeout">
+            <summary>
+            Time out in milliseconds -- settings set by spiderWebLoader
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.webLoaderSettings.tickDuration">
+            <summary>
+            Trajanje jednog ticka u milisekundama
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.webLoaderSettings.proxyErrorChangeTrigger">
+            <summary>
+            Posle koliko neuspesno izvrsenih requestova da pozove promenu proxija
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.webLoaderSettings.proxyExecutedChangeTrigger">
+            <summary>
+            Posle koliko uspesno izvrsenih requestova da pozove promenu proxija
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.webLoaderSettings.doUseProxy">
+            <summary>
+            Da li da koristi proxy modul - ako postoji
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.webLoaderSettings.doUseCache">
+            <summary>
+            Da li da koristi cache sistem
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.webLoaderSettings.blockExecuteMode">
+            <summary>
+            Mode for block execution
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.webLoaderSettings.doRetryOnTimeoutError">
+            <summary>
+            Da li da pokusava ponovo i kada je timeout error
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.webLoaderSettings.doRetryOnContentError">
+            <summary>
+            Da li da pokusava ponovo i kada je Content error
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.webLoaderSettings.htmlSettings">
+            <summary>
+            Podesavanja za HTML dom
+            </summary>
+        </member>
+        <member name="T:imbACE.Network.web.core.webRequestApiSettings">
+            <summary>
+            Skup podesavanja za API request
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.webRequestApiSettings.apiSignatureLine">
+            <summary>
+            Linija sa potpisom - temp
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.webRequestApiSettings.apiResultLimit">
+            <summary>
+            API result limit (like SQL limit)
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.webRequestApiSettings.apiResultOfset">
+            <summary>
+            API result ofset (like SQL LIMIT OFSET)
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.webRequestApiSettings.apiTimeStampFormat">
+            <summary>
+            format koji se koristi za vremenski pecat
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.webRequestApiSettings.apiServiceURL">
+            <summary>
+            API service URL - koristi se kao osnova za generisanje API request URL-a
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.webRequestApiSettings.apiSignatureType">
+            <summary>
+            Tip potpisa za proces autorizacije
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.webRequestApiSettings.apiPageNumber">
+            <summary>
+            API call page number to load (option)
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.webRequestApiSettings.apiSecretKey">
+            <summary>
+            API tajni kljuc za pristup
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.webRequestApiSettings.apiKey">
+            <summary>
+            API kljuc za pristup
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.core.webRequestApiSettings.targetAPI">
+            <summary>
+            API za koji je predvidjen request
+            </summary>
+        </member>
+        <member name="T:imbACE.Network.web.enums.apiType">
+            <summary>
+            Tip APIja
+            </summary>
+        </member>
+        <member name="T:imbACE.Network.web.enums.templateFieldWebRequest">
+            <summary>
+            Reporting template names
+            </summary>
+        </member>
+        <member name="F:imbACE.Network.web.enums.templateFieldWebRequest.res_headerReport">
+            <summary>
+            String report on headers loaded with result
+            </summary>
+        </member>
+        <member name="F:imbACE.Network.web.enums.templateFieldWebRequest.res_cookiesReport">
+            <summary>
+            Cookies loaded with result
+            </summary>
+        </member>
+        <member name="F:imbACE.Network.web.enums.templateFieldWebRequest.doc_source">
+            <summary>
+            Original source
+            </summary>
+        </member>
+        <member name="F:imbACE.Network.web.enums.templateFieldWebRequest.doc_sourceNormalized">
+            <summary>
+            Normalized document source
+            </summary>
+        </member>
+        <member name="T:imbACE.Network.web.enums.webRequestActionType">
+            <summary>
+            Modovi učitavanja
+            </summary>
+        </member>
+        <member name="F:imbACE.Network.web.enums.webRequestActionType.openUrl">
+            <summary>
+            Otvara URL i pravi Document dom pomocu HtmlAgility packa
+            </summary>
+        </member>
+        <member name="T:imbACE.Network.web.events.webLoaderEvent">
+            <summary>
+            Delegat eventa
+            </summary>
+            <param name="sender"></param>
+            <param name="args"></param>
+        </member>
+        <member name="T:imbACE.Network.web.events.webLoaderEventArgs">
+            <summary>
+            Objekat koji opisuje dogadjaj koji se desio objektu: webLoader
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.events.webLoaderEventArgs.type">
+            <summary>
+            Tip dogadjaja - ne moze da se prepravlja kasnije
+            </summary>
+        </member>
+        <member name="T:imbACE.Network.web.events.webLoaderEventType">
+            <summary>
+            Tip dogadjaja - za objekat: webLoader
+            </summary>
+        </member>
+        <member name="T:imbACE.Network.web.events.webRequestBlockEvent">
+            <summary>
+            Delegat eventa
+            </summary>
+            <param name="sender"></param>
+            <param name="args"></param>
+        </member>
+        <member name="T:imbACE.Network.web.events.webRequestBlockEventArgs">
+            <summary>
+            Objekat koji opisuje dogadjaj koji se desio objektu: webRequestBlock
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.events.webRequestBlockEventArgs.type">
+            <summary>
+            Tip dogadjaja - ne moze da se prepravlja kasnije
+            </summary>
+        </member>
+        <member name="T:imbACE.Network.web.events.webRequestBlockEventType">
+            <summary>
+            Tip dogadjaja - za objekat: webRequestBlock
+            </summary>
+        </member>
+        <member name="T:imbACE.Network.web.events.webRequestEvent">
+            <summary>
+            Delegat eventa
+            </summary>
+            <param name="sender"></param>
+            <param name="args"></param>
+        </member>
+        <member name="T:imbACE.Network.web.events.webRequestEventArgs">
+            <summary>
+            Objekat koji opisuje dogadjaj koji se desio objektu: webRequest
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.events.webRequestEventArgs.type">
+            <summary>
+            Tip dogadjaja - ne moze da se prepravlja kasnije
+            </summary>
+        </member>
+        <member name="T:imbACE.Network.web.events.webRequestEventType">
+            <summary>
+            Tip dogadjaja - za objekat: webRequest - sluzi i za status
+            </summary>
+        </member>
+        <member name="T:imbACE.Network.web.request.webRequest">
+            <summary>
+            Osnovna varijanta zahteva - omogucava TimeOut
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.web.request.webRequest.AppendDataFields(System.Data.PropertyCollection)">
+            <summary>
+            Appends its data points into new or existing property collection --- automatically called by result base
+            </summary>
+            <param name="data">Property collection to add data into</param>
+            <returns>Updated or newly created property collection</returns>
+        </member>
+        <member name="P:imbACE.Network.web.request.webRequest.proxyToUse">
+            <summary>
+            Definicija proxija koji treba da se koristi
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.web.request.webRequest.syncWaitingLoop(imbACE.Network.web.core.webLoaderSettings,imbACE.Network.web.enums.executionSyncMode)">
+            <summary>
+            Trenutni rezultat requesta
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.web.request.webRequest.deploySettings(imbACE.Network.web.core.webLoaderSettings,imbACE.Network.web.events.webRequestEvent,imbACE.Network.web.events.webRequestEvent,imbACE.Network.web.events.webRequestEvent)">
+            <summary>
+            Primenjuje podesavanja i postavlja event handlere
+            </summary>
+            <param name="settings">Podesavanja koja treba da primenu</param>
+            <param name="__onExecutedOk">Poziva se nakon finalizacije</param>
+            <param name="__onError">Poziva se za timeout ili neku drugu gresku</param>
+            <param name="__onRetry">Poziva se ako dodje do ponavljanja requesta</param>
+        </member>
+        <member name="P:imbACE.Network.web.request.webRequest.settings">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:imbACE.Network.web.request.webRequest.abortRequest(imbACE.Network.web.core.webLoaderSettings)">
+            <summary>
+            Abort the current request
+            </summary>
+            <param name="settings"></param>
+        </member>
+        <member name="M:imbACE.Network.web.request.webRequest.checkRequest(imbACE.Network.web.core.webLoaderSettings)">
+            <summary>
+            Calls all counters and check the status of request
+            </summary>
+            <param name="settings"></param>
+        </member>
+        <member name="M:imbACE.Network.web.request.webRequest.executeRequest(imbACE.Network.web.core.webLoaderSettings)">
+            <summary>
+            Addhock request execution Executes the request
+            </summary>
+            <param name="settings">The settings.</param>
+            <returns></returns>
+        </member>
+        <member name="P:imbACE.Network.web.request.webRequest.htmlSettings">
+            <summary>
+            Podesavanja za HTML dom
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.request.webRequest.onExecutionTimeout_hasHandler">
+            <summary>
+            Proverava da li ima handler vec
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.web.request.webRequest.callExecutionTimeout">
+            <summary>
+            Event invoker za ExecutionTimeout - Execution time limit reached
+            </summary>
+        </member>
+        <member name="E:imbACE.Network.web.request.webRequest.onExecutionTimeout">
+            <summary>
+            Event handler za ExecutionTimeout
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.web.request.webRequest.onExecutionTimeout_addHandler(imbACE.Network.web.events.webRequestEvent)">
+            <summary>
+            Postavlja event handler za ExecutionTimeout (onExecutionTimeout)
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.request.webRequest.onExecutionError_hasHandler">
+            <summary>
+            Proverava da li ima handler vec
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.web.request.webRequest.callExecutionError(imbACE.Network.web.events.webRequestEventType,System.String)">
+            <summary>
+            Event invoker za ExecutionError - Error occoured
+            </summary>
+        </member>
+        <member name="E:imbACE.Network.web.request.webRequest.onExecutionError">
+            <summary>
+            Event handler za ExecutionError
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.web.request.webRequest.onExecutionError_addHandler(imbACE.Network.web.events.webRequestEvent)">
+            <summary>
+            Postavlja event handler za ExecutionError (onExecutionError)
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.request.webRequest.onExecutionDone_hasHandler">
+            <summary>
+            Proverava da li ima handler vec
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.web.request.webRequest.callExecutionDone(System.String)">
+            <summary>
+            Event invoker za ExecutionDone - izvrsavanje je uspesno obavljeno
+            </summary>
+        </member>
+        <member name="E:imbACE.Network.web.request.webRequest.onExecutionDone">
+            <summary>
+            Event handler za ExecutionDone
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.web.request.webRequest.onExecutionDone_addHandler(imbACE.Network.web.events.webRequestEvent)">
+            <summary>
+            Postavlja event handler za ExecutionDone (onExecutionDone)
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.request.webRequest.onRetryCalled_hasHandler">
+            <summary>
+            Proverava da li ima handler vec
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.web.request.webRequest.callRetryCalled">
+            <summary>
+            Event invoker za RetryCalled - request execution retried
+            </summary>
+        </member>
+        <member name="E:imbACE.Network.web.request.webRequest.onRetryCalled">
+            <summary>
+            Event handler za RetryCalled
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.web.request.webRequest.onRetryCalled_addHandler(imbACE.Network.web.events.webRequestEvent)">
+            <summary>
+            Postavlja event handler za RetryCalled (onRetryCalled)
+            </summary>
+        </member>
+        <member name="T:imbACE.Network.web.request.webRequestBase">
+            <summary>
+            Abstraktna osnova za webRequest
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.request.webRequestBase.isActive">
+            <summary>
+            Da li je aktivan Request - if status == webRequestEventType.scheduled
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.request.webRequestBase.isExecutedOrFailed">
+            <summary>
+            Da li je izvrseno/greska? ako je scheduled ili executing onda vraca false
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.request.webRequestBase.isErrorStatus">
+            <summary>
+            Da li je trenutno u statusu greske?
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.request.webRequestBase.hasContentCriteria">
+            <summary>
+            da li ima Content Criteria
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.request.webRequestBase.status">
+            <summary>
+            Bindable property
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.request.webRequestBase.urlObject">
+            <summary>
+            URI objekat za prosledjeni URL
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.web.request.webRequestBase.executeBegin(imbACE.Network.web.core.webLoaderSettings)">
+            <summary>
+            Pocinje izvrsavanje requesta
+            </summary>
+            <param name="settings"></param>
+        </member>
+        <member name="M:imbACE.Network.web.request.webRequestBase.executeEnd(imbACE.Network.web.core.webLoaderSettings)">
+            <summary>
+            zavrsava izvrsavanje requesta
+            </summary>
+            <param name="settings"></param>
+        </member>
+        <member name="M:imbACE.Network.web.request.webRequestBase.cancelAllActivities">
+            <summary>
+            Prekida sve aktivnosti web client, tcp client, web browser i drugih objekata
+            </summary>
+        </member>
+        <member name="T:imbACE.Network.web.request.webRequestBlock">
+            <summary>
+            Blok zahteva prema webLoaderu - izvrsavaju se paralelno
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.request.webRequestBlock.title">
+            <summary>
+            naziv request bloka
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.request.webRequestBlock.isWorking">
+            <summary>
+            Da li jos uvek ima webRequest-a koji se cekaju
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.request.webRequestBlock.onBlockFinishedEvent_hasHandler">
+            <summary>
+            Proverava da li ima handler vec
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.web.request.webRequestBlock.callBlockFinishedEvent">
+            <summary>
+            Event invoker za BlockFinishedEvent - ako je ovaj objekat uzrok dogadjaja onda moze i bez argumenata da se pozove
+            </summary>
+            <param name="sender">Objekat koji je pozvao izvrsavanje - ako je null smatrace da je ovaj objekat uzrok dogadjaja</param>
+            <param name="args">Argumenti dogadjaja - ako je null postavlja da je unknown</param>
+        </member>
+        <member name="E:imbACE.Network.web.request.webRequestBlock.onBlockFinishedEvent">
+            <summary>
+            Event handler za BlockFinishedEvent
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.web.request.webRequestBlock.onBlockFinishedEvent_addHandler(imbACE.Network.web.events.webRequestBlockEvent)">
+            <summary>
+            Postavlja event handler za BlockFinishedEvent (onBlockFinishedEvent)
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.request.webRequestBlock.onBlockAbortedEvent_hasHandler">
+            <summary>
+            Proverava da li ima handler vec
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.web.request.webRequestBlock.callBlockAbortedEvent(System.String)">
+            <summary>
+            Event invoker za BlockAbortedEvent - ako je ovaj objekat uzrok dogadjaja onda moze i bez argumenata da se pozove
+            </summary>
+            <param name="sender">Objekat koji je pozvao izvrsavanje - ako je null smatrace da je ovaj objekat uzrok dogadjaja</param>
+            <param name="args">Argumenti dogadjaja - ako je null postavlja da je unknown</param>
+        </member>
+        <member name="E:imbACE.Network.web.request.webRequestBlock.onBlockAbortedEvent">
+            <summary>
+            Event handler za BlockAbortedEvent
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.web.request.webRequestBlock.onBlockAbortedEvent_addHandler(imbACE.Network.web.events.webRequestBlockEvent)">
+            <summary>
+            Postavlja event handler za BlockAbortedEvent (onBlockAbortedEvent)
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.request.webRequestBlock.onExecutionProgress_hasHandler">
+            <summary>
+            Proverava da li ima handler vec
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.web.request.webRequestBlock.callExecutionProgress">
+            <summary>
+            Event invoker za ExecutionProgress - Progress
+            </summary>
+        </member>
+        <member name="E:imbACE.Network.web.request.webRequestBlock.onExecutionProgress">
+            <summary>
+            Event handler za ExecutionProgress
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.web.request.webRequestBlock.onExecutionProgress_addHandler(imbACE.Network.web.events.webRequestBlockEvent)">
+            <summary>
+            Postavlja event handler za ExecutionProgress (onExecutionProgress)
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.request.webRequestBlock.executeMode">
+            <summary>
+            Nacin na koji se izvrsava Block
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.request.webRequestBlock.executeSyncMode">
+            <summary>
+            Mod izvrsavanja
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.request.webRequestBlock.tickDelay">
+            <summary>
+            vreme u milisekundama izmedju dve provere statusa
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.web.request.webRequestBlock.purgeExecutedRequests">
+            <summary>
+            izbacuje iz sebe sve koji su gotovi
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:imbACE.Network.web.request.webRequestBlock.abortExecution(imbACE.Network.web.core.webLoaderSettings)">
+            <summary>
+            Prekida izvrsavanje
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:imbACE.Network.web.request.webRequestBlock.executeBlock(imbACE.Network.web.core.webLoaderSettings,imbACE.Network.web.enums.executionSyncMode,imbACE.Network.web.events.webRequestBlockEvent,imbACE.Network.web.events.webRequestBlockEvent,imbACE.Network.web.events.webRequestBlockEvent)">
+            <summary>
+            Pokreze izvrsavanje bloka
+            </summary>
+            <param name="settings">Podesavanja webLoader-a</param>
+            <param name="__syncMode">mod sinhronizacije</param>
+            <returns>Referencu prema webResultBlock-u</returns>
+        </member>
+        <member name="M:imbACE.Network.web.request.webRequestBlock.monitoringLoop(imbACE.Network.web.core.webLoaderSettings)">
+             <summary>
+            
+             </summary>
+             <param name="settings"></param>
+             <param name="__syncMode"></param>
+        </member>
+        <member name="P:imbACE.Network.web.request.webRequestBlock.output">
+            <summary>
+            Blok rezultata - ako je async onda je samo prazan objekat na pocetku izvrsavanja
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.request.webRequestBlock.executeThread">
+            <summary>
+            glavni thread koji je pokrenuo izvrsavanje
+            </summary>
+        </member>
+        <member name="T:imbACE.Network.web.request.webRequestBrowser">
+            <summary>
+            Request koji ze izvrsava preko Browser kontrole
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.web.request.webRequestBrowser.executeRequest(imbACE.Network.web.core.webLoaderSettings,imbACE.Network.web.enums.executionSyncMode,imbACE.Network.web.events.webRequestEvent,imbACE.Network.web.events.webRequestEvent,imbACE.Network.web.events.webRequestEvent)">
+            <summary>
+            Izvrsavanje
+            </summary>
+            <param name="settings">Podesavanja loadera</param>
+            <param name="__syncMode">Tip izvrsavanja</param>
+            <param name="__onExecutedOk">kada je executedOk</param>
+            <param name="__onError">za sve vrste gresaka</param>
+            <param name="__onRetry">kada se desi retry</param>
+        </member>
+        <member name="T:imbACE.Network.web.request.webRequestClient">
+            <summary>
+            Standardni web request - ide preko web client-a
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.request.webRequestClient.method">
+            <summary>
+            Method kojim se prostupa web resursu
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.web.request.webRequestClient.executeRequest(imbACE.Network.web.core.webLoaderSettings,imbACE.Network.web.enums.executionSyncMode,imbACE.Network.web.events.webRequestEvent,imbACE.Network.web.events.webRequestEvent,imbACE.Network.web.events.webRequestEvent)">
+            <summary>
+            Izvrsavanje
+            </summary>
+            <param name="settings">Podesavanja loadera</param>
+            <param name="__syncMode">Tip izvrsavanja</param>
+            <param name="__onExecutedOk">kada je executedOk</param>
+            <param name="__onError">za sve vrste gresaka</param>
+            <param name="__onRetry">kada se desi retry</param>
+        </member>
+        <member name="M:imbACE.Network.web.request.webRequestClient.getResponse(System.IAsyncResult)">
+            <summary>
+            Gets the response.
+            </summary>
+            <param name="__result">The result.</param>
+        </member>
+        <member name="P:imbACE.Network.web.request.webRequestClient.webClient">
+            <summary>
+            Klijent za HTML agility operacije
+            </summary>
+        </member>
+        <member name="T:imbACE.Network.web.request.webRequestFile">
+            <summary>
+            Za rad sa fajllovima, downloadom, FTP-om
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.request.webRequestFile.webClient">
+            <summary>
+            Klijent za HTML agility operacije
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.request.webRequestFile.fileStream">
+            <summary>
+            tmpFileStream
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.request.webRequestFile.localPath">
+            <summary>
+            Putanja prema lokalnom fajlu
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.web.request.webRequestFile.executeRequest(imbACE.Network.web.core.webLoaderSettings,imbACE.Network.web.enums.executionSyncMode,imbACE.Network.web.events.webRequestEvent,imbACE.Network.web.events.webRequestEvent,imbACE.Network.web.events.webRequestEvent)">
+            <summary>
+            Izvrsavanje
+            </summary>
+            <param name="settings">Podesavanja loadera</param>
+            <param name="__syncMode">Tip izvrsavanja</param>
+            <param name="__onExecutedOk">kada je executedOk</param>
+            <param name="__onError">za sve vrste gresaka</param>
+            <param name="__onRetry">kada se desi retry</param>
+        </member>
+        <member name="T:imbACE.Network.web.request.webRequestLookup">
+            <summary>
+            Request za izvrsavanje IP Lookup-a, WhoIs, provera URL-a itd
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.request.webRequestLookup.tcpClient">
+            <summary>
+            TCP client
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.request.webRequestLookup.customServer">
+            <summary>
+            adresa proizvoljnog WhoIs servera koji treba da koristi
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.web.request.webRequestLookup.executeRequest(imbACE.Network.web.core.webLoaderSettings,imbACE.Network.web.enums.executionSyncMode,imbACE.Network.web.events.webRequestEvent,imbACE.Network.web.events.webRequestEvent,imbACE.Network.web.events.webRequestEvent)">
+            <summary>
+            Izvrsavanje
+            </summary>
+            <param name="settings">Podesavanja loadera</param>
+            <param name="__syncMode">Tip izvrsavanja</param>
+            <param name="__onExecutedOk">kada je executedOk</param>
+            <param name="__onError">za sve vrste gresaka</param>
+            <param name="__onRetry">kada se desi retry</param>
+        </member>
+        <member name="T:imbACE.Network.web.result.webDocument">
+            <summary>
+            Osnovni nosilac ucitanog dokumenta/podatka
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.web.result.webDocument.AppendDataFields(System.Data.PropertyCollection)">
+            <summary>
+            Appends its data points into new or existing property collection -- automatically called from webResultBase
+            </summary>
+            <param name="data">Property collection to add data into</param>
+            <returns>Updated or newly created property collection</returns>
+        </member>
+        <member name="P:imbACE.Network.web.result.webDocument.nsPrefix">
+            <summary>
+            Podrazumevani namespace prefix dokumenta koji je trenutno ucitan
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.result.webDocument.hasDocument">
+            <summary>
+            Da li ima document DOM objekat instanciran
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.result.webDocument.document">
+            <summary>
+            DOM ucitanog dokumenta
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.web.result.webDocument.deploySource(System.String,imbACE.Network.web.enums.webRequestActionType,imbACE.Network.web.core.htmlDomSettings)">
+            <summary>
+            Preuzima __source String i pravi DOM objekat prema podesavanju
+            </summary>
+            <param name="__source"></param>
+            <param name="action"></param>
+            <param name="htmlSettings"></param>
+        </member>
+        <member name="M:imbACE.Network.web.result.webDocument.detectDocumentType">
+            <summary>
+            Utvrdjuje tip dokumenta
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:imbACE.Network.web.result.webDocument.checkCriteria(System.String,imbACE.Network.web.enums.contentCriteriaType)">
+            <summary>
+            Proverava da li dokument ispunjava kriterijum
+            </summary>
+            <param name="criteriaValue"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="P:imbACE.Network.web.result.webDocument.processedSource">
+            <summary> </summary>
+        </member>
+        <member name="M:imbACE.Network.web.result.webDocument.releaseDocumentFromMemory">
+            <summary>
+            Clears all document source, processed source, HtmlAgility document and XPath navigator from the memory
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.web.result.webDocument.processedDocumentSource">
+            <summary>
+            Processing document source
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:imbACE.Network.web.result.webDocument.getDocumentNavigator">
+            <summary>
+            Glavna komanda za dobijanje navigatora
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:imbACE.Network.web.result.webDocument.source">
+            <summary>
+            Izvodni kod ucitanog web dokumenta
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.result.webDocument.documentType">
+            <summary>
+            tip DOM-a
+            </summary>
+        </member>
+        <member name="T:imbACE.Network.web.result.webHeader">
+            <summary>
+            imbVeles Web Header
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.result.webHeader.requestHeader">
+            <summary>
+            tip hedera
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.result.webHeader.value">
+            <summary>
+            Podatak koji je upisan
+            </summary>
+        </member>
+        <member name="T:imbACE.Network.web.result.webResponse">
+            <summary>
+            imbVeles http/web/file response objekat
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.web.result.webResponse.AppendDataFields(System.Data.PropertyCollection)">
+            <summary>
+            Appends its data points into new or existing property collection -- automatically called by webResultBase
+            </summary>
+            <param name="data">Property collection to add data into</param>
+            <returns>Updated or newly created property collection</returns>
+        </member>
+        <member name="P:imbACE.Network.web.result.webResponse.encoding">
+            <summary>
+            Enkodiranje koje je korišćeno
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.result.webResponse.server">
+            <summary>
+            server koji je poslao odgovor
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.result.webResponse.cookies">
+            <summary>
+            lista kukija
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.result.webResponse.headers">
+            <summary>
+            Hederi koji su došli uz odgovor
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.result.webResponse.type">
+            <summary>
+            Tip web response objekta
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.result.webResponse.contentType">
+            <summary>
+            Tip sadržaja koji je učitan
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.result.webResponse.responseUrl">
+            <summary>
+            Adresa sa koje je stvarno došao odgovor
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.result.webResponse.responseDomain">
+            <summary>
+            Domen sa koga je stigao odgovor
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.result.webResponse.method">
+            <summary>
+            Metod kojim je napravljen upit
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.result.webResponse.statusCode">
+            <summary>
+            statusni kod
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.result.webResponse.statusDesc">
+            <summary>
+            opis statusa
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.result.webResponse.charset">
+            <summary>
+            Headeri u odgovoru
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.web.result.webResponse.#ctor(System.Net.WebResponse)">
+            <summary>
+            Formira webResponse na osnovu prosledjeno web response-a
+            </summary>
+            <param name="response"></param>
+        </member>
+        <member name="P:imbACE.Network.web.result.webResponse._response">
+            <summary>
+            response objekat koji je dobio pri instanciranju
+            </summary>
+        </member>
+        <member name="T:imbACE.Network.web.result.webResult">
+            <summary>
+            Osnovna verzija Rezultata
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.web.result.webResult.#ctor(imbACE.Network.web.cache.cacheResponse)">
+            <summary>
+            Building webResult from <see cref="T:imbACE.Network.web.cache.cacheResponse"/>
+            </summary>
+            <param name="__response">The response.</param>
+        </member>
+        <member name="M:imbACE.Network.web.result.webResult.releaseDocumentFromMemory">
+            <summary>
+            Releases the document from memory
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.result.webResult.byteSize">
+            <summary>
+            Byte size of the document source code
+            </summary>
+        </member>
+        <member name="T:imbACE.Network.web.result.webResultBase">
+            <summary>
+            Osnova klase sa rezultatom webRequest-a
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.web.result.webResultBase.AppendDataFields(System.Data.PropertyCollection)">
+            <summary>
+            Appends its data points into new or existing property collection
+            </summary>
+            <param name="data">Property collection to add data into</param>
+            <returns>Updated or newly created property collection</returns>
+        </member>
+        <member name="P:imbACE.Network.web.result.webResultBase.dataObject">
+            <summary>
+            Opcioni objekat za smestanje podataka
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.result.webResultBase.document">
+            <summary>
+            Web dokument koji je ucitan
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.result.webResultBase.response">
+            <summary>
+            Web odgovor koji je dobijen
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.result.webResultBase.request">
+            <summary>
+            Instanca prema requestu koji je obradio ovaj odgovor
+            </summary>
+        </member>
+        <member name="T:imbACE.Network.web.result.webResultBlock">
+            <summary>
+            Blok web rezultata - dobija se kao rezultat webRequestBlock-a
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.result.webResultFile.loadedBytes">
+            <summary>
+            Pseudo property: dnsLookupata
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.webContentAndRequest.request">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:imbACE.Network.web.webContentAndRequest.result">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:imbACE.Network.web.webLoader">
+            <summary>
+            Osnovna verzija webLoader klase
+            </summary>
+        </member>
+        <member name="T:imbACE.Network.web.webLoaderFlag">
+            <summary>
+            Neke dodatne opcije za ucitavanje
+            </summary>
+        </member>
+        <member name="F:imbACE.Network.web.webLoaderFlag.loadOnlyIfNotLoaded">
+            <summary>
+            Izvrsice ucitavanje samo ako isti URL / komanda nije poslednja koja je izvrsena
+            </summary>
+        </member>
+        <member name="T:imbACE.Network.web.webLoadingEngine">
+            <summary>
+            Engine za web ucitavanja
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.webLoadingEngine.defNSprefix">
+            <summary>
+            imbControl property defNSprefix tipa String
+            </summary>
+        </member>
+        <member name="P:imbACE.Network.web.webLoadingEngine.mainLoader">
+            <summary>
+             Sistemski web loader
+            </summary>
+        </member>
+        <member name="M:imbACE.Network.web.webLoadingEngine.createNewRequest(imbACE.Network.web.core.commonRequestSettings,System.String,imbACE.Network.web.enums.webRequestActionType)">
+            <summary>
+            Pravi equest na osnovu settings a ima mogucnost override-a za URL i ACTION parametre
+            </summary>
+            <param name="settings"></param>
+            <param name="__url"></param>
+            <param name="__action"></param>
+            <returns></returns>
+        </member>
+        <member name="M:imbACE.Network.web.webLoadingEngine.createNewRequest(System.String,imbACE.Network.web.enums.webRequestActionType,imbACE.Network.web.request.webRequestType)">
+            <summary>
+            Kreira novi Request
+            </summary>
+            <param name="__url"></param>
+            <param name="__action"></param>
+            <param name="__type"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

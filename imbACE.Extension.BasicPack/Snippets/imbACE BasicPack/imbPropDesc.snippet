@@ -1,0 +1,55 @@
+﻿  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>Bindable property</Title>
+      <Shortcut>_imbPropDesc</Shortcut>
+      <Description>Bindable property for INotifyPropertyChanged, with general data annotation attributes</Description>
+      <Author>imbVeles</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>Property type</ToolTip>
+          <Default>String</Default>
+        </Literal>
+        <Literal>
+          <ID>property</ID>
+          <ToolTip>Property name</ToolTip>
+          <Default>myProperty</Default>
+        </Literal>
+        <Literal>
+          <ID>categoryGroup</ID>
+          <ToolTip>Class name of property</ToolTip>
+          <Function>ClassName()</Function>
+          <Default>ClassNamePlaceHolder</Default>
+        </Literal>
+        <Literal>
+          <ID>description</ID>
+          <ToolTip>Description used for region, comment and description in property grid</ToolTip>
+          <Default>Description</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+private $type$ _$property$ = default($type$); // = new $type$();
+/// &lt;summary&gt;
+/// $description$
+/// &lt;/summary&gt;
+[Category("$categoryGroup$")]
+[DisplayName("$property$")]
+[Description("$description$")]
+public $type$ $property$
+	{
+	get { 
+		return _$property$;
+	}
+	set {
+		_$property$ = value;
+		OnPropertyChanged(nameof($property$));
+		}
+}
+	$end$</Code>
+    </Snippet>
+  </CodeSnippet>

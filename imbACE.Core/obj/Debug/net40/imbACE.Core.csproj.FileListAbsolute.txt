@@ -1,0 +1,16 @@
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Core\obj\Debug\net40\imbACE.Core.csprojAssemblyReference.cache
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Core\obj\Debug\net40\imbACE.Core.csproj.CoreCompileInputs.cache
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Core\obj\Debug\net40\imbACE.Core.AssemblyInfoInputs.cache
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Core\obj\Debug\net40\imbACE.Core.AssemblyInfo.cs
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Core\bin\Debug\net40\imbACE.Core.dll
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Core\bin\Debug\net40\imbACE.Core.pdb
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Core\bin\Debug\net40\EPPlus.dll
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Core\bin\Debug\net40\MathNet.Numerics.dll
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Core\bin\Debug\net40\MySql.Data.dll
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Core\obj\Debug\net40\imbACE.Core.csproj.CopyComplete
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Core\obj\Debug\net40\imbACE.Core.dll
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Core\obj\Debug\net40\imbACE.Core.pdb
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Core\bin\Debug\net40\imbSCI.Core.dll
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Core\bin\Debug\net40\imbSCI.Data.dll
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Core\bin\Debug\net40\imbSCI.DataComplex.dll
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Core\bin\Debug\net40\imbSCI.Reporting.dll

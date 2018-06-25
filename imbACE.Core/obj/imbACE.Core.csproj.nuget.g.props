@@ -1,0 +1,846 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <RestoreSuccess Condition=" '$(RestoreSuccess)' == '' ">True</RestoreSuccess>
+    <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
+    <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">G:\imbVelesOpenSource\imbACE.Standard\imbACE.Core\obj\project.assets.json</ProjectAssetsFile>
+    <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">$(UserProfile)\.nuget\packages\</NuGetPackageRoot>
+    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\gorangrubic\.nuget\packages\;C:\Program Files\dotnet\sdk\NuGetFallbackFolder</NuGetPackageFolders>
+    <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
+    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">4.7.0</NuGetToolVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+  </PropertyGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net40' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Content Include="$(NuGetPackageRoot)imbsci.core.standard\0.3.36\contentFiles\any\net40\imbSCI.ico" Condition="Exists('$(NuGetPackageRoot)imbsci.core.standard\0.3.36\contentFiles\any\net40\imbSCI.ico')">
+      <NuGetPackageId>imbSCI.Core.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.36</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>imbSCI.ico</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.core.standard\0.3.36\contentFiles\any\net40\imbVeles48.ico" Condition="Exists('$(NuGetPackageRoot)imbsci.core.standard\0.3.36\contentFiles\any\net40\imbVeles48.ico')">
+      <NuGetPackageId>imbSCI.Core.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.36</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>imbVeles48.ico</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net40' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\imbVeles48.ico" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\imbVeles48.ico')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>imbVeles48.ico</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\include\d3\d3.js" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\include\d3\d3.js')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\include\d3\d3.js</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\include\jquery\jquery.js" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\include\jquery\jquery.js')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\include\jquery\jquery.js</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\include\strapdown\strapdown-topbar.min.js" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\include\strapdown\strapdown-topbar.min.js')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\include\strapdown\strapdown-topbar.min.js</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\include\strapdown\strapdown.css" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\include\strapdown\strapdown.css')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\include\strapdown\strapdown.css</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\include\strapdown\strapdown.js" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\include\strapdown\strapdown.js')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\include\strapdown\strapdown.js</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\compact\footer.md" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\compact\footer.md')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\compact\footer.md</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\compact\index.html" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\compact\index.html')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\compact\index.html</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\standard\standard.css" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\standard\standard.css')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\standard\standard.css</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\standard\standard.html" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\standard\standard.html')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\standard\standard.html</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\standard\standard.js" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\standard\standard.js')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\standard\standard.js</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\standard\standard.xml" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\standard\standard.xml')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\standard\standard.xml</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\standard\standard_color.css" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\standard\standard_color.css')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\standard\standard_color.css</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\standard\standard_xml.css" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\standard\standard_xml.css')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\standard\standard_xml.css</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\veles_report\footer.md" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\veles_report\footer.md')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\veles_report\footer.md</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\veles_report\index.md" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\veles_report\index.md')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\veles_report\index.md</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\veles_report\mermeid_example.html" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\veles_report\mermeid_example.html')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\veles_report\mermeid_example.html</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\veles_report\report_helpModule.md" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\veles_report\report_helpModule.md')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\veles_report\report_helpModule.md</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\velestrap\ASCIIMathTeXImg.js" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\velestrap\ASCIIMathTeXImg.js')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\velestrap\ASCIIMathTeXImg.js</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\velestrap\bootmark.min.css" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\velestrap\bootmark.min.css')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\velestrap\bootmark.min.css</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\velestrap\bootmark.min.js" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\velestrap\bootmark.min.js')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\velestrap\bootmark.min.js</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\velestrap\bootstrap.css" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\velestrap\bootstrap.css')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\velestrap\bootstrap.css</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\velestrap\bootstrap.min.js" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\velestrap\bootstrap.min.js')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\velestrap\bootstrap.min.js</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\velestrap\c3.css" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\velestrap\c3.css')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\velestrap\c3.css</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\velestrap\c3.min.js" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\velestrap\c3.min.js')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\velestrap\c3.min.js</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\velestrap\d3.js" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\velestrap\d3.js')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\velestrap\d3.js</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\velestrap\d3.v3.min.js" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\velestrap\d3.v3.min.js')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\velestrap\d3.v3.min.js</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\velestrap\index.html" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\velestrap\index.html')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\velestrap\index.html</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\velestrap\jquery-3.2.0.min.js" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\velestrap\jquery-3.2.0.min.js')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\velestrap\jquery-3.2.0.min.js</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\velestrap\katex-latex.js" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\velestrap\katex-latex.js')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\velestrap\katex-latex.js</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\velestrap\katex.css" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\velestrap\katex.css')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\velestrap\katex.css</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\velestrap\katex.js" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\velestrap\katex.js')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\velestrap\katex.js</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\velestrap\mermaid.forest.css" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\velestrap\mermaid.forest.css')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\velestrap\mermaid.forest.css</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\velestrap\mermaid.js" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\velestrap\mermaid.js')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\velestrap\mermaid.js</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\velestrap\mermaidAPI.js" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\velestrap\mermaidAPI.js')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\velestrap\mermaidAPI.js</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\velestrap\showdown-prettify.min.js" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\velestrap\showdown-prettify.min.js')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\velestrap\showdown-prettify.min.js</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\velestrap\showdown.min.js" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net40\resources\reporting\theme\velestrap\showdown.min.js')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\velestrap\showdown.min.js</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Content Include="$(NuGetPackageRoot)imbsci.core.standard\0.3.36\contentFiles\any\net45\imbSCI.ico" Condition="Exists('$(NuGetPackageRoot)imbsci.core.standard\0.3.36\contentFiles\any\net45\imbSCI.ico')">
+      <NuGetPackageId>imbSCI.Core.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.36</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>imbSCI.ico</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.core.standard\0.3.36\contentFiles\any\net45\imbVeles48.ico" Condition="Exists('$(NuGetPackageRoot)imbsci.core.standard\0.3.36\contentFiles\any\net45\imbVeles48.ico')">
+      <NuGetPackageId>imbSCI.Core.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.36</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>imbVeles48.ico</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\imbVeles48.ico" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\imbVeles48.ico')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>imbVeles48.ico</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\include\d3\d3.js" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\include\d3\d3.js')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\include\d3\d3.js</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\include\jquery\jquery.js" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\include\jquery\jquery.js')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\include\jquery\jquery.js</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\include\strapdown\strapdown-topbar.min.js" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\include\strapdown\strapdown-topbar.min.js')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\include\strapdown\strapdown-topbar.min.js</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\include\strapdown\strapdown.css" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\include\strapdown\strapdown.css')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\include\strapdown\strapdown.css</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\include\strapdown\strapdown.js" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\include\strapdown\strapdown.js')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\include\strapdown\strapdown.js</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\compact\footer.md" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\compact\footer.md')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\compact\footer.md</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\compact\index.html" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\compact\index.html')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\compact\index.html</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\standard\standard.css" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\standard\standard.css')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\standard\standard.css</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\standard\standard.html" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\standard\standard.html')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\standard\standard.html</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\standard\standard.js" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\standard\standard.js')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\standard\standard.js</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\standard\standard.xml" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\standard\standard.xml')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\standard\standard.xml</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\standard\standard_color.css" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\standard\standard_color.css')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\standard\standard_color.css</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\standard\standard_xml.css" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\standard\standard_xml.css')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\standard\standard_xml.css</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\veles_report\footer.md" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\veles_report\footer.md')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\veles_report\footer.md</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\veles_report\index.md" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\veles_report\index.md')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\veles_report\index.md</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\veles_report\mermeid_example.html" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\veles_report\mermeid_example.html')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\veles_report\mermeid_example.html</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\veles_report\report_helpModule.md" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\veles_report\report_helpModule.md')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\veles_report\report_helpModule.md</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\velestrap\ASCIIMathTeXImg.js" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\velestrap\ASCIIMathTeXImg.js')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\velestrap\ASCIIMathTeXImg.js</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\velestrap\bootmark.min.css" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\velestrap\bootmark.min.css')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\velestrap\bootmark.min.css</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\velestrap\bootmark.min.js" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\velestrap\bootmark.min.js')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\velestrap\bootmark.min.js</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\velestrap\bootstrap.css" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\velestrap\bootstrap.css')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\velestrap\bootstrap.css</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\velestrap\bootstrap.min.js" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\velestrap\bootstrap.min.js')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\velestrap\bootstrap.min.js</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\velestrap\c3.css" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\velestrap\c3.css')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\velestrap\c3.css</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\velestrap\c3.min.js" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\velestrap\c3.min.js')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\velestrap\c3.min.js</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\velestrap\d3.js" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\velestrap\d3.js')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\velestrap\d3.js</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\velestrap\d3.v3.min.js" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\velestrap\d3.v3.min.js')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\velestrap\d3.v3.min.js</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\velestrap\index.html" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\velestrap\index.html')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\velestrap\index.html</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\velestrap\jquery-3.2.0.min.js" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\velestrap\jquery-3.2.0.min.js')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\velestrap\jquery-3.2.0.min.js</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\velestrap\katex-latex.js" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\velestrap\katex-latex.js')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\velestrap\katex-latex.js</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\velestrap\katex.css" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\velestrap\katex.css')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\velestrap\katex.css</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\velestrap\katex.js" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\velestrap\katex.js')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\velestrap\katex.js</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\velestrap\mermaid.forest.css" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\velestrap\mermaid.forest.css')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\velestrap\mermaid.forest.css</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\velestrap\mermaid.js" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\velestrap\mermaid.js')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\velestrap\mermaid.js</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\velestrap\mermaidAPI.js" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\velestrap\mermaidAPI.js')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\velestrap\mermaidAPI.js</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\velestrap\showdown-prettify.min.js" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\velestrap\showdown-prettify.min.js')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\velestrap\showdown-prettify.min.js</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\velestrap\showdown.min.js" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\net45\resources\reporting\theme\velestrap\showdown.min.js')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\velestrap\showdown.min.js</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Content Include="$(NuGetPackageRoot)imbsci.core.standard\0.3.36\contentFiles\any\netstandard2.0\imbSCI.ico" Condition="Exists('$(NuGetPackageRoot)imbsci.core.standard\0.3.36\contentFiles\any\netstandard2.0\imbSCI.ico')">
+      <NuGetPackageId>imbSCI.Core.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.36</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>imbSCI.ico</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.core.standard\0.3.36\contentFiles\any\netstandard2.0\imbVeles48.ico" Condition="Exists('$(NuGetPackageRoot)imbsci.core.standard\0.3.36\contentFiles\any\netstandard2.0\imbVeles48.ico')">
+      <NuGetPackageId>imbSCI.Core.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.36</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>imbVeles48.ico</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\imbVeles48.ico" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\imbVeles48.ico')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>imbVeles48.ico</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\include\d3\d3.js" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\include\d3\d3.js')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\include\d3\d3.js</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\include\jquery\jquery.js" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\include\jquery\jquery.js')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\include\jquery\jquery.js</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\include\strapdown\strapdown-topbar.min.js" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\include\strapdown\strapdown-topbar.min.js')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\include\strapdown\strapdown-topbar.min.js</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\include\strapdown\strapdown.css" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\include\strapdown\strapdown.css')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\include\strapdown\strapdown.css</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\include\strapdown\strapdown.js" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\include\strapdown\strapdown.js')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\include\strapdown\strapdown.js</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\compact\footer.md" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\compact\footer.md')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\compact\footer.md</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\compact\index.html" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\compact\index.html')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\compact\index.html</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\standard\standard.css" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\standard\standard.css')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\standard\standard.css</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\standard\standard.html" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\standard\standard.html')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\standard\standard.html</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\standard\standard.js" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\standard\standard.js')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\standard\standard.js</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\standard\standard.xml" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\standard\standard.xml')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\standard\standard.xml</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\standard\standard_color.css" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\standard\standard_color.css')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\standard\standard_color.css</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\standard\standard_xml.css" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\standard\standard_xml.css')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\standard\standard_xml.css</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\veles_report\footer.md" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\veles_report\footer.md')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\veles_report\footer.md</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\veles_report\index.md" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\veles_report\index.md')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\veles_report\index.md</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\veles_report\mermeid_example.html" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\veles_report\mermeid_example.html')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\veles_report\mermeid_example.html</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\veles_report\report_helpModule.md" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\veles_report\report_helpModule.md')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\veles_report\report_helpModule.md</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\velestrap\ASCIIMathTeXImg.js" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\velestrap\ASCIIMathTeXImg.js')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\velestrap\ASCIIMathTeXImg.js</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\velestrap\bootmark.min.css" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\velestrap\bootmark.min.css')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\velestrap\bootmark.min.css</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\velestrap\bootmark.min.js" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\velestrap\bootmark.min.js')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\velestrap\bootmark.min.js</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\velestrap\bootstrap.css" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\velestrap\bootstrap.css')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\velestrap\bootstrap.css</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\velestrap\bootstrap.min.js" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\velestrap\bootstrap.min.js')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\velestrap\bootstrap.min.js</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\velestrap\c3.css" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\velestrap\c3.css')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\velestrap\c3.css</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\velestrap\c3.min.js" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\velestrap\c3.min.js')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\velestrap\c3.min.js</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\velestrap\d3.js" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\velestrap\d3.js')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\velestrap\d3.js</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\velestrap\d3.v3.min.js" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\velestrap\d3.v3.min.js')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\velestrap\d3.v3.min.js</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\velestrap\index.html" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\velestrap\index.html')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\velestrap\index.html</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\velestrap\jquery-3.2.0.min.js" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\velestrap\jquery-3.2.0.min.js')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\velestrap\jquery-3.2.0.min.js</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\velestrap\katex-latex.js" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\velestrap\katex-latex.js')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\velestrap\katex-latex.js</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\velestrap\katex.css" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\velestrap\katex.css')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\velestrap\katex.css</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\velestrap\katex.js" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\velestrap\katex.js')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\velestrap\katex.js</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\velestrap\mermaid.forest.css" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\velestrap\mermaid.forest.css')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\velestrap\mermaid.forest.css</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\velestrap\mermaid.js" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\velestrap\mermaid.js')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\velestrap\mermaid.js</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\velestrap\mermaidAPI.js" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\velestrap\mermaidAPI.js')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\velestrap\mermaidAPI.js</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\velestrap\showdown-prettify.min.js" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\velestrap\showdown-prettify.min.js')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\velestrap\showdown-prettify.min.js</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\velestrap\showdown.min.js" Condition="Exists('$(NuGetPackageRoot)imbsci.reporting.standard\0.3.37\contentFiles\any\netstandard2.0\resources\reporting\theme\velestrap\showdown.min.js')">
+      <NuGetPackageId>imbSCI.Reporting.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.37</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>resources\reporting\theme\velestrap\showdown.min.js</Link>
+    </Content>
+  </ItemGroup>
+</Project>

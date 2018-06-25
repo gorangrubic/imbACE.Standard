@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
+  <TemplateData>
+    <Name>imbACE Console Application multi-target</Name>
+    <Description>Project for imbACE console application, with custom: Advanced Command Console, State and Workspace classes. Targets: .NET 4.0, .NET 4.5 and .NET Standard</Description>
+    <Icon>veles_template_blue.ico</Icon>
+    <ProjectType>CSharp</ProjectType>
+    <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
+    <SortOrder>1000</SortOrder>
+    <TemplateID>178fe38c-7979-46ed-a217-f7bc370f1db5</TemplateID>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>ConsoleApplication</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <CreateInPlace>true</CreateInPlace>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="$safeprojectname$.csproj" File="ProjectTemplate.csproj" ReplaceParameters="true">
+      <ProjectItem TargetFileName="imbACE.ico">imbACE.ico</ProjectItem>
+      <ProjectItem TargetFileName="$safeprojectname$Application.cs" ReplaceParameters="true" >CommandConsoleApplication.cs</ProjectItem>
+      <Folder Name="console" TargetFolderName="console">
+        <ProjectItem TargetFileName="CommandConsoleConsole.cs" ReplaceParameters="true" >CommandConsoleDemo.cs</ProjectItem>
+        <ProjectItem TargetFileName="CommandConsoleState.cs" ReplaceParameters="true" >CommandConsoleDemoState.cs</ProjectItem>
+        <ProjectItem TargetFileName="CommandConsoleWorkspace.cs" ReplaceParameters="true" >CommandConsoleDemoWorkspace.cs</ProjectItem>
+      </Folder>
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>NuGet.VisualStudio.Interop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>NuGet.VisualStudio.TemplateWizard</FullClassName>
+  </WizardExtension>
+  <WizardData>
+    <packages repository="extension" repositoryId="imbACE.Extension.BasicPack.20ed33a6-3481-4161-a929-ab10d33258ef">
+      <package Include="imbACE.Services.Standard" Version="0.2.4" />
+    </packages>
+  </WizardData>
+</VSTemplate>

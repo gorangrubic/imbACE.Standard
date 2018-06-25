@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>imbACE.Core.Standard</id>
+    <version>0.2.2</version>
+    <title>imbACE.Core .NET Standard</title>
+    <authors>Goran Grubić</authors>
+    <owners>Goran Grubić</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>http://doc.veles.rs/LICENCE.txt</licenseUrl>
+    <projectUrl>http://blog.veles.rs/</projectUrl>
+    <iconUrl>http://doc.veles.rs/imbACE.ico</iconUrl>
+    <description>imbACE.Core is foundation of imbACE (Advanced Console Environment) console application framework. It provides base application, components &amp; plugin classes, ACE Script execution &amp; command-tree management (reflection, model construction, user reference auto construction) and several side functionalities (sound sequence, db access, workload measurement...). imbACE is all about rapid console application development – any kind of console application. The main use case is: development of your research-specific console application/tool for automated experimentation, data processing and reporting.</description>
+    <releaseNotes>Targets: .NET 4.0*, .NET 4.5 and .NET Core 2.0 i.e ready for use in cross-platform application development. * Purpose of the .NET 4.0 target is to provide compatibility with Windows XP, that is still popular on console PCs of older CNC machines and industrial controlers. It will be supported "forever", as it is part of the mission.</releaseNotes>
+    <copyright>Copyright (C) 2017-2018 imbVeles - GNU GENERAL PUBLIC LICENSE V3.0</copyright>
+    <tags>Console, TUI, Command line, text interface, scripting, plugin</tags>
+    <repository type="GitHub" url="https://github.com/gorangrubic/" />
+    <dependencies>
+      <group targetFramework=".NETFramework4.0">
+        <dependency id="MySql.Data" version="6.9.12" exclude="Build,Analyzers" />
+        <dependency id="imbSCI.Reporting.Standard" version="0.2.0.22" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETFramework4.5">
+        <dependency id="MySql.Data" version="6.9.12" exclude="Build,Analyzers" />
+        <dependency id="imbSCI.Reporting.Standard" version="0.2.0.22" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="MySql.Data" version="8.0.11" exclude="Build,Analyzers" />
+        <dependency id="imbSCI.Reporting.Standard" version="0.2.0.22" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="G:\imbVelesOpenSource\imbACE.Standard\imbACE.Core\bin\Release\net40\imbACE.Core.dll" target="lib\net40\imbACE.Core.dll" />
+    <file src="G:\imbVelesOpenSource\imbACE.Standard\imbACE.Core\bin\Release\net40\imbACE.Core.Standard.xml" target="lib\net40\imbACE.Core.Standard.xml" />
+    <file src="G:\imbVelesOpenSource\imbACE.Standard\imbACE.Core\bin\Release\net45\imbACE.Core.dll" target="lib\net45\imbACE.Core.dll" />
+    <file src="G:\imbVelesOpenSource\imbACE.Standard\imbACE.Core\bin\Release\net45\imbACE.Core.Standard.xml" target="lib\net45\imbACE.Core.Standard.xml" />
+    <file src="G:\imbVelesOpenSource\imbACE.Standard\imbACE.Core\bin\Release\netstandard2.0\imbACE.Core.dll" target="lib\netstandard2.0\imbACE.Core.dll" />
+    <file src="G:\imbVelesOpenSource\imbACE.Standard\imbACE.Core\bin\Release\netstandard2.0\imbACE.Core.Standard.xml" target="lib\netstandard2.0\imbACE.Core.Standard.xml" />
+  </files>
+</package>

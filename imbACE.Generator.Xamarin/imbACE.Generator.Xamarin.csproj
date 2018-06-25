@@ -1,0 +1,74 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ApplicationIcon>imbACE.ico</ApplicationIcon>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageId>imbACE.Generator.Xamarin</PackageId>
+    <Version>0.2.4</Version>
+    <Title>imbACE.Generator.Xamarin .NET Standard</Title>
+    <Summary></Summary>
+    <PackageIconUrl>http://doc.veles.rs/imbACE.ico</PackageIconUrl>
+    <PackageProjectUrl>http://blog.veles.rs/</PackageProjectUrl>
+    <PackageLicenseUrl>http://doc.veles.rs/LICENCE.txt</PackageLicenseUrl>
+    <Copyright>Copyright (C) 2017-2018 imbVeles - GNU GENERAL PUBLIC LICENSE V3.0</Copyright>
+    <Description>User Interface generator (XAML)</Description>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <PackageReleaseNotes>Targets: .NET 4.0, .NET 4.5 and .NET Core 2.0
+    </PackageReleaseNotes>
+    <PackageTags></PackageTags>
+    <RepositoryUrl>https://github.com/gorangrubic/</RepositoryUrl>
+    <RepositoryType>GitHub</RepositoryType>
+    <Authors>Goran Grubić</Authors>
+    <Company>imbVeles</Company>
+    <AssemblyVersion>0.2.0.0</AssemblyVersion>
+    <FileVersion>0.2.0.0</FileVersion>
+    <Product>imbACE.Generator.Xamarin</Product>
+    <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="3.1.0.550168-pre3" />
+  </ItemGroup>
+
+  
+  
+  <ItemGroup>
+    <ProjectReference Include="..\imbACE.Generator\imbACE.Generator.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <DocumentationFile>$(OutputPath)$(PackageId).xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
+    <ShouldCreateLogs>True</ShouldCreateLogs>
+    <AdvancedSettingsExpanded>True</AdvancedSettingsExpanded>
+    <UpdateAssemblyVersion>False</UpdateAssemblyVersion>
+    <UpdateAssemblyFileVersion>False</UpdateAssemblyFileVersion>
+    <UpdateAssemblyInfoVersion>False</UpdateAssemblyInfoVersion>
+    <UpdatePackageVersion>True</UpdatePackageVersion>
+    <AssemblyInfoVersionType>SettingsVersion</AssemblyInfoVersionType>
+    <InheritWinAppVersionFrom>None</InheritWinAppVersionFrom>
+    <WarningLevel>0</WarningLevel>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
+    <ShouldCreateLogs>True</ShouldCreateLogs>
+    <AdvancedSettingsExpanded>True</AdvancedSettingsExpanded>
+    <UpdateAssemblyVersion>False</UpdateAssemblyVersion>
+    <UpdateAssemblyFileVersion>False</UpdateAssemblyFileVersion>
+    <UpdateAssemblyInfoVersion>False</UpdateAssemblyInfoVersion>
+    <UpdatePackageVersion>True</UpdatePackageVersion>
+    <AssemblyInfoVersionType>SettingsVersion</AssemblyInfoVersionType>
+    <InheritWinAppVersionFrom>None</InheritWinAppVersionFrom>
+  </PropertyGroup>
+
+  <Target Name="CopyPackage" AfterTargets="Pack">
+    <Copy SourceFiles="$(OutputPath)..\$(PackageId).$(PackageVersion).nupkg" DestinationFolder="G:\imbVelesOpenSource\LocalNuGet\imbVelesSecondGeneration\" />
+  </Target>
+
+</Project>

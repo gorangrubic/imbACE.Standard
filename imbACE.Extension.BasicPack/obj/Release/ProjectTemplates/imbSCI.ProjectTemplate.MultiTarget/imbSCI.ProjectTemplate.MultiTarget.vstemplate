@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
+  <TemplateData>
+    <Name>Blank multi-target library project</Name>
+    <Description>C# Library project, targeting .NET 4.0, .NET 4.5 and .NET Standard 2.0. The .csproj file contains: option build instruction to copy .nupkg file into local NuGet repository, declaration of compiler tags for each target and other helpful things.</Description>
+    <Icon>imbVeles_red_blank.png</Icon>
+    <ProjectType>CSharp</ProjectType>
+    <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
+    <SortOrder>1000</SortOrder>
+    <TemplateID>b8e54219-0fb2-4b8d-b19e-4a0e1f7bed49</TemplateID>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>imbSCI.ProjectTemplate.MultiTarget</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <CreateInPlace>true</CreateInPlace>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="$fileinputname$.csproj" File="ProjectTemplate.csproj" ReplaceParameters="true">
+      <ProjectItem TargetFileName="imbSCI.ico">imbSCI.ico</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Properties\AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

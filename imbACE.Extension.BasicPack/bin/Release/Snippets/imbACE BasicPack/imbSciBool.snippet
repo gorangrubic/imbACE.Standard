@@ -1,0 +1,46 @@
+﻿  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>imbSCI Boolean property</Title>
+      <Shortcut>_imbSCI_Bool</Shortcut>
+      <Description>Boolean property with common imbSCI data annotation attributes</Description>
+      <Author>imbVeles</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>Property type</ToolTip>
+          <Default>Boolean</Default>
+        </Literal>
+        <Literal>
+          <ID>property</ID>
+          <ToolTip>Property name</ToolTip>
+          <Default>isInState</Default>
+        </Literal>
+        <Literal>
+          <ID>categoryGroup</ID>
+          <ToolTip>Category of property</ToolTip>
+          <Default>Flag</Default>
+        </Literal>
+        <Literal>
+          <ID>description</ID>
+          <ToolTip>Description</ToolTip>
+          <Default>If &lt;c&gt;true&lt;/c&gt; it will</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        /// &lt;summary&gt; $description$ &lt;/summary&gt;
+        [Category("$categoryGroup$")]
+        [DisplayName("$property$")]
+        [Description("$description$")]
+        [imb(imbAttributeName.measure_letter, "T")]
+        [imb(imbAttributeName.basicColor, "#0066FF")] // color of Excel column header or GUI block...
+        [imb(imbAttributeName.reporting_columnWidth, 10)] // width of Excel column ...
+        public $type$ $property$ {get; set;} = false;
+
+        $end$</Code>
+    </Snippet>
+  </CodeSnippet>

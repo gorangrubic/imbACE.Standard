@@ -1,0 +1,50 @@
+﻿	<CodeSnippet Format="1.1.0">
+		<Header>
+			<Title>Static Regex evaluation method</Title>
+			<Shortcut>_imbRegStaticIs</Shortcut>
+			<Description>Inserts static Regex property and String extension evaluation method</Description>
+			<Author>imbVeles</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>property</ID>
+					<ToolTip>Descriptive name for the Regex</ToolTip>
+					<Default>RegexName</Default>
+				</Literal>
+        <Literal>
+          <ID>regex</ID>
+          <ToolTip>Regex Query</ToolTip>
+          <Default>([\w]{1}\.{1}\s{1}){2,}</Default>
+        </Literal>
+			</Declarations>
+			<Code Language="csharp">
+        <![CDATA[
+		
+		/// <summary>
+    /// Regex select $property$ : $regex$
+    /// </summary>
+		/// <remarks>
+		/// <para>For text: example text</para>
+		/// <para>Selects: ex</para>
+		/// </remarks>
+    public static Regex _select_is$property$ = new Regex(@"$regex$", RegexOptions.Compiled);
+		
+		/// <summary>
+    /// Test if input matches $regex$
+    /// </summary>
+		/// <param name="input">String to test</param>
+    /// <returns>IsMatch against _select_is$property$</returns>
+		public static Boolean is$property$(this String input) {
+		    if (String.IsNullOrEmpty(input)) return false;
+		    return _select_is$property$.IsMatch(input);
+		}
+		
+		
+	$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>

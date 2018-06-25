@@ -1,0 +1,124 @@
+﻿ <CodeSnippet Format="1.1.0">
+        <Header>
+            <Title>imbACE Console Operation</Title>
+            <Shortcut>_imbAceOperationMethod</Shortcut>
+            <Description>Declaration of an ACE Operation method for Command Console, Screen, Console plugin - invocable from ACE Script</Description>
+            <Author>imbVeles</Author>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>type</ID>
+                    <ToolTip>Property type</ToolTip>
+                    <Default>aceMenu</Default>
+                </Literal>
+                <Literal>
+                    <ID>name</ID>
+                    <ToolTip>Name of the method</ToolTip>
+                    <Default>Test</Default>
+                </Literal>
+                <Literal>
+                    <ID>key</ID>
+                    <ToolTip>Menu item key shortcut</ToolTip>
+                    <Default>ESC</Default>
+                </Literal>
+                <Literal>
+                    <ID>p1name</ID>
+                    <ToolTip></ToolTip>
+                    <Default>word</Default>
+                </Literal>
+                <Literal>
+                    <ID>p1value</ID>
+                    <ToolTip></ToolTip>
+                    <Default>word</Default>
+                </Literal>
+                <Literal>
+                    <ID>p1type</ID>
+                    <ToolTip></ToolTip>
+                    <Default>String</Default>
+                </Literal>
+                <Literal>
+                    <ID>p2name</ID>
+                    <ToolTip></ToolTip>
+                    <Default>steps</Default>
+                </Literal>
+                <Literal>
+                    <ID>p2value</ID>
+                    <ToolTip></ToolTip>
+                    <Default>5</Default>
+                </Literal>
+                <Literal>
+                    <ID>p2type</ID>
+                    <ToolTip></ToolTip>
+                    <Default>Int32</Default>
+                </Literal>
+                <Literal>
+                    <ID>p3name</ID>
+                    <ToolTip></ToolTip>
+                    <Default>debug</Default>
+                </Literal>
+                <Literal>
+                    <ID>p3value</ID>
+                    <ToolTip></ToolTip>
+                    <Default>true</Default>
+                </Literal>
+                <Literal>
+                    <ID>p3type</ID>
+                    <ToolTip></ToolTip>
+                    <Default>Boolean</Default>
+                </Literal>
+                <Literal>
+                    <ID>ehelp</ID>
+                    <ToolTip>help line / description</ToolTip>
+                    <Default>What is purpose of this?</Default>
+                </Literal>
+                <Literal>
+                    <ID>help</ID>
+                    <ToolTip>help line / description</ToolTip>
+                    <Default>What it will do?</Default>
+                </Literal>
+                <Literal>
+                    <ID>group</ID>
+                    <ToolTip>Functional group, used just for user manual method categorization</ToolTip>
+                    <Default>run</Default>
+                </Literal>
+                <Literal>
+                    <ID>p1desc</ID>
+                    <ToolTip></ToolTip>
+                    <Default>--</Default>
+                </Literal>
+                <Literal>
+                    <ID>p2desc</ID>
+                    <ToolTip></ToolTip>
+                    <Default>--</Default>
+                </Literal>
+                <Literal>
+                    <ID>p3desc</ID>
+                    <ToolTip></ToolTip>
+                    <Default>--</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="csharp">
+                <![CDATA[
+	
+  [Display(GroupName = "$group$", Name ="$name$", ShortName = "",Description ="$ehelp$")]
+  [aceMenuItem(aceMenuItemAttributeRole.ExpandedHelp, "$help$")]
+  /// <summary>$ehelp$</summary> 
+	/// <remarks><para>$help$</para></remarks>
+  /// <param name="$p1name$">$p1desc$</param>
+  /// <param name="$p2name$">$p2desc$</param>
+  /// <param name="$p3name$">$p3desc$</param>
+	/// <seealso cref="aceOperationSetExecutorBase"/>
+	public void aceOperation_$group$$name$(
+        [Description("$p1desc$")] $p1type$ $p1name$="$p1value$", 
+        [Description("$p2desc$")] $p2type$ $p2name$=$p2value$,
+        [Description("$p3desc$")] $p3type$ $p3name$=$p3value$)
+	{
+	}
+	$end$]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>

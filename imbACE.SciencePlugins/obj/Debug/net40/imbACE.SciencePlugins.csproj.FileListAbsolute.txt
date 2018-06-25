@@ -1,0 +1,4 @@
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.SciencePlugins\obj\Debug\net40\imbACE.SciencePlugins.csprojAssemblyReference.cache
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.SciencePlugins\obj\Debug\net40\imbACE.SciencePlugins.csproj.CoreCompileInputs.cache
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.SciencePlugins\obj\Debug\net40\imbACE.SciencePlugins.AssemblyInfoInputs.cache
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.SciencePlugins\obj\Debug\net40\imbACE.SciencePlugins.AssemblyInfo.cs

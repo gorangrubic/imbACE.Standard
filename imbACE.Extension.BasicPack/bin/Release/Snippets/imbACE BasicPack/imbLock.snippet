@@ -1,0 +1,25 @@
+﻿<CodeSnippet Format="1.1.0">
+		<Header>
+			<Title>Private lock property</Title>
+			<Shortcut>_imbLock</Shortcut>
+			<Description>Private locking property, to be consumed by thread lock instruction</Description>
+			<Author>imbVeles</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>property</ID>
+					<ToolTip>Property name</ToolTip>
+					<Default>resource</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp">
+        <![CDATA[
+private Object $property$Lock = new Object();
+$end$]]>
+			</Code>
+		</Snippet>
+</CodeSnippet>

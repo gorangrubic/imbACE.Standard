@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
+  <TemplateData>
+    <Name>imbACE.PluginAndConsoleProjectTemplate</Name>
+    <Description>Multi-target class library (.NET 4.0, .NET 4.5 and .NET Standard 2.0) with custom imbACE aceAdvancedConsole class and an imbACE console plugin class. Use this template to develop imbACe console and plugins library, to be consumed by imbACE framework based application.</Description>
+    <Icon>veles_template_blue.ico</Icon>
+    <ProjectType>CSharp</ProjectType>
+    <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
+    <SortOrder>1000</SortOrder>
+    <TemplateID>38479f2d-55f8-43a0-b754-2eaefaf9a71f</TemplateID>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>imbAceLibrary</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="ProjectTemplate.csproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" TargetFileName="Properties\AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Application\$fileinputname$Application.cs" OpenInEditor="true">application\CommandConsoleApplication.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Console\$fileinputname$Console.cs" OpenInEditor="true">console\CommandConsoleDemo.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Console\$fileinputname$State.cs" OpenInEditor="true">console\CommandConsoleDemoState.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Console\$fileinputname$Workspace.cs" OpenInEditor="true">console\CommandConsoleDemoWorkspace.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Plugins\$fileinputname$Plugin.cs" OpenInEditor="true">plugins\ConsolePlugin.cs</ProjectItem>
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>imbACE.TemplateExtensions, PublicKeyToken=813871e6ff1626f9</Assembly>
+    <FullClassName>imbACE.TemplateExtensions.Wizards.PluginAndConsoleProjectWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

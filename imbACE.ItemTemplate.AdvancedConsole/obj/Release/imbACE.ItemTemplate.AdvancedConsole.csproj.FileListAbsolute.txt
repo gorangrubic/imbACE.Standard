@@ -1,0 +1,8 @@
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.ItemTemplate.AdvancedConsole\bin\Release\ItemTemplates\CSharp\1033\imbACE.ItemTemplate.AdvancedConsole.zip
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.ItemTemplate.AdvancedConsole\bin\Release\imbACE.ItemTemplate.AdvancedConsole.dll
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.ItemTemplate.AdvancedConsole\obj\Release\imbACE.ItemTemplate.AdvancedConsole.csproj.CoreCompileInputs.cache
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.ItemTemplate.AdvancedConsole\obj\Release\CSharp\1033\imbACE.ItemTemplate.AdvancedConsole.zip
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.ItemTemplate.AdvancedConsole\obj\Release\imbACE.ItemTemplate.AdvancedConsole.dll
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.ItemTemplate.AdvancedConsole\obj\Release\imbACE.ItemTemplate.AdvancedConsole.pdb
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Extension.BasicPack\ItemTemplates\imbACE\ItemTemplates\CSharp\1033\imbACE.ItemTemplate.AdvancedConsole.zip
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Extension.BasicPack\ItemTemplates\imbACE\imbACE.ItemTemplate.AdvancedConsole.dll

@@ -1,0 +1,5 @@
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Network\bin\Debug\netstandard2.0\imbSCI.Core.Standard.xml
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Network\obj\Debug\netstandard2.0\imbACE.Network.csprojAssemblyReference.cache
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Network\obj\Debug\netstandard2.0\imbACE.Network.csproj.CoreCompileInputs.cache
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Network\obj\Debug\netstandard2.0\imbACE.Network.AssemblyInfoInputs.cache
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Network\obj\Debug\netstandard2.0\imbACE.Network.AssemblyInfo.cs

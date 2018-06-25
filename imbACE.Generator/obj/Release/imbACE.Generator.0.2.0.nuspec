@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>imbACE.Generator</id>
+    <version>0.2.0</version>
+    <title>imbACE.Generator .NET Standard</title>
+    <authors>Goran Grubić</authors>
+    <owners>Goran Grubić</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>http://doc.veles.rs/LICENCE.txt</licenseUrl>
+    <projectUrl>http://blog.veles.rs/</projectUrl>
+    <iconUrl>http://doc.veles.rs/imbACE.ico</iconUrl>
+    <description>Base classes for User Interface and documentation generation.</description>
+    <releaseNotes>Targets: .NET 4.0, .NET 4.5 and .NET Core 2.0 i.e ready for use in cross-platform application development. * Purpose of the .NET 4.0 target is to provide compatibility with Windows XP, that is still popular on console PCs of older CNC machines and industrial controlers. It will be supported "forever", as it is part of the mission.</releaseNotes>
+    <copyright>Copyright (C) 2017-2018 imbVeles - GNU GENERAL PUBLIC LICENSE V3.0</copyright>
+    <repository type="GitHub" url="https://github.com/gorangrubic/" />
+    <dependencies>
+      <group targetFramework=".NETFramework4.0">
+        <dependency id="imbACE.Core.Standard" version="0.2.0.5" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETFramework4.5">
+        <dependency id="imbACE.Core.Standard" version="0.2.0.5" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="imbACE.Core.Standard" version="0.2.0.5" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="G:\imbVelesOpenSource\imbACE.Standard\imbACE.Generator\bin\Release\net40\imbACE.Generator.dll" target="lib\net40\imbACE.Generator.dll" />
+    <file src="G:\imbVelesOpenSource\imbACE.Standard\imbACE.Generator\bin\Release\net45\imbACE.Generator.dll" target="lib\net45\imbACE.Generator.dll" />
+    <file src="G:\imbVelesOpenSource\imbACE.Standard\imbACE.Generator\bin\Release\netstandard2.0\imbACE.Generator.dll" target="lib\netstandard2.0\imbACE.Generator.dll" />
+    <file src="G:\imbVelesOpenSource\imbACE.Standard\imbACE.Generator\bin\Release\netstandard2.0\imbACE.Generator.xml" target="lib\netstandard2.0\imbACE.Generator.xml" />
+  </files>
+</package>

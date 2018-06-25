@@ -1,0 +1,10 @@
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Generator.Xamarin\bin\Debug\netstandard2.0\imbACE.Generator.Xamarin.deps.json
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Generator.Xamarin\bin\Debug\netstandard2.0\imbACE.Generator.Xamarin.dll
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Generator.Xamarin\obj\Debug\netstandard2.0\imbACE.Generator.Xamarin.csprojAssemblyReference.cache
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Generator.Xamarin\obj\Debug\netstandard2.0\imbACE.Generator.Xamarin.csproj.CoreCompileInputs.cache
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Generator.Xamarin\obj\Debug\netstandard2.0\imbACE.Generator.Xamarin.AssemblyInfoInputs.cache
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Generator.Xamarin\obj\Debug\netstandard2.0\imbACE.Generator.Xamarin.AssemblyInfo.cs
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Generator.Xamarin\obj\Debug\netstandard2.0\XamlC.stamp
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Generator.Xamarin\bin\Debug\netstandard2.0\imbACE.Generator.Xamarin.pdb
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Generator.Xamarin\obj\Debug\netstandard2.0\imbACE.Generator.Xamarin.dll
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Generator.Xamarin\obj\Debug\netstandard2.0\imbACE.Generator.Xamarin.pdb

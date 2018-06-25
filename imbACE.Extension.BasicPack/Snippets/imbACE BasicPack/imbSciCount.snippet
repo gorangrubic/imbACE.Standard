@@ -1,0 +1,48 @@
+﻿  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>imbSCI Integer property</Title>
+      <Shortcut>_imbSCI_Count</Shortcut>
+      <Description>Int32 property for natural number count, with common data annotation attributes</Description>
+      <Author>imbVeles</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>Property type</ToolTip>
+          <Default>Int32</Default>
+        </Literal>
+        <Literal>
+          <ID>property</ID>
+          <ToolTip>Property name</ToolTip>
+          <Default>myProperty</Default>
+        </Literal>
+        <Literal>
+          <ID>categoryGroup</ID>
+          <ToolTip>Class name of property</ToolTip>
+          <Default>Count</Default>
+        </Literal>
+        <Literal>
+          <ID>description</ID>
+          <ToolTip>Description used for region, comment and description in property grid</ToolTip>
+          <Default>Number of</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        /// &lt;summary&gt; $description$ &lt;/summary&gt;
+        [Category("$categoryGroup$")]
+        [DisplayName("$property$")]
+        [Description("$description$")]
+        [imb(imbAttributeName.measure_letter, "C")]
+        [imb(imbAttributeName.measure_setUnit, "n")]
+        [imb(imbAttributeName.reporting_valueformat, "#,###")]
+        // [imb(imbAttributeName.measure_important, dataPointImportance.important)]
+        // [imb(imbAttributeName.basicColor, ColorWorks.ColorRed)]
+        public $type$ $property$ {get; set;} = default($type$);
+
+        $end$</Code>
+    </Snippet>
+  </CodeSnippet>

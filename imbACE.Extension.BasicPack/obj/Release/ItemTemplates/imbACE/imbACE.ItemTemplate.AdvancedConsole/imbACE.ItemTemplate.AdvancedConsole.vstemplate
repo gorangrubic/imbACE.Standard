@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
+  <TemplateData>
+    <Name>imbACE Advanced Console bundle</Name>
+    <Description>aceAdvancedConsole implementation bundle, with aceAdvancedState and aceAdvancedWorkspace classes. Type only name prefix, it will automatically add -Console, -State and -Workspace class name suffixes. Requires imbACE.Services library.</Description>
+    <Icon>veles_template_blue.ico</Icon>
+    <TemplateID>ff8529c7-bb1f-42c2-901d-e656206029c8</TemplateID>
+    <ProjectType>CSharp</ProjectType>
+    <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>custom.cs</DefaultName>
+    <CreateInPlace>true</CreateInPlace>
+    <TemplateGroupID></TemplateGroupID>
+  </TemplateData>
+  <TemplateContent>
+    <References>
+      <Reference>
+        <Assembly>System</Assembly>
+      </Reference>
+    </References>
+    <ProjectItem TargetFileName="$safeitemname$Console.cs" ReplaceParameters="true" >CommandConsoleDemo.cs</ProjectItem>
+    <ProjectItem TargetFileName="$safeitemname$State.cs" ReplaceParameters="true" >CommandConsoleDemoState.cs</ProjectItem>
+    <ProjectItem TargetFileName="$safeitemname$Workspace.cs" ReplaceParameters="true" >CommandConsoleDemoWorkspace.cs</ProjectItem>
+  </TemplateContent>
+</VSTemplate>

@@ -1,0 +1,8 @@
+G:\imbVelesOpenSource\imbACE.Standard\imbSCI.ItemTemplate.NamespaceDoc\bin\Release\ItemTemplates\CSharp\1033\imbSCI.ItemTemplate.NamespaceDoc.zip
+G:\imbVelesOpenSource\imbACE.Standard\imbSCI.ItemTemplate.NamespaceDoc\bin\Release\imbSCI.ItemTemplate.NamespaceDoc.dll
+G:\imbVelesOpenSource\imbACE.Standard\imbSCI.ItemTemplate.NamespaceDoc\obj\Release\imbSCI.ItemTemplate.NamespaceDoc.csproj.CoreCompileInputs.cache
+G:\imbVelesOpenSource\imbACE.Standard\imbSCI.ItemTemplate.NamespaceDoc\obj\Release\CSharp\1033\imbSCI.ItemTemplate.NamespaceDoc.zip
+G:\imbVelesOpenSource\imbACE.Standard\imbSCI.ItemTemplate.NamespaceDoc\obj\Release\imbSCI.ItemTemplate.NamespaceDoc.dll
+G:\imbVelesOpenSource\imbACE.Standard\imbSCI.ItemTemplate.NamespaceDoc\obj\Release\imbSCI.ItemTemplate.NamespaceDoc.pdb
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Extension.BasicPack\ItemTemplates\imbSCI\ItemTemplates\CSharp\1033\imbSCI.ItemTemplate.NamespaceDoc.zip
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Extension.BasicPack\ItemTemplates\imbSCI\imbSCI.ItemTemplate.NamespaceDoc.dll

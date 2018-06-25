@@ -1,0 +1,10 @@
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Services\obj\Debug\netstandard2.0\imbACE.Services.csprojAssemblyReference.cache
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Services\obj\Debug\netstandard2.0\imbACE.Services.csproj.CoreCompileInputs.cache
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Services\obj\Debug\netstandard2.0\imbACE.Services.AssemblyInfoInputs.cache
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Services\obj\Debug\netstandard2.0\imbACE.Services.AssemblyInfo.cs
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Services\bin\Debug\netstandard2.0\imbACE.Services.deps.json
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Services\bin\Debug\netstandard2.0\imbACE.Services.dll
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Services\bin\Debug\netstandard2.0\imbACE.Services.pdb
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Services\obj\Debug\netstandard2.0\imbACE.Services.dll
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Services\obj\Debug\netstandard2.0\imbACE.Services.pdb
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Services\bin\Debug\netstandard2.0\imbACE.Services.Standard.xml

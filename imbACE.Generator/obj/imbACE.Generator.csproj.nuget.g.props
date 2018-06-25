@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <RestoreSuccess Condition=" '$(RestoreSuccess)' == '' ">True</RestoreSuccess>
+    <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
+    <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">G:\imbVelesOpenSource\imbACE.Standard\imbACE.Generator\obj\project.assets.json</ProjectAssetsFile>
+    <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">$(UserProfile)\.nuget\packages\</NuGetPackageRoot>
+    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\gorangrubic\.nuget\packages\;C:\Program Files\dotnet\sdk\NuGetFallbackFolder</NuGetPackageFolders>
+    <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
+    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">4.7.0</NuGetToolVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+  </PropertyGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net40' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Content Include="$(NuGetPackageRoot)imbsci.core.standard\0.3.35\contentFiles\any\net40\imbSCI.ico" Condition="Exists('$(NuGetPackageRoot)imbsci.core.standard\0.3.35\contentFiles\any\net40\imbSCI.ico')">
+      <NuGetPackageId>imbSCI.Core.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.35</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>imbSCI.ico</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.core.standard\0.3.35\contentFiles\any\net40\imbVeles48.ico" Condition="Exists('$(NuGetPackageRoot)imbsci.core.standard\0.3.35\contentFiles\any\net40\imbVeles48.ico')">
+      <NuGetPackageId>imbSCI.Core.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.35</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>imbVeles48.ico</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Content Include="$(NuGetPackageRoot)imbsci.core.standard\0.3.35\contentFiles\any\net45\imbSCI.ico" Condition="Exists('$(NuGetPackageRoot)imbsci.core.standard\0.3.35\contentFiles\any\net45\imbSCI.ico')">
+      <NuGetPackageId>imbSCI.Core.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.35</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>imbSCI.ico</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.core.standard\0.3.35\contentFiles\any\net45\imbVeles48.ico" Condition="Exists('$(NuGetPackageRoot)imbsci.core.standard\0.3.35\contentFiles\any\net45\imbVeles48.ico')">
+      <NuGetPackageId>imbSCI.Core.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.35</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>imbVeles48.ico</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Content Include="$(NuGetPackageRoot)imbsci.core.standard\0.3.35\contentFiles\any\netstandard2.0\imbSCI.ico" Condition="Exists('$(NuGetPackageRoot)imbsci.core.standard\0.3.35\contentFiles\any\netstandard2.0\imbSCI.ico')">
+      <NuGetPackageId>imbSCI.Core.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.35</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>imbSCI.ico</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)imbsci.core.standard\0.3.35\contentFiles\any\netstandard2.0\imbVeles48.ico" Condition="Exists('$(NuGetPackageRoot)imbsci.core.standard\0.3.35\contentFiles\any\netstandard2.0\imbVeles48.ico')">
+      <NuGetPackageId>imbSCI.Core.Standard</NuGetPackageId>
+      <NuGetPackageVersion>0.3.35</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>imbVeles48.ico</Link>
+    </Content>
+  </ItemGroup>
+</Project>

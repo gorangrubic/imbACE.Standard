@@ -1,0 +1,10 @@
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Generator\obj\Release\netstandard2.0\imbACE.Generator.csprojAssemblyReference.cache
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Generator\obj\Release\netstandard2.0\imbACE.Generator.csproj.CoreCompileInputs.cache
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Generator\obj\Release\netstandard2.0\imbACE.Generator.AssemblyInfoInputs.cache
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Generator\obj\Release\netstandard2.0\imbACE.Generator.AssemblyInfo.cs
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Generator\bin\Release\netstandard2.0\imbACE.Generator.deps.json
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Generator\bin\Release\netstandard2.0\imbACE.Generator.dll
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Generator\bin\Release\netstandard2.0\imbACE.Generator.pdb
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Generator\obj\Release\netstandard2.0\imbACE.Generator.dll
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Generator\obj\Release\netstandard2.0\imbACE.Generator.pdb
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Generator\bin\Release\netstandard2.0\imbACE.Generator.xml

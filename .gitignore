@@ -3,3 +3,12 @@
 ################################################################################
 
 /imbACE.Controls.WPF/obj
+/imbACE.Core.Document
+/imbACE.DemoConsole
+/imbACE.Standard
+/.vs
+/.paket
+/imbACE.TemplateExtensions
+/imbACE.VSIX
+/packages
+/imbACE.Controls.WPF

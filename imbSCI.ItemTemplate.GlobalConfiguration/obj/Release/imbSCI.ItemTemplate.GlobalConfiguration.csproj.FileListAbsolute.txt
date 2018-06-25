@@ -1,0 +1,9 @@
+G:\imbVelesOpenSource\imbACE.Standard\imbSCI.ItemTemplate.GlobalConfiguration\bin\Release\ItemTemplates\CSharp\1033\imbSCI.ItemTemplate.GlobalConfiguration.zip
+G:\imbVelesOpenSource\imbACE.Standard\imbSCI.ItemTemplate.GlobalConfiguration\bin\Release\imbSCI.ItemTemplate.GlobalConfiguration.dll
+G:\imbVelesOpenSource\imbACE.Standard\imbSCI.ItemTemplate.GlobalConfiguration\obj\Release\imbSCI.ItemTemplate.GlobalConfiguration.csproj.CoreCompileInputs.cache
+G:\imbVelesOpenSource\imbACE.Standard\imbSCI.ItemTemplate.GlobalConfiguration\obj\Release\CSharp\1033\imbSCI.ItemTemplate.GlobalConfiguration.zip
+G:\imbVelesOpenSource\imbACE.Standard\imbSCI.ItemTemplate.GlobalConfiguration\obj\Release\imbSCI.ItemTemplate.GlobalConfiguration.dll
+G:\imbVelesOpenSource\imbACE.Standard\imbSCI.ItemTemplate.GlobalConfiguration\obj\Release\imbSCI.ItemTemplate.GlobalConfiguration.pdb
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Extension.BasicPack\ItemTemplates\imbSCI\ItemTemplates\CSharp\1033\imbSCI.ItemTemplate.GlobalConfiguration.zip
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Extension.BasicPack\ItemTemplates\imbSCI\imbSCI.ItemTemplate.GlobalConfiguration.dll
+G:\imbVelesOpenSource\imbACE.Standard\imbSCI.ItemTemplate.GlobalConfiguration\obj\Release\imbSCI.ItemTemplate.GlobalConfiguration.csproj.CopyComplete

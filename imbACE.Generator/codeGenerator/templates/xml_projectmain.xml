@@ -1,0 +1,25 @@
+﻿	<PropertyGroup>
+		<TargetFrameworks>$</TargetFrameworks>
+		<ApplicationIcon>veles_template_blue.ico</ApplicationIcon>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<PackageId>$safeprojectname$</PackageId>
+		<Version>$imb_version$</Version>
+		<Title>$imb_title$</Title>
+		<PackageIconUrl>http://doc.veles.rs/imbACE.ico</PackageIconUrl>
+		<PackageProjectUrl>http://blog.veles.rs/</PackageProjectUrl>
+		<PackageLicenseUrl>http://doc.veles.rs/LICENCE.txt</PackageLicenseUrl>
+		<Copyright>Copyright (C) 2018 $imb_company$</Copyright>
+		<Description>$imb_description$</Description>
+		<NeutralLanguage>en-US</NeutralLanguage>
+		<PackageReleaseNotes>Initial release based on imbAce.PluginAndConsoleProjectTemplate 
+		</PackageReleaseNotes>
+		<PackageTags></PackageTags>
+		<RepositoryUrl>http://github.com/$imb_repository$</RepositoryUrl>
+		<RepositoryType>GitHub</RepositoryType>
+		<Authors>Goran Grubić</Authors>
+		<Company>$imb_company$</Company>
+		<AssemblyVersion>$imb_version$</AssemblyVersion>
+		<FileVersion>$imb_version$</FileVersion>
+		<Product>$safeprojectname$</Product>
+		<PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
+	</PropertyGroup>

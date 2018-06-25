@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <!-- The configuration and platform will be used to determine which assemblies to include from solution and
+				 project documentation sources -->
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>0441af93-8b03-4d72-b721-7301d0de6d1c</ProjectGuid>
+    <SHFBSchemaVersion>2017.9.26.0</SHFBSchemaVersion>
+    <!-- AssemblyName, Name, and RootNamespace are not used by SHFB but Visual Studio adds them anyway -->
+    <AssemblyName>imbACE</AssemblyName>
+    <RootNamespace>imbACE</RootNamespace>
+    <Name>imbACE</Name>
+    <!-- SHFB properties -->
+    <FrameworkVersion>Cross-platform (.NET Core/.NET Standard)</FrameworkVersion>
+    <OutputPath>..\..\doc\imb-ace-api\</OutputPath>
+    <HtmlHelpName>imbACE</HtmlHelpName>
+    <Language>en-US</Language>
+    <TransformComponentArguments>
+      <Argument Key="logoFile" Value="imbACE.png" />
+      <Argument Key="logoHeight" Value="" />
+      <Argument Key="logoWidth" Value="" />
+      <Argument Key="logoAltText" Value="" />
+      <Argument Key="logoPlacement" Value="left" />
+      <Argument Key="logoAlignment" Value="left" />
+      <Argument Key="maxVersionParts" Value="2" />
+      <Argument Key="defaultLanguage" Value="cs" />
+      <Argument Key="includeEnumValues" Value="true" />
+      <Argument Key="baseSourceCodeUrl" Value="https://github.com/gorangrubic/imbACE/blob/master/src/" />
+      <Argument Key="requestExampleUrl" Value="https://github.com/gorangrubic/imbACE/issues/new " />
+    </TransformComponentArguments>
+    <DocumentationSources>
+      <DocumentationSource sourceFile="..\imbACE.Core\imbACE.Core.csproj" subFolders="true" />
+      <DocumentationSource sourceFile="..\imbACE.Network\imbACE.Network.csproj" subFolders="true" />
+      <DocumentationSource sourceFile="..\imbACE.Services\imbACE.Services.csproj" subFolders="true" />
+    </DocumentationSources>
+    <SaveComponentCacheCapacity>0</SaveComponentCacheCapacity>
+    <BuildAssemblerVerbosity>OnlyWarningsAndErrors</BuildAssemblerVerbosity>
+    <BuildLogFile>..\imb-ace-api.log</BuildLogFile>
+    <HelpFileFormat>Website</HelpFileFormat>
+    <IndentHtml>False</IndentHtml>
+    <KeepLogFile>True</KeepLogFile>
+    <DisableCodeBlockComponent>False</DisableCodeBlockComponent>
+    <CleanIntermediates>True</CleanIntermediates>
+    <HelpFileVersion>0.1.2.17</HelpFileVersion>
+    <MaximumGroupParts>2</MaximumGroupParts>
+    <NamespaceGrouping>True</NamespaceGrouping>
+    <SyntaxFilters>C#</SyntaxFilters>
+    <SdkLinkTarget>Blank</SdkLinkTarget>
+    <RootNamespaceContainer>False</RootNamespaceContainer>
+    <PresentationStyle>VS2013</PresentationStyle>
+    <Preliminary>False</Preliminary>
+    <NamingMethod>Guid</NamingMethod>
+    <HelpTitle>imbACE - Coding for Science - Advanced Console Environment</HelpTitle>
+    <ContentPlacement>AboveNamespaces</ContentPlacement>
+    <FooterText>Coding For Science - imbVeles Open Source Framework - Goran Grubić : 2018- &amp;lt%3ba href=&amp;quot%3bhttp://blog.veles.rs&amp;quot%3b&amp;gt%3bProject web site&amp;lt%3b/a&amp;gt%3b</FooterText>
+    <FeedbackEMailLinkText>hardy%40veles.rs</FeedbackEMailLinkText>
+    <FeedbackEMailAddress>hardy%40veles.rs</FeedbackEMailAddress>
+    <CopyrightText>Copyright %28c%29 2018 - GNU General Public License v3.0</CopyrightText>
+    <CopyrightHref>http://blog.veles.rs/glossary/gnu-general-public-license-v3-0/</CopyrightHref>
+    <VisibleItems>Attributes, InheritedMembers, ProtectedInternalAsProtected, EditorBrowsableNever, NonBrowsable</VisibleItems>
+    <MissingTags>AutoDocumentCtors</MissingTags>
+    <WarnOnMissingSourceContext>True</WarnOnMissingSourceContext>
+    <HeaderText>&amp;lt%3ba href=&amp;quot%3bhttp://doc.veles.rs/&amp;quot%3b&amp;gt%3bHome&amp;lt%3b/a&amp;gt%3b | &amp;lt%3ba href=&amp;quot%3bhttp://doc.veles.rs/imb-sci-api/index.html&amp;quot%3b&amp;gt%3bimbSCI&amp;lt%3b/a&amp;gt%3b |  &amp;lt%3ba href=&amp;quot%3bhttp://doc.veles.rs/imb-ace-api/index.html&amp;quot%3b&amp;gt%3bimbACE&amp;lt%3b/a&amp;gt%3b |  &amp;lt%3ba href=&amp;quot%3bhttp://doc.veles.rs/imb-nlp-api/index.html&amp;quot%3b&amp;gt%3bimbNLP&amp;lt%3b/a&amp;gt%3b |  &amp;lt%3ba href=&amp;quot%3bhttp://doc.veles.rs/imb-wem-api/index.html&amp;quot%3b&amp;gt%3bimbWEM&amp;lt%3b/a&amp;gt%3b |  &amp;lt%3ba href=&amp;quot%3bhttp://doc.veles.rs/imb-wbi-api/index.html&amp;quot%3b&amp;gt%3bimbWBI&amp;lt%3b/a&amp;gt%3b</HeaderText>
+    <ComponentConfigurations>
+      <ComponentConfig id="API Token Resolution" enabled="False">
+        <component id="API Token Resolution">{@TokenFiles}
+<replace elements="/*//token" item="string(.)" /></component>
+      </ComponentConfig>
+      <ComponentConfig id="Code Block Component" enabled="False">
+        <component id="Code Block Component">
+          <basePath value="{@HtmlEncProjectFolder}" />
+          <outputPaths>{@HelpFormatOutputPaths}</outputPaths>
+          <allowMissingSource value="false" />
+          <removeRegionMarkers value="false" />
+          <colorizer syntaxFile="{@SHFBFolder}PresentationStyles\Colorizer\highlight.xml" styleFile="{@SHFBFolder}PresentationStyles\Colorizer\highlight.xsl" stylesheet="{@SHFBFolder}PresentationStyles\Colorizer\highlight.css" scriptFile="{@SHFBFolder}PresentationStyles\Colorizer\highlight.js" disabled="{@DisableCodeBlockComponent}" language="cs" tabSize="0" numberLines="true" outlining="true" keepSeeTags="false" defaultTitle="true" />
+        </component>
+      </ComponentConfig>
+      <ComponentConfig id="IntelliSense Component" enabled="False">
+        <component id="IntelliSense Component">
+          <output includeNamespaces="false" namespacesFile="Namespaces" folder="{@OutputFolder}" boundedCapacity="0" />
+        </component>
+      </ComponentConfig>
+      <ComponentConfig id="Syntax Component" enabled="False">
+        <component id="Syntax Component">
+          <syntax input="/document/reference" output="/document/syntax" renderReferenceLinks="true" />
+          <generators>
+    {@SyntaxFilters}
+</generators>
+          <containerElement name="codeSnippetGroup" addNoExampleTabs="true" includeOnSingleSnippets="true" groupingEnabled="{@CodeSnippetGrouping}" />
+          <configurations>
+            <generator id="C#" />
+            <generator id="Visual Basic">
+              <includeLineContinuation value="false" />
+            </generator>
+            <generator id="Visual Basic Usage">
+              <includeLineContinuation value="false" />
+            </generator>
+            <generator id="Managed C++" />
+            <generator id="F#" />
+            <generator id="J#" />
+            <generator id="JScript" />
+            <generator id="JavaScript" />
+            <generator id="XAML Usage" />
+            <generator id="ASP.NET" />
+            <generator id="X#" />
+          </configurations>
+        </component>
+      </ComponentConfig>
+    </ComponentConfigurations>
+    <PlugInConfigurations>
+    </PlugInConfigurations>
+    <HtmlSdkLinkType>Msdn</HtmlSdkLinkType>
+    <BinaryTOC>True</BinaryTOC>
+    <IncludeFavorites>True</IncludeFavorites>
+    <WebsiteSdkLinkType>Msdn</WebsiteSdkLinkType>
+    <AppendMarkdownFileExtensionsToUrls>False</AppendMarkdownFileExtensionsToUrls>
+    <SourceCodeBasePath>G:\imbVelesOpenSource\imbACE.Standard\</SourceCodeBasePath>
+  </PropertyGroup>
+  <!-- There are no properties for these groups.  AnyCPU needs to appear in order for Visual Studio to perform
+			 the build.  The others are optional common platform types that may appear. -->
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|Win32' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|Win32' ">
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Content" />
+    <Folder Include="Content\VersionHistory" />
+    <Folder Include="icons" />
+    <Folder Include="media" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Content\VersionHistory\v1.0.0.0.aml" />
+    <None Include="Content\VersionHistory\VersionHistory.aml" />
+    <None Include="Content\Welcome.aml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ContentLayout Include="ContentLayout.content" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icons\Help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="icons\imbACE.png">
+      <ImageId>imbACE</ImageId>
+      <AlternateText>imbACE</AlternateText>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d">
+      <HintPath>..\imbACE.Core\bin\Release\net45\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <!-- Import the SHFB build targets -->
+  <Import Project="$(SHFBROOT)\SandcastleHelpFileBuilder.targets" />
+  <!-- The pre-build and post-build event properties must appear *after* the targets file import in order to be
+			 evaluated correctly. -->
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+  </PropertyGroup>
+</Project>

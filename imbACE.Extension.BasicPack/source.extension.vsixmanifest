@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" ?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+    <Metadata>
+        <Identity Id="imbACE.Extension.BasicPack.20ed33a6-3481-4161-a929-ab10d33258ef" Version="0.9" Language="en-US" Publisher="imbVeles" />
+        <DisplayName>imbACE Basic Pack</DisplayName>
+        <Description xml:space="preserve">General multi-target C# (.NET 4.0, .NET 4.5 and .NET Standard) project template. + imbACE (Advanced Console Environment) project and imbSCI (Coding for Science) item templates (namespace XML documentation declaration, imbACE Advanced Console class, imbSCI Global configuration, and code snippets. Project templates contain custom MSBuild target that makes copy of NuGet .nupkg file to local NuGet repository, on each build. </Description>
+        <MoreInfo>http://blog.veles.rs/</MoreInfo>
+        <License>LICENCE.txt</License>
+        <GettingStartedGuide>http://blog.veles.rs/imbace-basicpack-getting-started-draft/</GettingStartedGuide>
+        <ReleaseNotes>http://blog.veles.rs/visual-studio-extension-imbace-basicpack/</ReleaseNotes>
+        <Icon>veles_template_blue.ico</Icon>
+        <PreviewImage>imbACE_Extension_BasicPack.jpg</PreviewImage>
+        <Tags>multi-target, .NET 4.0, .NET 4.5, .NET Standard 2.0, Console, Templates, Cross-platform</Tags>
+    </Metadata>
+    <Installation AllUsers="true">
+        <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="[15.0,16.0)" />
+    </Installation>
+    <Dependencies>
+        <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
+    </Dependencies>
+    <Assets>
+        <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
+        <Asset Type="imbACE.Services.Standard.0.2.4.nupkg" d:Source="File" Path="imbACE.Services.Standard.0.2.4.nupkg" d:VsixSubPath="Packages" />
+        <Asset Type="imbSCI.Core.Standard.0.3.36.nupkg" d:Source="File" Path="imbSCI.Core.Standard.0.3.36.nupkg" d:VsixSubPath="Packages" />
+        <Asset Type="Microsoft.VisualStudio.ItemTemplate" d:Source="Project" Path="ItemTemplates" d:TargetPath="|imbACE.ItemTemplate.AdvancedConsole;TemplateProjectOutputGroup|" d:ProjectName="imbACE.ItemTemplate.AdvancedConsole" d:VsixSubPath="ItemTemplates" />
+        <Asset Type="Microsoft.VisualStudio.ItemTemplate" d:Source="Project" Path="ItemTemplates" d:TargetPath="|imbACE.ItemTemplate.AdvancedConsolePlugin;TemplateProjectOutputGroup|" d:ProjectName="imbACE.ItemTemplate.AdvancedConsolePlugin" d:VsixSubPath="ItemTemplates" />
+        <Asset Type="Microsoft.VisualStudio.ItemTemplate" d:Source="Project" Path="ItemTemplates" d:TargetPath="|imbNLP.ItemTemplate.TransliterationRuleSet;TemplateProjectOutputGroup|" d:ProjectName="imbNLP.ItemTemplate.TransliterationRuleSet" d:VsixSubPath="ItemTemplates" />
+        <Asset Type="Microsoft.VisualStudio.ItemTemplate" d:Source="Project" Path="ItemTemplates" d:TargetPath="|imbSCI.ItemTemplate.GlobalConfiguration;TemplateProjectOutputGroup|" d:ProjectName="imbSCI.ItemTemplate.GlobalConfiguration" d:VsixSubPath="ItemTemplates" />
+        <Asset Type="Microsoft.VisualStudio.ItemTemplate" d:Source="Project" Path="ItemTemplates" d:TargetPath="|imbSCI.ItemTemplate.NamespaceDoc;TemplateProjectOutputGroup|" d:ProjectName="imbSCI.ItemTemplate.NamespaceDoc" d:VsixSubPath="ItemTemplates" />
+        <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="Project" Path="ProjectTemplates" d:TargetPath="|imbACE.ProjectTemplate.ConsoleApplication;TemplateProjectOutputGroup|" d:ProjectName="imbACE.ProjectTemplate.ConsoleApplication" d:VsixSubPath="ProjectTemplates" />
+        <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="Project" Path="ProjectTemplates" d:TargetPath="|imbSCI.ProjectTemplate.MultiTarget;TemplateProjectOutputGroup|" d:ProjectName="imbSCI.ProjectTemplate.MultiTarget" d:VsixSubPath="ProjectTemplates" />
+        <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="File" Path="Snippets\imbACE BasicPack\imbACE BasicPack.pkgdef" />
+    </Assets>
+    <Prerequisites>
+        <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[15.0,16.0)" DisplayName="Visual Studio core editor" />
+    </Prerequisites>
+</PackageManifest>

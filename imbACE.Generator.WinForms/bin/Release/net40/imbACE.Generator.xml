@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>imbACE.Generator</name>
+    </assembly>
+    <members>
+        <member name="T:imbACE.Generator.codeGenerator.definitions.acePackageInfo">
+            <summary>
+            Extends imbACE application information with data entries relevant for NuGet package meta data
+            </summary>
+            <seealso cref="T:imbACE.Core.application.aceApplicationInfo" />
+        </member>
+        <member name="P:imbACE.Generator.codeGenerator.definitions.acePackageInfo.ReleaseNotes">
+            <summary>
+            Text of release notes, attached to NuGet package 
+            </summary>
+        </member>
+        <member name="T:imbACE.Generator.codeGenerator.definitions.classGenerationTask">
+            <summary>
+            Description of a class generation task
+            </summary>
+            <seealso cref="T:imbSCI.Data.data.imbBindable" />
+            <seealso cref="T:imbSCI.Data.interfaces.IObjectWithName" />
+            <seealso cref="T:imbSCI.Data.interfaces.IObjectWithDescription" />
+            <seealso cref="T:imbSCI.Data.interfaces.IObjectWithNameAndDescription" />
+        </member>
+        <member name="P:imbACE.Generator.codeGenerator.definitions.classGenerationTask.name">
+            <summary> Human readable - Display name for a class to be generated</summary>
+        </member>
+        <member name="T:imbACE.Generator.codeGenerator.definitions.CodeGenerationForProjectDefinition">
+            <summary>
+            Collection of
+            </summary>
+            <seealso cref="!:System.Collections.Generic.List&lt;imbACE.Generator.codeGenerator.definitions.projectTargetTask&gt;" />
+        </member>
+        <member name="M:imbACE.Generator.codeGenerator.definitions.CodeGenerationForProjectDefinition.GetTargetFrameworksValue(System.Collections.Generic.IEnumerable{imbACE.Generator.codeGenerator.definitions.projectTargetTask})">
+            <summary>
+            Gets the list of target frameworks, as required by PropertyGroup->TargetFrameworks element of Visual Studio project definitions
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:imbACE.Generator.codeGenerator.definitions.packageOptionTask">
+            <summary>
+            
+            </summary>
+            <seealso cref="T:imbACE.Generator.codeGenerator.definitions.codeGeneratorTaskBase" />
+            <seealso cref="T:imbSCI.Data.interfaces.IObjectWithName" />
+        </member>
+        <member name="P:imbACE.Generator.codeGenerator.definitions.packageOptionTask.targets">
+            <summary>
+            Gets or sets the targets.
+            </summary>
+            <value>
+            The targets.
+            </value>
+        </member>
+        <member name="P:imbACE.Generator.codeGenerator.definitions.packageOptionTask.name">
+            <summary> Full namespace name</summary>
+        </member>
+        <member name="P:imbACE.Generator.codeGenerator.definitions.packageOptionTask.Version">
+            <summary> </summary>
+        </member>
+        <member name="T:imbACE.Generator.codeGenerator.definitions.projectGenerationSettings">
+            <summary>
+            Settings consumed by imbACE project templates
+            </summary>
+        </member>
+        <member name="P:imbACE.Generator.codeGenerator.definitions.projectGenerationSettings.applicationInfo">
+            <summary> </summary>
+        </member>
+        <member name="T:imbACE.Generator.codeGenerator.definitions.projectTargetTask">
+            <summary>
+            Platform target definition for Visual Studio project file (.csproj)
+            </summary>
+            <seealso cref="T:imbSCI.Data.data.imbBindable" />
+        </member>
+        <member name="M:imbACE.Generator.codeGenerator.definitions.projectTargetTask.#ctor">
+            <summary>
+            Initializes an empty instance of the <see cref="T:imbACE.Generator.codeGenerator.definitions.projectTargetTask"/> class.
+            </summary>
+        </member>
+        <member name="M:imbACE.Generator.codeGenerator.definitions.projectTargetTask.GetDefineConstantsXML">
+            <summary>
+            XML node with compiler constant / flag 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:imbACE.Generator.codeGenerator.definitions.projectTargetTask.#ctor(System.String,System.String,System.String[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:imbACE.Generator.codeGenerator.definitions.projectTargetTask"/> class.
+            </summary>
+            <param name="_targetName">Target framework name - compatibile with Visual Studio property PropertyGroup->TargetFrameworks e.g. netstandard2.0 or net45</param>
+            <param name="_name">Display name, e.g. .NET Standard 2.0</param>
+            <param name="_flagConstant">Compiler constants to be defined in the Visual Studio project file. e.g. "NETSTANDARD2_0" etc.</param>
+        </member>
+        <member name="P:imbACE.Generator.codeGenerator.definitions.projectTargetTask.targetName">
+            <summary> Target framework name - compatibile with Visual Studio property PropertyGroup->TargetFrameworks </summary>
+        </member>
+        <member name="P:imbACE.Generator.codeGenerator.definitions.projectTargetTask.compilerFlagName">
+            <summary> Compiler Flags to be defined </summary>
+        </member>
+        <member name="P:imbACE.Generator.codeGenerator.definitions.projectTargetTask.name">
+            <summary> Human - Display name of the target </summary>
+        </member>
+        <member name="P:imbACE.Generator.package.PackageInformation.repository_name">
+            <summary>
+            Name of the GitHub repository
+            </summary>
+        </member>
+        <member name="M:imbACE.Generator.ui.generatorBase.BuildSourceFrom(imbACE.Generator.ui.universalViewModel)">
+            <summary>
+            Builds the source from <see cref="T:imbACE.Generator.ui.universalViewModel"/>
+            </summary>
+            <param name="model">The model.</param>
+            <returns></returns>
+        </member>
+        <member name="P:imbACE.Generator.ui.generatorSettings.options">
+            <summary>
+            Gets or sets the options.
+            </summary>
+            <value>
+            The options.
+            </value>
+        </member>
+        <member name="T:imbACE.Generator.ui.universalViewModel">
+            <summary>
+            Universal ViewModel class - wrapping the edited object
+            </summary>
+            <seealso cref="T:System.ComponentModel.INotifyPropertyChanged" />
+        </member>
+        <member name="P:imbACE.Generator.ui.universalViewModel.Title">
+            <summary> Title of the view model </summary>
+        </member>
+        <member name="P:imbACE.Generator.ui.universalViewModel.Description">
+            <summary> </summary>
+        </member>
+        <member name="P:imbACE.Generator.ui.universalViewModel.ContextualHelp">
+            <summary> Contextual help </summary>
+        </member>
+        <member name="P:imbACE.Generator.ui.universalViewModel.DataObject">
+            <summary> data object that is being edited </summary>
+        </member>
+        <member name="M:imbACE.Generator.ui.universalViewModel.#ctor(System.Object)">
+            <summary>
+            Builds universal view model with data object information
+            </summary>
+            <param name="dataObject">The data object.</param>
+        </member>
+        <member name="P:imbACE.Generator.ui.universalViewModel.DataObjectInfo">
+            <summary>
+            Gets or sets the data object information.
+            </summary>
+            <value>
+            The data object information.
+            </value>
+        </member>
+        <member name="P:imbACE.Generator.ui.universalViewModel.options">
+            <summary>
+            Options controling how view model is updated
+            </summary>
+            <value>
+            The options.
+            </value>
+        </member>
+        <member name="M:imbACE.Generator.ui.universalViewModel.Deploy(System.Object)">
+            <summary>
+            Deploys the specified data object.
+            </summary>
+            <param name="dataObject">The data object.</param>
+        </member>
+        <member name="M:imbACE.Generator.ui.universalViewModel.SetContextualHelp(System.String)">
+            <summary>
+            Sets the contextual help
+            </summary>
+            <param name="propertyName">Name of the property.</param>
+        </member>
+    </members>
+</doc>

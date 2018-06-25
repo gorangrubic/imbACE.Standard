@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
+  <TemplateData>
+    <Name>imbSCI NamespaceDoc</Name>
+    <Description>C# file containing declarations of NamespaceDoc and NamespaceGroupDoc, private classes that are placeholders for XML documentation on the namespace and namespace group.</Description>
+    <Icon>veles_template_red.ico</Icon>
+    <TemplateID>dec067d4-525a-485a-9c7b-d64ea0ca7da0</TemplateID>
+    <ProjectType>CSharp</ProjectType>
+    <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>NamespaceDoc.cs</DefaultName>
+    <CreateInPlace>true</CreateInPlace>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem ReplaceParameters="true">NamespaceDoc.cs</ProjectItem>
+  </TemplateContent>
+</VSTemplate>

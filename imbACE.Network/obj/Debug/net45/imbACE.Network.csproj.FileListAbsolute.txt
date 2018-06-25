@@ -1,0 +1,4 @@
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Network\obj\Debug\net45\imbACE.Network.csprojAssemblyReference.cache
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Network\obj\Debug\net45\imbACE.Network.csproj.CoreCompileInputs.cache
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Network\obj\Debug\net45\imbACE.Network.AssemblyInfoInputs.cache
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Network\obj\Debug\net45\imbACE.Network.AssemblyInfo.cs

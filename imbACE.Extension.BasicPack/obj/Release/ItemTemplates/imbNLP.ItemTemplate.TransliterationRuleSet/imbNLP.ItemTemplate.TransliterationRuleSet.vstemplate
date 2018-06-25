@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
+  <TemplateData>
+    <Name>imbNLP Transliteration Rule Set</Name>
+    <Description>Transliteteration specification file, used by imbNLP.Transliteration library. Item name should be ISO 2-letter Alpha language designation (e.g. en, de, ru, es...). Call this template from project root directory, it will place the transliteration ruleset at resources/transliteration/ subdirectory, that is searched, by imbNLP.Transliteration library, by default</Description>
+    <Icon>veles_template_green.ico</Icon>
+    <TemplateID>6ad1fc88-bd0c-41a5-b6ff-0329fad20a38</TemplateID>
+    <ProjectType>CSharp</ProjectType>
+    <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>en.txt</DefaultName>
+    <CreateInPlace>true</CreateInPlace>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem TargetFileName="$safeitemname$.txt" ReplaceParameters="true" >sr.txt</ProjectItem>
+    <ProjectItem TargetFileName="$safeitemname$_readme.txt" ReplaceParameters="true" >readme.txt</ProjectItem>
+    <!--
+    <Folder Name="resources" TargetFolderName="resources">
+      <Folder Name="transliteration" TargetFolderName="transliteration">
+         
+        </Folder>
+      </Folder>
+      -->
+  </TemplateContent>
+</VSTemplate>

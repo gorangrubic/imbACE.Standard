@@ -1,0 +1,15 @@
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Services\obj\Release\netstandard2.0\imbACE.Services.csprojAssemblyReference.cache
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Services\obj\Release\netstandard2.0\imbACE.Services.csproj.CoreCompileInputs.cache
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Services\obj\Release\netstandard2.0\imbACE.Services.AssemblyInfoInputs.cache
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Services\obj\Release\netstandard2.0\imbACE.Services.AssemblyInfo.cs
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Services\bin\Release\netstandard2.0\imbACE.Services.deps.json
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Services\bin\Release\netstandard2.0\imbACE.Services.dll
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Services\bin\Release\netstandard2.0\imbACE.Services.pdb
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Services\obj\Release\netstandard2.0\imbACE.Services.dll
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Services\obj\Release\netstandard2.0\imbACE.Services.pdb
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Services\bin\Release\netstandard2.0\imbACE.Services.Standard.xml
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Services\bin\Release\netstandard2.0\imbACE.Core.dll
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Services\bin\Release\netstandard2.0\imbACE.Network.dll
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Services\bin\Release\netstandard2.0\imbACE.Network.pdb
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Services\bin\Release\netstandard2.0\imbACE.Core.pdb
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Services\obj\Release\netstandard2.0\imbACE.Services.csproj.CopyComplete

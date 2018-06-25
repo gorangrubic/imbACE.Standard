@@ -1,0 +1,8 @@
+G:\imbVelesOpenSource\imbACE.Standard\imbSCI.ProjectTemplate.MultiTarget\bin\Release\ProjectTemplates\CSharp\1033\imbSCI.ProjectTemplate.MultiTarget.zip
+G:\imbVelesOpenSource\imbACE.Standard\imbSCI.ProjectTemplate.MultiTarget\bin\Release\imbSCI.ProjectTemplate.MultiTarget.dll
+G:\imbVelesOpenSource\imbACE.Standard\imbSCI.ProjectTemplate.MultiTarget\obj\Release\imbSCI.ProjectTemplate.MultiTarget.csproj.CoreCompileInputs.cache
+G:\imbVelesOpenSource\imbACE.Standard\imbSCI.ProjectTemplate.MultiTarget\obj\Release\CSharp\1033\imbSCI.ProjectTemplate.MultiTarget.zip
+G:\imbVelesOpenSource\imbACE.Standard\imbSCI.ProjectTemplate.MultiTarget\obj\Release\imbSCI.ProjectTemplate.MultiTarget.dll
+G:\imbVelesOpenSource\imbACE.Standard\imbSCI.ProjectTemplate.MultiTarget\obj\Release\imbSCI.ProjectTemplate.MultiTarget.pdb
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Extension.BasicPack\ItemTemplates\imbSCI\ProjectTemplates\CSharp\1033\imbSCI.ProjectTemplate.MultiTarget.zip
+G:\imbVelesOpenSource\imbACE.Standard\imbACE.Extension.BasicPack\ItemTemplates\imbSCI\imbSCI.ProjectTemplate.MultiTarget.dll

@@ -1,0 +1,105 @@
+﻿	<CodeSnippet Format="1.1.0">
+		<Header>
+			<Title>Static Regex methods bundle</Title>
+			<Shortcut>_imbRegComplete</Shortcut>
+			<Description>Complete bundle of String extension methods used to test, select, select all, and replace matches, with specified Regex expression</Description>
+			<Author>imbVeles</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>property</ID>
+					<ToolTip>Descriptive name for the Regex expression</ToolTip>
+					<Default>regexName</Default>
+				</Literal>
+        <Literal>
+          <ID>regex</ID>
+          <ToolTip>Regex expression</ToolTip>
+          <Default>([\w]{1}\.{1}\s{1}){2,}</Default>
+        </Literal>
+			</Declarations>
+			<Code Language="csharp">
+        <![CDATA[
+		 #region REGEX BUNDLE 
+
+        /// <summary>
+        /// Regex expression to select $property$ 
+        /// </summary>
+        /// <remarks>
+        /// <para>For text: </para>
+        /// <para>Selects: </para>
+        /// </remarks>
+        public static Regex _select_$property$ = new Regex(@"([\w]{1}\.{1}\s{1}){2,}", RegexOptions.Compiled);
+
+        /// <summary>
+        /// Refills the Matches with refilement parameter: ### 
+        /// </summary>
+        /// <param name="input"></param>
+        /// <param name="refilement"></param>
+        /// <returns></returns>
+        public static String replace_$property$(this String input, String refilement = "")
+        {
+            String matchedStrings = input;
+            var matched = _select_$property$.Matches(input);
+            foreach (Match m in matched)
+            {
+                if (m.Success)
+                {
+                    String insert = refilement.toWidthExact(m.Length, refilement);
+                    String sufix = matchedStrings.Substring(m.Index + m.Length);
+                    matchedStrings = matchedStrings.Substring(0, m.Index) + insert + sufix;
+                }
+            }
+            return _select_$property$.Replace(input, refilement);
+        }
+
+
+        /// <summary>
+        /// Select all $property$ found using Regex _select_$property$
+        /// </summary>
+        /// <param name="m">text to extract from</param>
+        /// <returns>Returns list of matched substrings. Returns empty List if no match found</returns>
+        public static List<String> selectList_$property$(this String input)
+        {
+            List<String> matchedStrings = new List<string>();
+            var matched = _select_$property$.Matches(input);
+            foreach (Match m in matched)
+            {
+                if (m.Success) matchedStrings.Add(m.Value);
+            }
+
+            return matchedStrings;
+        }
+
+        /// <summary>
+        /// Select $property$ : using Regex _select_$property$
+        /// </summary>
+        /// <param name="m">text to regex</param>
+        /// <returns>Returns value match. Returns Empty String if no match found</returns>
+        public static String select_$property$(this String input)
+        {
+            Match m = _select_$property$.Match(input);
+            if (m.Success) return m.Value;
+            return "";
+
+        }
+
+        /// <summary>
+        /// Test if input is $property$ (match against ([\w]{1}\.{1}\s{1}){2,})
+        /// </summary>
+        /// <param name="input">String to test</param>
+        /// <returns>IsMatch against _select_is$property$ - returns TRUE if input returns 1 or more Match results</returns>
+        public static Boolean is$property$Match(this String input)
+        {
+            if (String.IsNullOrEmpty(input)) return false;
+            return _select_$property$.IsMatch(input);
+        }
+
+        #endregion
+	$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>

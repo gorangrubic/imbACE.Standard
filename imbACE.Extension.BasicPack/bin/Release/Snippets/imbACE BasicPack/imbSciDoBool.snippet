@@ -1,0 +1,44 @@
+﻿  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>imbSCI Do boolean property</Title>
+      <Shortcut>_imbSCI_DoBool</Shortcut>
+      <Description>Boolean property for switching something, with common data annotation attributes</Description>
+      <Author>imbVeles</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>Property type</ToolTip>
+          <Default>Boolean</Default>
+        </Literal>
+        <Literal>
+          <ID>property</ID>
+          <ToolTip>Property name</ToolTip>
+          <Default>doSomething</Default>
+        </Literal>
+        <Literal>
+          <ID>categoryGroup</ID>
+          <ToolTip>Category of configuration</ToolTip>
+          <Default>Switch</Default>
+        </Literal>
+        <Literal>
+          <ID>description</ID>
+          <ToolTip>Description</ToolTip>
+          <Default>If true it will do something</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        /// &lt;summary&gt; $description$ &lt;/summary&gt;
+        [Category("$categoryGroup$")]
+        [DisplayName("$property$")]
+        [Description("$description$")]
+        // [imb(imbAttributeName.measure_important, dataPointImportance.important)]
+        public $type$ $property$ {get; set;} = true;
+
+        $end$</Code>
+    </Snippet>
+  </CodeSnippet>

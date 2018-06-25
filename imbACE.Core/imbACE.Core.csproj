@@ -1,0 +1,101 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net45;net40</TargetFrameworks>
+    <ApplicationIcon>imbACE.ico</ApplicationIcon>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageId>imbACE.Core.Standard</PackageId>
+    <Version>0.2.13</Version>
+    <Title>imbACE.Core .NET Standard</Title>
+    <Summary></Summary>
+    <PackageIconUrl>http://doc.veles.rs/imbACE.ico</PackageIconUrl>
+    <PackageProjectUrl>http://blog.veles.rs/</PackageProjectUrl>
+    <PackageLicenseUrl>http://doc.veles.rs/LICENCE.txt</PackageLicenseUrl>
+    <Copyright>Copyright (C) 2017-2018 imbVeles - GNU GENERAL PUBLIC LICENSE V3.0</Copyright>
+    <Description>imbACE.Core is foundation of imbACE (Advanced Console Environment) console application framework. It provides base application, components &amp; plugin classes, ACE Script execution &amp; command-tree management (reflection, model construction, user reference auto construction) and several side functionalities (sound sequence, db access, workload measurement...). imbACE is all about rapid console application development – any kind of console application. The main use case is: development of your research-specific console application/tool for automated experimentation, data processing and reporting.</Description>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <PackageReleaseNotes>Targets: .NET 4.0*, .NET 4.5 and .NET Core 2.0 i.e ready for use in cross-platform application development. * Purpose of the .NET 4.0 target is to provide compatibility with Windows XP, that is still popular on console PCs of older CNC machines and industrial controlers. It will be supported "forever", as it is part of the mission.
+    </PackageReleaseNotes>
+    <PackageTags>Console, TUI, Command line, text interface, scripting, plugin</PackageTags>
+    <RepositoryUrl>https://github.com/gorangrubic/</RepositoryUrl>
+    <RepositoryType>GitHub</RepositoryType>
+    <Authors>Goran Grubić</Authors>
+    <Company>imbVeles</Company>
+    <AssemblyVersion>0.2.0.21</AssemblyVersion>
+    <FileVersion>0.2.0.21</FileVersion>
+    <Product>imbACE.Core .NET Standard</Product>
+    <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <!-- .NET Standard 2.0 references, compilation flags and build options -->
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.0'">
+    <DefineConstants>NETCORE;NETSTANDARD;NETSTANDARD2_0</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net40'">
+    <DefineConstants>NET40</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net45'">
+    <DefineConstants>NET45;NETFULL</DefineConstants>
+  </PropertyGroup>
+  
+  <PropertyGroup>
+    <DocumentationFile>$(OutputPath)$(PackageId).xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
+    <ShouldCreateLogs>True</ShouldCreateLogs>
+    <AdvancedSettingsExpanded>True</AdvancedSettingsExpanded>
+    <UpdateAssemblyVersion>False</UpdateAssemblyVersion>
+    <UpdateAssemblyFileVersion>False</UpdateAssemblyFileVersion>
+    <UpdateAssemblyInfoVersion>False</UpdateAssemblyInfoVersion>
+    <UpdatePackageVersion>True</UpdatePackageVersion>
+    <AssemblyInfoVersionType>SettingsVersion</AssemblyInfoVersionType>
+    <InheritWinAppVersionFrom>None</InheritWinAppVersionFrom>
+    <WarningLevel>0</WarningLevel>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
+    <ShouldCreateLogs>True</ShouldCreateLogs>
+    <AdvancedSettingsExpanded>True</AdvancedSettingsExpanded>
+    <UpdateAssemblyVersion>False</UpdateAssemblyVersion>
+    <UpdateAssemblyFileVersion>False</UpdateAssemblyFileVersion>
+    <UpdateAssemblyInfoVersion>False</UpdateAssemblyInfoVersion>
+    <UpdatePackageVersion>True</UpdatePackageVersion>
+    <AssemblyInfoVersionType>SettingsVersion</AssemblyInfoVersionType>
+    <InheritWinAppVersionFrom>None</InheritWinAppVersionFrom>
+  </PropertyGroup>
+
+  <Target Name="CopyPackage" AfterTargets="Pack">
+    <Copy SourceFiles="$(OutputPath)$(PackageId).$(PackageVersion).nupkg" DestinationFolder="G:\imbVelesOpenSource\LocalNuGet\imbVelesSecondGeneration\" />
+  </Target>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+    <!-- <PackageReference Include="MySql.Data.NET40" Version="1.0.0" />-->
+    <PackageReference Include="MySql.Data" Version="8.0.11" />
+  </ItemGroup>
+
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net45'">
+    <PackageReference Include="MySql.Data" Version="6.9.12" />
+   <!-- <PackageReference Include="MySql.Data.NET40" Version="1.0.0" />-->
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net40'">
+    <PackageReference Include="MySql.Data" Version="6.9.12" />
+    <!-- <PackageReference Include="MySql.Data.NET40" Version="1.0.0" />-->
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="imbSCI.Core.Standard" Version="0.3.36" />
+    <PackageReference Include="imbSCI.Reporting.Standard" Version="0.3.37" />
+  </ItemGroup>
+
+  <Target Name="CopyPackage" AfterTargets="Pack">
+    <Copy SourceFiles="$(OutputPath)$(PackageId).$(PackageVersion).nupkg" DestinationFolder="G:\imbVelesOpenSource\LocalNuGet\imbVelesSecondGeneration\" />
+  </Target>
+
+</Project>

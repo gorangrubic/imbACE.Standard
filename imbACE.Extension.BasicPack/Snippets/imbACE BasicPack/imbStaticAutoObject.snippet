@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>imbSCI Static object with lazy initiation</Title>
+			<Shortcut>_imbStatAutoObject</Shortcut>
+			<Description>Class instance property with thread-safe lazy initialization, performed on the first Get call</Description>
+			<Author>imbVeles</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>type</ID>
+					<ToolTip>Property type</ToolTip>
+					<Default><![CDATA[List<String>]]></Default>
+				</Literal>
+				<Literal>
+					<ID>property</ID>
+					<ToolTip>Property name</ToolTip>
+					<Default>myProperty</Default>
+				</Literal>
+				<Literal>
+					<ID>static</ID>
+					<ToolTip>Static prefix</ToolTip>
+					<Default>static</Default>
+				</Literal>
+        <Literal>
+          <ID>desc</ID>
+          <ToolTip>opis</ToolTip>
+          <Default>static and autoinitiated object</Default>
+        </Literal>
+			</Declarations>
+			<Code Language="csharp">
+        <![CDATA[
+private $static$ Object _$property$_lock = new Object();
+private $static$ $type$ _$property$;
+/// <summary>
+/// $desc$
+/// </summary>
+public $static$ $type$ $property$
+{
+	get
+	{
+		if (_$property$==null)
+		{
+			lock (_$property$_lock) {
+
+				if (_$property$==null) {
+		  			_$property$ = new $type$();
+					// add here if any additional initialization code is required
+				}
+		  }
+		}
+		return _$property$;
+	}
+}
+$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

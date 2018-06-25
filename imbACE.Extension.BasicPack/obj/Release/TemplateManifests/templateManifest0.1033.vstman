@@ -1,0 +1,89 @@
+﻿<VSTemplateManifest Version="1.0" Locale="1033" xmlns="http://schemas.microsoft.com/developer/vstemplatemanifest/2015">
+  <VSTemplateContainer TemplateType="Item">
+    <RelativePathOnDisk>imbACE\CSharp\1033\imbACE.ItemTemplate.AdvancedConsolePlugin</RelativePathOnDisk>
+    <TemplateFileName>imbACE.ItemTemplate.AdvancedConsolePlugin.vstemplate</TemplateFileName>
+    <VSTemplateHeader>
+      <TemplateData xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+        <Name>imbACE Plugin for Advanced Console</Name>
+        <Description>Template for a imbACE Advanced Console Plugin class (part of imbACE framework). Requires imbACE.Core</Description>
+        <Icon>veles_template_blue.ico</Icon>
+        <TemplateID>a64789d7-3973-47b9-896a-bf1882101f9d</TemplateID>
+        <ProjectType>CSharp</ProjectType>
+        <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
+        <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+        <DefaultName>PluginImplementation.cs</DefaultName>
+        <CreateInPlace>true</CreateInPlace>
+      </TemplateData>
+    </VSTemplateHeader>
+  </VSTemplateContainer>
+  <VSTemplateContainer TemplateType="Item">
+    <RelativePathOnDisk>imbACE\CSharp\1033\imbACE.ItemTemplate.AdvancedConsole</RelativePathOnDisk>
+    <TemplateFileName>imbACE.ItemTemplate.AdvancedConsole.vstemplate</TemplateFileName>
+    <VSTemplateHeader>
+      <TemplateData xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+        <Name>imbACE Advanced Console bundle</Name>
+        <Description>aceAdvancedConsole implementation bundle, with aceAdvancedState and aceAdvancedWorkspace classes. Type only name prefix, it will automatically add -Console, -State and -Workspace class name suffixes. Requires imbACE.Services library.</Description>
+        <Icon>veles_template_blue.ico</Icon>
+        <TemplateID>ff8529c7-bb1f-42c2-901d-e656206029c8</TemplateID>
+        <ProjectType>CSharp</ProjectType>
+        <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
+        <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+        <DefaultName>custom.cs</DefaultName>
+        <CreateInPlace>true</CreateInPlace>
+        <TemplateGroupID>
+        </TemplateGroupID>
+      </TemplateData>
+    </VSTemplateHeader>
+  </VSTemplateContainer>
+  <VSTemplateContainer TemplateType="Item">
+    <RelativePathOnDisk>imbNLP\CSharp\1033\imbNLP.ItemTemplate.TransliterationRuleSet</RelativePathOnDisk>
+    <TemplateFileName>imbNLP.ItemTemplate.TransliterationRuleSet.vstemplate</TemplateFileName>
+    <VSTemplateHeader>
+      <TemplateData xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+        <Name>imbNLP Transliteration Rule Set</Name>
+        <Description>Transliteteration specification file, used by imbNLP.Transliteration library. Item name should be ISO 2-letter Alpha language designation (e.g. en, de, ru, es...). Place definitions at project's [resources/transliteration/] subdirectory, and set Build Action to Content. Like that, it will be automatically visible by imbNLP.Transliteration library.</Description>
+        <Icon>veles_template_green.ico</Icon>
+        <TemplateID>6ad1fc88-bd0c-41a5-b6ff-0329fad20a38</TemplateID>
+        <ProjectType>CSharp</ProjectType>
+        <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
+        <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+        <DefaultName>en.txt</DefaultName>
+        <CreateInPlace>true</CreateInPlace>
+      </TemplateData>
+    </VSTemplateHeader>
+  </VSTemplateContainer>
+  <VSTemplateContainer TemplateType="Item">
+    <RelativePathOnDisk>imbSCI\CSharp\1033\imbSCI.ItemTemplate.GlobalConfiguration</RelativePathOnDisk>
+    <TemplateFileName>imbSCI.ItemTemplate.GlobalConfiguration.vstemplate</TemplateFileName>
+    <VSTemplateHeader>
+      <TemplateData xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+        <Name>imbSCI.ItemTemplate.GlobalConfiguration</Name>
+        <Description>imbSCI.ItemTemplate.GlobalConfiguration</Description>
+        <Icon>veles_template_red.ico</Icon>
+        <TemplateID>cadf3118-732a-47b8-b7f8-51c57c5441e6</TemplateID>
+        <ProjectType>CSharp</ProjectType>
+        <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
+        <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+        <DefaultName>Class.cs</DefaultName>
+        <CreateInPlace>true</CreateInPlace>
+      </TemplateData>
+    </VSTemplateHeader>
+  </VSTemplateContainer>
+  <VSTemplateContainer TemplateType="Item">
+    <RelativePathOnDisk>imbSCI\CSharp\1033\imbSCI.ItemTemplate.NamespaceDoc</RelativePathOnDisk>
+    <TemplateFileName>imbSCI.ItemTemplate.NamespaceDoc.vstemplate</TemplateFileName>
+    <VSTemplateHeader>
+      <TemplateData xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+        <Name>imbSCI NamespaceDoc</Name>
+        <Description>C# file containing declarations of NamespaceDoc and NamespaceGroupDoc, private classes that are placeholders for XML documentation on the namespace and namespace group.</Description>
+        <Icon>veles_template_red.ico</Icon>
+        <TemplateID>dec067d4-525a-485a-9c7b-d64ea0ca7da0</TemplateID>
+        <ProjectType>CSharp</ProjectType>
+        <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
+        <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+        <DefaultName>NamespaceDoc.cs</DefaultName>
+        <CreateInPlace>true</CreateInPlace>
+      </TemplateData>
+    </VSTemplateHeader>
+  </VSTemplateContainer>
+</VSTemplateManifest>

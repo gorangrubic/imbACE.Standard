@@ -1,0 +1,672 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.5": {
+      "EPPlus/4.5.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "PresentationCore",
+          "System",
+          "System.Core",
+          "System.Data",
+          "System.Drawing",
+          "System.Security",
+          "System.Xml",
+          "System.configuration"
+        ],
+        "compile": {
+          "lib/net40/EPPlus.dll": {}
+        },
+        "runtime": {
+          "lib/net40/EPPlus.dll": {}
+        }
+      },
+      "imbSCI.Core.Standard/0.3.36": {
+        "type": "package",
+        "dependencies": {
+          "EPPlus": "4.5.1",
+          "MathNet.Numerics": "4.4.1",
+          "System.ComponentModel.Annotations": "4.4.1",
+          "System.Drawing.Primitives": "4.3.0",
+          "imbSCI.Data.Standard": "0.3.15"
+        },
+        "compile": {
+          "lib/net45/imbSCI.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net45/imbSCI.Core.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/net45/imbSCI.ico": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          },
+          "contentFiles/any/net45/imbVeles48.ico": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
+      "imbSCI.Data.Standard/0.3.15": {
+        "type": "package",
+        "compile": {
+          "lib/net45/imbSCI.Data.dll": {}
+        },
+        "runtime": {
+          "lib/net45/imbSCI.Data.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/any/_._": {
+            "buildAction": "None",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
+      "MathNet.Numerics/4.4.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "System.Core",
+          "System.Numerics",
+          "System.Runtime.Serialization"
+        ],
+        "compile": {
+          "lib/net40/MathNet.Numerics.dll": {}
+        },
+        "runtime": {
+          "lib/net40/MathNet.Numerics.dll": {}
+        }
+      },
+      "System.ComponentModel.Annotations/4.4.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.ComponentModel.DataAnnotations"
+        ],
+        "compile": {
+          "ref/net45/_._": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
+        }
+      },
+      "System.Drawing.Primitives/4.3.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Drawing",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net45/System.Drawing.Primitives.dll": {}
+        },
+        "runtime": {
+          "lib/net45/System.Drawing.Primitives.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.5/win": {
+      "EPPlus/4.5.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "PresentationCore",
+          "System",
+          "System.Core",
+          "System.Data",
+          "System.Drawing",
+          "System.Security",
+          "System.Xml",
+          "System.configuration"
+        ],
+        "compile": {
+          "lib/net40/EPPlus.dll": {}
+        },
+        "runtime": {
+          "lib/net40/EPPlus.dll": {}
+        }
+      },
+      "imbSCI.Core.Standard/0.3.36": {
+        "type": "package",
+        "dependencies": {
+          "EPPlus": "4.5.1",
+          "MathNet.Numerics": "4.4.1",
+          "System.ComponentModel.Annotations": "4.4.1",
+          "System.Drawing.Primitives": "4.3.0",
+          "imbSCI.Data.Standard": "0.3.15"
+        },
+        "compile": {
+          "lib/net45/imbSCI.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net45/imbSCI.Core.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/net45/imbSCI.ico": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          },
+          "contentFiles/any/net45/imbVeles48.ico": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
+      "imbSCI.Data.Standard/0.3.15": {
+        "type": "package",
+        "compile": {
+          "lib/net45/imbSCI.Data.dll": {}
+        },
+        "runtime": {
+          "lib/net45/imbSCI.Data.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/any/_._": {
+            "buildAction": "None",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
+      "MathNet.Numerics/4.4.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "System.Core",
+          "System.Numerics",
+          "System.Runtime.Serialization"
+        ],
+        "compile": {
+          "lib/net40/MathNet.Numerics.dll": {}
+        },
+        "runtime": {
+          "lib/net40/MathNet.Numerics.dll": {}
+        }
+      },
+      "System.ComponentModel.Annotations/4.4.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.ComponentModel.DataAnnotations"
+        ],
+        "compile": {
+          "ref/net45/_._": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
+        }
+      },
+      "System.Drawing.Primitives/4.3.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Drawing",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net45/System.Drawing.Primitives.dll": {}
+        },
+        "runtime": {
+          "lib/net45/System.Drawing.Primitives.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.5/win-x64": {
+      "EPPlus/4.5.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "PresentationCore",
+          "System",
+          "System.Core",
+          "System.Data",
+          "System.Drawing",
+          "System.Security",
+          "System.Xml",
+          "System.configuration"
+        ],
+        "compile": {
+          "lib/net40/EPPlus.dll": {}
+        },
+        "runtime": {
+          "lib/net40/EPPlus.dll": {}
+        }
+      },
+      "imbSCI.Core.Standard/0.3.36": {
+        "type": "package",
+        "dependencies": {
+          "EPPlus": "4.5.1",
+          "MathNet.Numerics": "4.4.1",
+          "System.ComponentModel.Annotations": "4.4.1",
+          "System.Drawing.Primitives": "4.3.0",
+          "imbSCI.Data.Standard": "0.3.15"
+        },
+        "compile": {
+          "lib/net45/imbSCI.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net45/imbSCI.Core.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/net45/imbSCI.ico": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          },
+          "contentFiles/any/net45/imbVeles48.ico": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
+      "imbSCI.Data.Standard/0.3.15": {
+        "type": "package",
+        "compile": {
+          "lib/net45/imbSCI.Data.dll": {}
+        },
+        "runtime": {
+          "lib/net45/imbSCI.Data.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/any/_._": {
+            "buildAction": "None",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
+      "MathNet.Numerics/4.4.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "System.Core",
+          "System.Numerics",
+          "System.Runtime.Serialization"
+        ],
+        "compile": {
+          "lib/net40/MathNet.Numerics.dll": {}
+        },
+        "runtime": {
+          "lib/net40/MathNet.Numerics.dll": {}
+        }
+      },
+      "System.ComponentModel.Annotations/4.4.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.ComponentModel.DataAnnotations"
+        ],
+        "compile": {
+          "ref/net45/_._": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
+        }
+      },
+      "System.Drawing.Primitives/4.3.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Drawing",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net45/System.Drawing.Primitives.dll": {}
+        },
+        "runtime": {
+          "lib/net45/System.Drawing.Primitives.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.5/win-x86": {
+      "EPPlus/4.5.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "PresentationCore",
+          "System",
+          "System.Core",
+          "System.Data",
+          "System.Drawing",
+          "System.Security",
+          "System.Xml",
+          "System.configuration"
+        ],
+        "compile": {
+          "lib/net40/EPPlus.dll": {}
+        },
+        "runtime": {
+          "lib/net40/EPPlus.dll": {}
+        }
+      },
+      "imbSCI.Core.Standard/0.3.36": {
+        "type": "package",
+        "dependencies": {
+          "EPPlus": "4.5.1",
+          "MathNet.Numerics": "4.4.1",
+          "System.ComponentModel.Annotations": "4.4.1",
+          "System.Drawing.Primitives": "4.3.0",
+          "imbSCI.Data.Standard": "0.3.15"
+        },
+        "compile": {
+          "lib/net45/imbSCI.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net45/imbSCI.Core.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/net45/imbSCI.ico": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          },
+          "contentFiles/any/net45/imbVeles48.ico": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
+      "imbSCI.Data.Standard/0.3.15": {
+        "type": "package",
+        "compile": {
+          "lib/net45/imbSCI.Data.dll": {}
+        },
+        "runtime": {
+          "lib/net45/imbSCI.Data.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/any/_._": {
+            "buildAction": "None",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
+      "MathNet.Numerics/4.4.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "System.Core",
+          "System.Numerics",
+          "System.Runtime.Serialization"
+        ],
+        "compile": {
+          "lib/net40/MathNet.Numerics.dll": {}
+        },
+        "runtime": {
+          "lib/net40/MathNet.Numerics.dll": {}
+        }
+      },
+      "System.ComponentModel.Annotations/4.4.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.ComponentModel.DataAnnotations"
+        ],
+        "compile": {
+          "ref/net45/_._": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
+        }
+      },
+      "System.Drawing.Primitives/4.3.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Drawing",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net45/System.Drawing.Primitives.dll": {}
+        },
+        "runtime": {
+          "lib/net45/System.Drawing.Primitives.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EPPlus/4.5.1": {
+      "sha512": "rMf9NC7jcRRA/whINWiIYoquj3iXioTIg4plgT1vvVwKQ2DtIVfD3UDDArD/MZvLjsm1Hx68GmrTinHXREWpKQ==",
+      "type": "package",
+      "path": "epplus/4.5.1",
+      "files": [
+        "epplus.4.5.1.nupkg.sha512",
+        "epplus.nuspec",
+        "lib/net35/EPPlus.dll",
+        "lib/net35/EPPlus.xml",
+        "lib/net40/EPPlus.dll",
+        "lib/net40/EPPlus.xml",
+        "lib/netstandard2.0/EPPlus.dll",
+        "lib/netstandard2.0/EPPlus.xml",
+        "readme.txt"
+      ]
+    },
+    "imbSCI.Core.Standard/0.3.36": {
+      "sha512": "77YaoiH6vyG5DIpv0J+sxpxi16dWZ6iS87kS8maBQhgg3TucvqeKMh8fvrTPnfE4bAAEfagRKYoE8tip5R7kkg==",
+      "type": "package",
+      "path": "imbsci.core.standard/0.3.36",
+      "files": [
+        "content/imbSCI.ico",
+        "content/imbVeles48.ico",
+        "contentFiles/any/net40/imbSCI.ico",
+        "contentFiles/any/net40/imbVeles48.ico",
+        "contentFiles/any/net45/imbSCI.ico",
+        "contentFiles/any/net45/imbVeles48.ico",
+        "contentFiles/any/netstandard2.0/imbSCI.ico",
+        "contentFiles/any/netstandard2.0/imbVeles48.ico",
+        "imbsci.core.standard.0.3.36.nupkg.sha512",
+        "imbsci.core.standard.nuspec",
+        "lib/net40/imbSCI.Core.Standard.xml",
+        "lib/net40/imbSCI.Core.dll",
+        "lib/net45/imbSCI.Core.Standard.xml",
+        "lib/net45/imbSCI.Core.dll",
+        "lib/netstandard2.0/imbSCI.Core.Standard.xml",
+        "lib/netstandard2.0/imbSCI.Core.dll"
+      ]
+    },
+    "imbSCI.Data.Standard/0.3.15": {
+      "sha512": "Ay+4qY0bKw+XOx5n27GByqAQccsfaFp2jcwPcyYhteg2ztY9T1rUta/y0MaKVzytknf4UZpE3T5tpihMlVtm8A==",
+      "type": "package",
+      "path": "imbsci.data.standard/0.3.15",
+      "files": [
+        "content/imbVeles48.ico",
+        "contentFiles/any/net40/imbVeles48.ico",
+        "contentFiles/any/net45/imbVeles48.ico",
+        "contentFiles/any/netstandard2.0/imbVeles48.ico",
+        "imbsci.data.standard.0.3.15.nupkg.sha512",
+        "imbsci.data.standard.nuspec",
+        "lib/net40/imbSCI.Data.Standard.xml",
+        "lib/net40/imbSCI.Data.dll",
+        "lib/net45/imbSCI.Data.Standard.xml",
+        "lib/net45/imbSCI.Data.dll",
+        "lib/netstandard2.0/imbSCI.Data.Standard.xml",
+        "lib/netstandard2.0/imbSCI.Data.dll"
+      ]
+    },
+    "MathNet.Numerics/4.4.1": {
+      "sha512": "QEk2fiO2/rojz4dUFQA+qQXEDOsSxLyk9c9GJPs7e4bdXiw7PERPGKpq1Vv1E557L7D4yeijz3O0eaZ2nPDLrA==",
+      "type": "package",
+      "path": "mathnet.numerics/4.4.1",
+      "files": [
+        "lib/net40/MathNet.Numerics.dll",
+        "lib/net40/MathNet.Numerics.xml",
+        "lib/net461/MathNet.Numerics.dll",
+        "lib/net461/MathNet.Numerics.xml",
+        "lib/netstandard1.3/MathNet.Numerics.dll",
+        "lib/netstandard1.3/MathNet.Numerics.xml",
+        "lib/netstandard2.0/MathNet.Numerics.dll",
+        "lib/netstandard2.0/MathNet.Numerics.xml",
+        "mathnet.numerics.4.4.1.nupkg.sha512",
+        "mathnet.numerics.nuspec"
+      ]
+    },
+    "System.ComponentModel.Annotations/4.4.1": {
+      "sha512": "ToiYqSCioqhtspq2O/jYKtyTC/T0uwWHBTYlzCi6PRbSSHArN1IaRWeHffDamvms5sye5FDUWCfNZgubQpNRsA==",
+      "type": "package",
+      "path": "system.componentmodel.annotations/4.4.1",
+      "files": [
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/net461/System.ComponentModel.Annotations.dll",
+        "lib/netcore50/System.ComponentModel.Annotations.dll",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.4/System.ComponentModel.Annotations.dll",
+        "lib/netstandard2.0/System.ComponentModel.Annotations.dll",
+        "lib/portable-net45+win8/_._",
+        "lib/win8/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/net461/System.ComponentModel.Annotations.dll",
+        "ref/net461/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/System.ComponentModel.Annotations.dll",
+        "ref/netcore50/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/de/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/es/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/fr/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/it/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/ja/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/ko/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/ru/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/zh-hans/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/zh-hant/System.ComponentModel.Annotations.xml",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.1/System.ComponentModel.Annotations.dll",
+        "ref/netstandard1.1/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/de/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/es/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/fr/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/it/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/ja/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/ko/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/ru/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/zh-hans/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/zh-hant/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/System.ComponentModel.Annotations.dll",
+        "ref/netstandard1.3/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/de/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/es/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/fr/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/it/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/ja/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/ko/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/ru/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/zh-hans/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/zh-hant/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/System.ComponentModel.Annotations.dll",
+        "ref/netstandard1.4/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/de/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/es/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/fr/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/it/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/ja/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/ko/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/ru/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/zh-hans/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/zh-hant/System.ComponentModel.Annotations.xml",
+        "ref/netstandard2.0/System.ComponentModel.Annotations.dll",
+        "ref/netstandard2.0/System.ComponentModel.Annotations.xml",
+        "ref/portable-net45+win8/_._",
+        "ref/win8/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.componentmodel.annotations.4.4.1.nupkg.sha512",
+        "system.componentmodel.annotations.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Drawing.Primitives/4.3.0": {
+      "sha512": "1QU/c35gwdhvj77fkScXQQbjiVAqIL3fEYn/19NE0CV/ic5TN5PyWAft8HsrbRd4SBLEoErNCkWSzMDc0MmbRw==",
+      "type": "package",
+      "path": "system.drawing.primitives/4.3.0",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/System.Drawing.Primitives.dll",
+        "lib/netstandard1.1/System.Drawing.Primitives.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/System.Drawing.Primitives.dll",
+        "ref/netstandard1.1/System.Drawing.Primitives.dll",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.drawing.primitives.4.3.0.nupkg.sha512",
+        "system.drawing.primitives.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.5": [
+      "imbSCI.Core.Standard >= 0.3.36"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\gorangrubic\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "G:\\imbVelesOpenSource\\imbACE.Standard\\imbSCI.ItemTemplate.GlobalConfiguration\\imbSCI.ItemTemplate.GlobalConfiguration.csproj",
+      "projectName": "imbSCI.ItemTemplate.GlobalConfiguration",
+      "projectPath": "G:\\imbVelesOpenSource\\imbACE.Standard\\imbSCI.ItemTemplate.GlobalConfiguration\\imbSCI.ItemTemplate.GlobalConfiguration.csproj",
+      "packagesPath": "C:\\Users\\gorangrubic\\.nuget\\packages\\",
+      "outputPath": "G:\\imbVelesOpenSource\\imbACE.Standard\\imbSCI.ItemTemplate.GlobalConfiguration\\obj\\",
+      "projectStyle": "PackageReference",
+      "skipContentFileWrite": true,
+      "configFilePaths": [
+        "C:\\Users\\gorangrubic\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net45"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "G:\\imbVelesOpenSource\\LocalNuGet\\imbVelesSecondGeneration": {},
+        "https://nuget.org/api/v2/": {}
+      },
+      "frameworks": {
+        "net45": {
+          "projectReferences": {}
+        }
+      }
+    },
+    "frameworks": {
+      "net45": {
+        "dependencies": {
+          "imbSCI.Core.Standard": {
+            "target": "Package",
+            "version": "[0.3.36, )"
+          }
+        }
+      }
+    },
+    "runtimes": {
+      "win": {
+        "#import": []
+      },
+      "win-x64": {
+        "#import": []
+      },
+      "win-x86": {
+        "#import": []
+      }
+    }
+  }
+}
