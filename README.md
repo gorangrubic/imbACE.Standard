@@ -26,3 +26,7 @@
 [imbACE Console, State and Workspace](http://blog.veles.rs/imbveles-open-source-libraries/imbace-introduction/ace-commandconsole-and-plugins/)
 
 [ACE Script](http://blog.veles.rs/imbveles-open-source-libraries/imbace-introduction/ace-script-and-s-script/)
+
+## API Documentation
+
+[imbACE API Documentation](http://doc.veles.rs/imb-ace-api)
