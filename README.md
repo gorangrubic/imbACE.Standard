@@ -8,18 +8,23 @@
 
 > Download [imbACE BasicPack v1.0 Extension](https://marketplace.visualstudio.com/items?itemName=imbVeles.imbACEBasicPack)
 
-[Getting Started - multi-target project](http://blog.veles.rs/imbace-basicpack-getting-started-draft/)
++ [Getting Started - multi-target project](http://blog.veles.rs/imbace-basicpack-getting-started-draft/)
 
 
 ## Practical guides - Using imbACE BasicPack v1.0 - Visual Studio Extension
-[Getting Started - multi-target project](http://blog.veles.rs/imbace-basicpack-getting-started-draft/)
-[Getting Started - imbACE Console Application](http://blog.veles.rs/creating-your-imbace-console-application/)
+
+ + [Getting Started - multi-target project](http://blog.veles.rs/imbace-basicpack-getting-started-draft/)
+ 
+ + [Getting Started - imbACE Console Application](http://blog.veles.rs/creating-your-imbace-console-application/)
 
 ---
 
 ## Conceptual guides
 
 [imbACE Introduction](http://blog.veles.rs/imbveles-open-source-libraries/imbace-introduction/)
+
 [imbACE User Interface](http://blog.veles.rs/imbveles-open-source-libraries/imbace-introduction/user-interface/)
+
 [imbACE Console, State and Workspace](http://blog.veles.rs/imbveles-open-source-libraries/imbace-introduction/ace-commandconsole-and-plugins/)
+
 [ACE Script](http://blog.veles.rs/imbveles-open-source-libraries/imbace-introduction/ace-script-and-s-script/)
