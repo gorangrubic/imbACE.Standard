@@ -8,8 +8,6 @@
 
 > Download [imbACE BasicPack v1.0 Extension](https://marketplace.visualstudio.com/items?itemName=imbVeles.imbACEBasicPack)
 
-+ [Getting Started - multi-target project](http://blog.veles.rs/imbace-basicpack-getting-started-draft/)
-
 
 ## Practical guides - Using imbACE BasicPack v1.0 - Visual Studio Extension
 
